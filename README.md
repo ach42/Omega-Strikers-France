@@ -1,34 +1,28 @@
-# vue-i18n-starter
+# :zap: Vite Vue I18n Starter
 
-> A Vue.js starter project for i18n websites
+Starter for [Vite](https://github.com/vuejs/vite) + [vue-i18n-next](https://github.com/intlify/vue-i18n-next) + [TypeScript](https://www.typescriptlang.org/)
 
-## Build Setup
+## :warning: Notice
 
-``` bash
-# install dependencies
-npm install
+This starter is set up using [vite-plugin-vue-i18n](https://github.com/intlify/vite-plugin-vue-i18n), so it is a starter for the Composition API.
 
-# serve with hot reload at localhost:8080
-npm run dev
+If you are new to Vue I18n, it is recommended that you follow the [documentation guide](https://vue-i18n.intlify.dev/) to learn using the Legacy API.
 
-# build for production with minification
-npm run build
+## :cd: Installation
 
-# build for production and view the bundle analyzer report
-npm run build --report
+1. Clone this repository
+2. `yarn`
+3. `yarn dev`
+4.  open http://localhost:3000 in your browser
 
-# run unit tests
-npm run unit
+## :lollipop: Demo
+https://wonderful-curran-765ceb.netlify.app
 
-# run all tests
-npm test
+## `<i18n>` custom blocks support langs
+- json
+- yaml
+- json5
 
-# sync down lokalise translation strings. You need to create acc and generate token. Not available for free plan.
-npm run lokalise:down
-```
+## :copyright: License
 
-### Settings
-Default language, supported languages and fallback language can be setup inside [constants/trans.js](./src/constants/trans.js).
-
-Inside the [router/index.js](./src/router/index.js) the beforeEnter guard calls the `Trans.routeMiddleware`. That will redirect the user to a valid language route if the current one is not supported.
- 
+[MIT](http://opensource.org/licenses/MIT)

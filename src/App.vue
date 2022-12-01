@@ -1,35 +1,39 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <the-navigation/>
-    <div>
-      Change Language to:
-      <TheLanguageSwitcher/>
-    </div>
-    <router-view/>
-  </div>
+  <img alt="Vue I18n logo" src="../assets/logo.png" />
+  <form>
+    <label>{{ t('language') }}</label>
+    <select v-model="locale">
+      <option value="en">en</option>
+      <option value="ja">ja</option>
+    </select>
+  </form>
+  <HelloI18n />
 </template>
 
-<script>
-import TheLanguageSwitcher from '@/components/TheLanguageSwitcher'
-import TheNavigation from '@/components/TheNavigation'
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+import HelloI18n from './components/HelloI18n.vue'
 
-export default {
-  name: 'app',
+export default defineComponent({
+  name: 'App',
   components: {
-    TheLanguageSwitcher,
-    TheNavigation
+    HelloI18n
+  },
+  setup() {
+    // use global scope
+    const { t, locale } = useI18n()
+    return { t, locale }
   }
-}
+})
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+form {
+  margin-top: 48px;
+}
+
+label {
+  margin-right: 8px;
 }
 </style>
