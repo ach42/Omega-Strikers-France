@@ -1,37 +1,61 @@
 <template>
   <div id="app">
-		<language-switcher v-slot="{ links }">
-			<router-link :to="link.url" v-for="link in links" :key="link.langIndex">
-				<span>{{ link.langName }}</span>
-			</router-link>
-		</language-switcher>
-    <nav>
-      <localized-link to="/">Home</localized-link> |
-      <localized-link to="/about">About</localized-link>
-    </nav>
-    <router-view/>
+    <div id="layout">
+      <Headervue />
+      <main>
+        <router-view/>
+      </main>
+      <Asidevue/>
+    </div>
+    <Footervue/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+<script>
+import Headervue from '@/components/header.vue'
+import Asidevue from '@/components/aside.vue'
+import Footervue from '@/components/footer.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Headervue,
+    Asidevue,
+    Footervue
+  }
 }
 
-nav {
-  padding: 30px;
+</script>
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+<style lang="scss">
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+#layout {
+  display: flex;
+  width: 100%;
+  height: 95%;
+  & header {
+
   }
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5%;
 }
 </style>

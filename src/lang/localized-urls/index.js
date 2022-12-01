@@ -1,3 +1,3 @@
-import cs from './cs.json';
+import fr from './fr.json';
 
-export default { cs };
+export default { fr };

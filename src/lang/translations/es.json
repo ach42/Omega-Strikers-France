@@ -1,0 +1,47 @@
+{
+    "App": {
+      "Title": "Omega Strikers France",
+      "Subtitle": "Ah on est là hein",
+      "Flag" : "🇺🇸 🇬🇧",
+      "Nav" : {
+        "home" : "Acceuil",
+        "strikers" : "Tous les Strikers",
+        "wiki" : "Wiki du jeu",
+        "index": "Index communautaire"
+      },
+      "Discord": {
+        "steam_online": "Joueurs sur le jeu",
+        "members_online": "En ligne sur discord",
+        "online": "connecté",
+        "dnd" : "ne pas déranger",
+        "idle" : "inactif"
+      },
+      "LinkToGame": {
+        "title" : "Play Omega Strikers",
+        "steam": "Get on Steam",
+        "soon" : "Coming soon"
+      },
+      "Footer" : {
+        "odyssey" : "Nous ne sommes pas affilié avec"
+      }
+    },
+    "Strikers": {
+      "Juliette" : "La recrue enthousiaste",
+      "Kai": "La superstar naturelle",
+      "Dubu": "Le défenseur attachant",
+      "Estelle": "Le sniper éblouissant",
+      "Atlas": "Le protecteur inébranlable",
+      "Juno": "L'éxplorateur curieux",
+      "Drekar": "L'envahisseur intimidant",
+      "Rune": "La force de l'ombre",
+      "X": "Le bagarreur excentrique",
+      "Era": "L'enchanteur qui confére du pouvoir",
+      "Aimi": "La fille qui a buggé",
+      "Asher": "Le mur inébranlable",
+      "lore" : "Histoire",
+      "difficulty" : "difficulté",
+      "powertime" : "Temps de rechargement",
+      "secondes" : "secondes"
+    }
+  }
+  

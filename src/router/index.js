@@ -17,13 +17,97 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/strikers',
+    name: 'strikers',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+      return import(/* webpackChunkName: "about" */ '../views/StrikersListView.vue')
+    }
+  },
+  {
+    path: '/strikers/juliette',
+    name: 'StrikerJuliette',
+    component: function () {
+    return import(/* webpackChunkName: "strikerJuliette" */ '../views/StrikerView.vue')
+    }
+  },
+  {
+    path: '/strikers/kai',
+    name: 'StrikerKai',
+    component: function () {
+    return import(/* webpackChunkName: "strikerKai" */ '../views/StrikerView.vue')
+    }
+  },
+  {
+    path: '/strikers/dubu',
+    name: 'StrikerDubu',
+    component: function () {
+    return import(/* webpackChunkName: "strikerDubu" */ '../views/StrikerView.vue')
+    }
+  },
+  {
+    path: '/strikers/estelle',
+    name: 'StrikerEstelle',
+    component: function () {
+    return import(/* webpackChunkName: "strikerEstelle" */ '../views/StrikerView.vue')
+    }
+  },
+  {
+    path: '/strikers/atlas',
+    name: 'StrikerAtlas',
+    component: function () {
+    return import(/* webpackChunkName: "strikerAtlas" */ '../views/StrikerView.vue')
+    }
+  },
+  {
+    path: '/strikers/juno',
+    name: 'StrikerJuno',
+    component: function () {
+    return import(/* webpackChunkName: "strikerJuno" */ '../views/StrikerView.vue')
+    }
+  },
+  {
+    path: '/strikers/drekar',
+    name: 'StrikerDrekar',
+    component: function () {
+    return import(/* webpackChunkName: "strikerDrekar" */ '../views/StrikerView.vue')
+    }
+  },
+  {
+    path: '/strikers/rune',
+    name: 'StrikerRune',
+    component: function () {
+    return import(/* webpackChunkName: "strikerRune" */ '../views/StrikerView.vue')
+    }
+  },
+  {
+    path: '/strikers/x',
+    name: 'StrikerX',
+    component: function () {
+    return import(/* webpackChunkName: "strikerX" */ '../views/StrikerView.vue')
+    }
+  },
+  {
+    path: '/strikers/era',
+    name: 'StrikerEra',
+    component: function () {
+    return import(/* webpackChunkName: "strikerEra" */ '../views/StrikerView.vue')
+    }
+  },
+  {
+    path: '/strikers/aimi',
+    name: 'StrikerAimi',
+    component: function () {
+    return import(/* webpackChunkName: "strikerAimi" */ '../views/StrikerView.vue')
+    }
+  },
+  {
+    path: '/strikers/asher',
+    name: 'StrikerAsher',
+    component: function () {
+    return import(/* webpackChunkName: "strikerAsher" */ '../views/StrikerView.vue')
     }
   }
 ]
