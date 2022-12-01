@@ -150,7 +150,6 @@ $text: getColor($main);
 }
 
 .primnav {
-    position: fixed;
     height: 58px;
     width: 100vw;
     font-size: .8em;

@@ -3,7 +3,7 @@
     <div id="layout">
       <Headervue />
       <main>
-        <router-view/>
+        <router-view :key="$route.fullPath"/>
       </main>
       <Asidevue/>
     </div>
@@ -26,14 +26,29 @@ export default {
   }
 }
 
+
+
 </script>
 
 <style lang="scss">
-body {
+* {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
 }
+@font-face {
+    font-family: 'made_outer';
+    src:url('./assets/made_outer.woff') format('woff'),
+        url('./assets/made_outer.svg') format('svg'),
+        url('./assets/made_outer.eot'),
+        url('./assets/made_outer.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+.emoji {
+  font-family: 'Noto Color Emoji', sans-serif;
+}
+
 #app {
   display: flex;
   flex-direction: column;
@@ -42,14 +57,41 @@ body {
   background-image: url('./assets/background.webp');
   background-size: cover;
   background-repeat: no-repeat;
+  & ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  & ::-webkit-scrollbar-track {
+    background-color: #101D42;
+  }
+
+  & ::-webkit-scrollbar-thumb {
+    background-color: #172A5F;
+  }
+  & h1 { 
+    font-family: 'made_outer';
+    color: #fff;
+    letter-spacing: 3px;
+  }
+  & a {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 #layout {
   display: flex;
   width: 100%;
   height: 95%;
-  & header {
-
+  & main {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    height: 100%;
+  }
+  & aside {
+    width: 12%;
+    height: 100vh;
   }
 }
 footer {

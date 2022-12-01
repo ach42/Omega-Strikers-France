@@ -1,11 +1,239 @@
 <template>
     <aside>
-        
+    <section id="discord" v-if="discordAPI">
+        <div id="discord__steam">
+            <span>{{NmbOfPlayers.player_count}}</span>
+            <p>{{$t('App.Discord.steam_online')}}</p>
+        </div>
+        <div id="discord__count">
+            <span>{{discordAPI.presence_count}}</span>
+            <p>{{$t('App.Discord.members_online')}}</p>
+        </div>
+        <div id="discord__cta">
+            <a v-bind:href="discordAPI.instant_invite"><img src="../assets/discord-mark-white.svg">Rejoindre le discord</a>
+        </div>
+        <div id="discord__list">
+            <div id="discord__list__block" v-for="members of discordAPI.members">
+                <div id="discord__list__block__online" v-if="members.status == CheckOnline">
+                    <div id="discord__list__card">    
+                        <a v-bind:href="discordAPI.instant_invite">
+                        <img v-bind:src="members.avatar_url">
+                        <div>
+                            <span>{{members.username}}</span>
+                            <span>{{ $t('App.Discord.online') }}</span>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div id="discord__list__block__dnd" v-if="members.status == CheckDnd">
+                    <div id="discord__list__card">    
+                        <a v-bind:href="discordAPI.instant_invite">
+                        <img v-bind:src="members.avatar_url">
+                        <div>
+                            <span>{{members.username}}</span>
+                            <span>{{ $t('App.Discord.dnd') }}</span>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div id="discord__list__block__idle" v-if="members.status == CheckIdle">
+                    <div id="discord__list__card">    
+                        <a v-bind:href="discordAPI.instant_invite">
+                        <img v-bind:src="members.avatar_url">
+                        <div>
+                            <span>{{members.username}}</span>
+                            <span>{{ $t('App.Discord.idle') }}</span>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </aside>
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-    name: 'Asidevue'
+    data() {
+        return {
+            discordAPI: [],
+            CheckOnline : ["online"],
+            CheckDnd : ["dnd"],
+            CheckIdle : ["idle"],
+            NmbOfPlayers : []
+        }
+    },
+    created() {
+    // language api calls
+    axios.get("https://discordapp.com/api/guilds/1026604059580448875/widget.json")
+    .then(resp =>{this.discordAPI = resp.data})
+    
+    axios.get("https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?key=52E6009875FC31C619516A1ED1C9FE04&appid=1869590")
+    .then(response =>{this.NmbOfPlayers = response.data.response})
+    }
 }
 </script>
+
+<style lang="scss">
+#discord {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    &__steam {
+        display: flex;
+        width: 100%;
+        height: 5%;
+        background-color: #101D42;
+        & span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 14px;
+            width: 30%;
+            font-family: 'made_outer';
+            background-color: #172A5F;
+            box-shadow: inset 0px -8px 20px 0px rgb(0 0 0 / 40%);
+        }
+        & p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 400;
+            font-size: 13px;
+            box-shadow: inset 0px -8px 20px 0px rgb(0 0 0 / 40%);
+            color: #fff;
+            width: 70%;
+        }
+    }
+    &__count {
+        display: flex;
+        height: 5%;
+        width: 100%;
+        background-color: #101D42;
+        & span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'made_outer';
+            font-size: 14px;
+            color: #fff;
+            box-shadow: inset 0px -8px 20px 0px rgb(0 0 0 / 40%);
+            width: 30%;
+            background-color: #172A5F;
+        }
+        & p {
+            display: flex;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 400;
+            width: 70%;
+            align-items: center;
+            color: #fff;
+        }
+    }
+    &__cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        height: 5%;
+        backdrop-filter: blur(5px);
+        box-shadow: inset 0px 0px 270px 0px rgba(16,29,66,0.5);
+        & a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+            font-size: 12px;
+            width: 100%;
+            height: 100%;
+            transition: 0.3s;
+            &:hover {
+                transition: 0.3s;
+                background-color: #5865F2;
+                box-shadow: 0px 0px 9px 0px rgba(88,101,242,1)
+            }
+        }
+        & img {
+            width: 22px;
+            height: 22px;
+            background-color: #5865F2;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        box-shadow: inset 0px -8px 20px 0px rgb(0 0 0 / 40%);
+        align-items: center;
+        width: 100%;
+        height: 85%;
+        background-color: #101D42;
+        overflow-y: hidden;
+        &:hover {
+            overflow-y: scroll;
+        }
+        &__card {
+            width: 100%;
+            margin-top: 10px;
+        }
+        &__block {
+            width: 85%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            & img {
+                width: 30px;
+                height: 30px;
+                border-radius: 25px;
+            }
+            & a {
+                display: flex;
+                align-items: center;
+                column-gap: 5px;
+                font-size: 12px;
+                color: #fff;
+                width: 100%;
+                height: 100%;
+                background-color: #172A5F;
+                border-radius: 5px;
+            }
+            &__online {
+                display: flex;
+                justify-content: center;
+                & div {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            &__dnd {
+                display: flex;
+                justify-content: center;
+                & div {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            &__idle {
+                display: flex;
+                justify-content: center;
+                & div {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1025px)  {
+    #discord__cta {
+        visibility: hidden;
+    }
+}
+</style>

@@ -5,7 +5,7 @@ import translations from '../lang/translations'
 import localizedURLs from '../lang/localized-urls'
 
 Vue.use(LangRouter, {
-	defaultLanguage: 'en',
+	defaultLanguage: 'fr',
 	translations,
 	localizedURLs,
 })

@@ -13,3 +13,10 @@ export default {
     name: 'Footervue'
 }
 </script>
+
+<style lang="scss">
+footer {
+    z-index: 5;
+    background-color: #101D42;
+}
+</style>
