@@ -1,8 +1,13 @@
 <template>
   <div id="app">
+		<language-switcher v-slot="{ links }">
+			<router-link :to="link.url" v-for="link in links" :key="link.langIndex">
+				<span>{{ link.langName }}</span>
+			</router-link>
+		</language-switcher>
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <localized-link to="/">Home</localized-link> |
+      <localized-link to="/about">About</localized-link>
     </nav>
     <router-view/>
   </div>
