@@ -89,16 +89,17 @@
         display: flex;
         width: 100%;
         height: 95vh;
+        backdrop-filter: blur(5px);
+        box-shadow: inset 0px 0px 500px 0px rgba(16, 29, 66, 0.733);
         &__left {
             display: flex;
             flex-direction: column;
             width: 25%;
+            background-color: #101d42;
             &__img {
                 display: flex;
                 width: 100%;
                 height: 50%;
-                backdrop-filter: blur(5px);
-                box-shadow: inset 0px 0px 270px 0px rgba(16,29,66,0.5);
                 & img {
                     width: 100%;
                     height: 100%;
@@ -110,7 +111,6 @@
                 flex-direction: column;
                 padding: 3%;
                 height: 50%;
-                background-color: #101d42;
                 &__title {
                     display: flex;
                     flex-direction: column;
@@ -159,7 +159,6 @@
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                background-color: #172A5F;
                 height: 50%;
                 transition: 1s;
             }
@@ -219,7 +218,7 @@
             justify-content: space-around;
             width: 90%;
             height: 150px;
-            background-color: #172A5F;
+            background-color: #101d42;
             border-radius: 0px 0px 5px 5px;
             &__img {
                 display: flex;

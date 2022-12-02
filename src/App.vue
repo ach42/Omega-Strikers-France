@@ -36,6 +36,9 @@ export default {
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
+body {
+  overflow: hidden;
+}
 @font-face {
     font-family: 'made_outer';
     src:url('./assets/made_outer.woff') format('woff'),
@@ -58,11 +61,11 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   & ::-webkit-scrollbar {
-    width: 5px;
+    width: 0px;
   }
 
   & ::-webkit-scrollbar-track {
-    background-color: #101D42;
+    background-color: #101d4200;
   }
 
   & ::-webkit-scrollbar-thumb {
@@ -75,7 +78,6 @@ export default {
   }
   & a {
     text-decoration: none;
-    color: #fff;
   }
 }
 
