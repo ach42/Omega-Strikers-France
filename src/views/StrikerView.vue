@@ -216,9 +216,9 @@
                 object-fit: cover;
                 width: 90%;
                 border-top: 3px solid #1d367c;
-            border-left: 3px solid #1d367c;
-            border-right: 3px solid #1d367c;
-            box-shadow: 0px 0px 60px 0px rgba(30, 61, 146, 0.644);
+                border-left: 3px solid #1d367c;
+                border-right: 3px solid #1d367c;
+                box-shadow: 0px 0px 60px 0px rgba(30, 61, 146, 0.644);
                 border-radius: 10px 10px 0px 0px;
             }
         }

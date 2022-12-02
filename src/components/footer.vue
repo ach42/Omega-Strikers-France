@@ -18,6 +18,6 @@ export default {
 footer {
     z-index: 5;
     background-color: #101d42;
-    border-top: 0.5px solid rgba(0, 0, 0, 0.205);
+    border-top: 0.3px solid rgba(0, 0, 0, 0.205);
 }
 </style>

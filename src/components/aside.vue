@@ -82,7 +82,7 @@ export default {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background-color: rgba(21, 38, 87, 0.7960784314);
+    background-color: #101d42;
     &__steam {
         display: flex;
         backdrop-filter: blur(5px);
@@ -94,6 +94,7 @@ export default {
             justify-content: center;
             color: #fff;
             font-size: 14px;
+            background-color: #E82335;
             width: 30%;
             font-family: 'made_outer';
         }
@@ -105,6 +106,7 @@ export default {
             font-size: 13px;
             color: #fff;
             width: 70%;
+            border-bottom: 0.1px rgba(255, 255, 255, 0.212) solid;
         }
     }
     &__count {
@@ -117,6 +119,7 @@ export default {
             align-items: center;
             justify-content: center;
             font-family: 'made_outer';
+            background-color: #3BA55C;
             font-size: 14px;
             color: #fff;
             width: 30%;
@@ -191,6 +194,8 @@ export default {
                 align-items: center;
                 column-gap: 5px;
                 font-size: 12px;
+                padding: 3px 5px 3px 5px;
+                background-color: #172A5F;
                 color: #fff;
                 width: 100%;
                 height: 100%;

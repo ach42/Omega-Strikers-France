@@ -177,7 +177,7 @@ $green: random(256)-1;
 $blue: random(256)-1;
 
 $main: rgb($red, $green, $blue);
-$main: #101d42cb;
+$main: #172A5F;
 $dark: mix(black, $main, 20%);
 
 // select font color
@@ -193,7 +193,7 @@ $text: getColor($main);
     font-size: .8em;
     backdrop-filter: blur(5px);
     text-transform: uppercase;
-    background-color: lighten($main, 5%);
+    background-color: #101d42;
     display: flex;
     flex-direction: column;
     transition: height 246ms .5s ease;
