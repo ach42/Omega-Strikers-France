@@ -82,11 +82,12 @@ export default {
     flex-direction: column;
     height: 100%;
     width: 100%;
+    background-color: rgba(21, 38, 87, 0.7960784314);
     &__steam {
         display: flex;
+        backdrop-filter: blur(5px);
         width: 100%;
         height: 5%;
-        background-color: #101D42;
         & span {
             display: flex;
             align-items: center;
@@ -95,8 +96,6 @@ export default {
             font-size: 14px;
             width: 30%;
             font-family: 'made_outer';
-            background-color: #172A5F;
-            box-shadow: inset 0px -8px 20px 0px rgb(0 0 0 / 40%);
         }
         & p {
             display: flex;
@@ -104,7 +103,6 @@ export default {
             justify-content: center;
             font-weight: 400;
             font-size: 13px;
-            box-shadow: inset 0px -8px 20px 0px rgb(0 0 0 / 40%);
             color: #fff;
             width: 70%;
         }
@@ -113,7 +111,7 @@ export default {
         display: flex;
         height: 5%;
         width: 100%;
-        background-color: #101D42;
+        backdrop-filter: blur(5px);
         & span {
             display: flex;
             align-items: center;
@@ -121,9 +119,7 @@ export default {
             font-family: 'made_outer';
             font-size: 14px;
             color: #fff;
-            box-shadow: inset 0px -8px 20px 0px rgb(0 0 0 / 40%);
             width: 30%;
-            background-color: #172A5F;
         }
         & p {
             display: flex;
@@ -141,8 +137,7 @@ export default {
         align-items: center;
         font-size: 14px;
         height: 5%;
-        backdrop-filter: blur(5px);
-        box-shadow: inset 0px 0px 270px 0px rgba(16,29,66,0.5);
+        background-color: #5865F2;
         & a {
             display: flex;
             align-items: center;
@@ -154,7 +149,6 @@ export default {
             transition: 0.3s;
             &:hover {
                 transition: 0.3s;
-                background-color: #5865F2;
                 box-shadow: 0px 0px 9px 0px rgba(88,101,242,1)
             }
         }
@@ -173,7 +167,7 @@ export default {
         align-items: center;
         width: 100%;
         height: 85%;
-        background-color: #101D42;
+        backdrop-filter: blur(5px);
         overflow-y: hidden;
         &:hover {
             overflow-y: scroll;
@@ -200,7 +194,6 @@ export default {
                 color: #fff;
                 width: 100%;
                 height: 100%;
-                background-color: #172A5F;
                 border-radius: 5px;
             }
             &__online {

@@ -424,7 +424,6 @@ label.hamburger {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: #172A5F;
     column-gap: 10px;
     height: 10%;
     &__img {

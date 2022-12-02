@@ -17,6 +17,7 @@ export default {
 <style lang="scss">
 footer {
     z-index: 5;
-    background-color: #101D42;
+    background-color: #101d42;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.205);
 }
 </style>

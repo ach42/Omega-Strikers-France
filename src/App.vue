@@ -78,13 +78,14 @@ body {
   }
   & a {
     text-decoration: none;
+    color: #fff;
   }
 }
 
 #layout {
   display: flex;
   width: 100%;
-  height: 95%;
+  height: 97%;
   & main {
     display: flex;
     justify-content: center;
@@ -100,6 +101,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 5%;
+  height: 3%;
 }
 </style>
