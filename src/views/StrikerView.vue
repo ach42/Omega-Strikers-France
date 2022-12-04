@@ -146,6 +146,7 @@
             justify-content: flex-end;
             align-items: center;
             flex-direction: column;
+            overflow-y: scroll;
             width: 75%;
             background-color: #101d42;
             &__powers {
@@ -186,17 +187,6 @@
                     text-transform: uppercase;
                     width: fit-content;
                 }
-            }
-            &:hover #striker__right__powers {
-                margin-top: -55%;
-                transition: 1s;
-                z-index: 0;
-            }
-            &:hover #striker__right__content {
-                height: 100%;
-                overflow-y: scroll;
-                z-index: 1;
-                transition: 1s;
             }
         }
     }
@@ -241,13 +231,12 @@
                 justify-content: flex-start;
                 margin-top: -30px;
                 &__bg {
-                    position: absolute;
                     width: 65px;
                     z-index: 1;
                 }
                 &__top {
                     width: 40px;
-                    margin-top: 12.5px;
+                    margin-top: -50px;
                     z-index: 2;
                 }
             }

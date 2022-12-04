@@ -305,7 +305,7 @@ input.hamburger {
 
     &:checked {
         &~nav.primnav {
-            height: 95vh;
+            height: 100%;
 
             @include media-sm {
                 width: 230px;
