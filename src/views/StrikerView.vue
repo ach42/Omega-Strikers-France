@@ -1,5 +1,5 @@
 <template>
-    <div id="StrikerView"> 
+    <div id="StrikerView">
         <section id="striker" v-for="striker of strikerAPI" v-if="striker.attributes['name'] == nameOfStriker">
             <section id="striker__left">
                 <div id="striker__left__img">
@@ -7,9 +7,9 @@
                 </div>
                 <div id="striker__left__content">
                     <div id="striker__left__content__title">
-                        <h1>{{striker.attributes['displayname']}}</h1>
-                        <p>{{striker.attributes['subtitle']}}</p>
-                        <span>{{$t('Strikers.difficulty')}}: {{striker.attributes['difficulty']}}</span>
+                        <h1>{{ striker.attributes['displayname'] }}</h1>
+                        <p>{{ striker.attributes['subtitle'] }}</p>
+                        <span>{{ $t('Strikers.difficulty') }}: {{ striker.attributes['difficulty'] }}</span>
                     </div>
                 </div>
             </section>
@@ -70,295 +70,417 @@
                         </div>
                     </div>
                 </div>
-                <div id="striker__right__content">
-                    <div id="striker__right__bio">
-                        <h1>{{$t('Strikers.lore')}}</h1>
-                        <p>{{striker.attributes['bio1']}}</p>
-                        <p>{{striker.attributes['bio2']}}</p>
-                        <p>{{striker.attributes['bio3']}}</p>
-                        <p>{{striker.attributes['bio4']}}</p>
-                    </div>
-                    <div id="striker__right__skins">
-                        <h1>{{$t('Strikers.skins')}}</h1>
-                        <div class="skins"> 
-                            <div class="skins__img">
-                                <img v-for="skinsurl of striker.attributes['skins_url']" v-bind:src="skinsurl">
-                            </div>
-                            <div class="skins__name">
-                                <span v-for="skinname of striker.attributes['skins_name']">{{skinname}}</span>
-                            </div>
+                <div id="striker__right__bio">
+                    <h1>{{ $t('Strikers.lore') }}</h1>
+                    <p>{{ striker.attributes['bio1'] }}</p>
+                    <p>{{ striker.attributes['bio2'] }}</p>
+                    <p>{{ striker.attributes['bio3'] }}</p>
+                    <p>{{ striker.attributes['bio4'] }}</p>
+                </div>
+                <div id="striker__right__skins">
+                    <h1>{{ $t('Strikers.skins') }}</h1>
+                    <div class="skins">
+                        <div class="skins__img">
+                            <img v-for="skinsurl of striker.attributes['skins_url']" v-bind:src="skinsurl">
+                        </div>
+                        <div class="skins__name">
+                            <span v-for="skinname of striker.attributes['skins_name']">{{ skinname }}</span>
                         </div>
                     </div>
                 </div>
             </section>
         </section>
     </div>
-    </template>
+</template>
     
-    <style lang="scss">
-    #striker {
+<style lang="scss">
+#striker {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0px 0px 270px 0px rgba(16, 29, 66, 0.5);
+
+    &__left {
         display: flex;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(5px);
-        box-shadow: inset 0px 0px 270px 0px rgba(16,29,66,0.5);
-        &__left {
+        flex-direction: column;
+        width: 25%;
+        background-color: #101d42cb;
+
+        &__img {
+            display: flex;
+            width: 100%;
+            height: 50%;
+
+            & img {
+                width: 80%;
+                margin: auto;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__content {
             display: flex;
             flex-direction: column;
-            width: 25%;
-            background-color: #101d42cb;
-            &__img {
-                display: flex;
-                width: 100%;
-                height: 50%;
-                & img {
-                    width: 80%;
-                    margin: auto;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-            &__content {
+            padding: 3%;
+            height: 50%;
+
+            &__title {
                 display: flex;
                 flex-direction: column;
-                padding: 3%;
-                height: 50%;
-                &__title {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    & h1 {
+                align-items: center;
+                justify-content: center;
+
+                & h1 {
                     font-size: 40px;
                     text-transform: uppercase;
                     font-style: italic;
-                    }
-                    & p {
-                        color: #fff;
-                        font-weight: 600;
-                    }
-                    & span {
-                        color: #fff;
-                    }
                 }
-            }
-            &__stats {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                background-color: #101d42;
-                & img {
-                    width: 100%;
-                    opacity: 0.3;
+
+                & p {
+                    color: #fff;
+                    font-weight: 600;
+                }
+
+                & span {
+                    color: #fff;
                 }
             }
         }
-        &__right {
+
+        &__stats {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-direction: column;
-            row-gap: 5%;
-            overflow-y: scroll;
-            width: 75%;
-            height: 100%;
-            padding-top: 5%;
+            justify-content: center;
+            width: 100%;
             background-color: #101d42;
-            &__powers {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+
+            & img {
                 width: 100%;
-                height: 100%;
-                padding-top: 10%;
-                transition: 1s;
-            }
-            &__content {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                background-color: #101d42;
-                height: 100%;
-                transition: 1s;
-                margin-bottom: 5%;
-            }
-            &__bio {
-                display: flex;
-                flex-direction: column;
-                margin-top: 1%;
-                height: 100%;
-                & p {
-                    color: #fff;
-                    padding: 1%;
-                    background-color: #172A5F;
-                    border-radius: 10px;
-                    margin: 5px;
-                    font-size: 14px;
-                    margin-left: 2%;
-                    margin-right: 2%;
-                }
-                & h1 {
-                    font-style: italic;
-                    margin-left: 2%;
-                    margin-bottom: 1%;
-                    text-transform: uppercase;
-                    width: fit-content;
-                }
-            }
-            &__skins {
-                display: flex;
-                flex-direction: column;
-                margin: 2%;
-                & h1 {
-                    text-transform: uppercase;
-                    font-style: italic;
-                }
+                opacity: 0.3;
             }
         }
     }
-    .powers {
+
+    &__right {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
+        justify-content: space-between;
         align-items: center;
-        width: 33%;
-        &__gif {
+        flex-direction: column;
+        row-gap: 5%;
+        overflow-y: scroll;
+        width: 75%;
+        height: 105%;
+        background-color: #101d42;
+
+        &__powers {
             display: flex;
-            justify-content: center;
+            margin-top: 2%;
+            justify-content: space-between;
             align-items: center;
             width: 100%;
-            & img {
-                object-fit: cover;
-                width: 90%;
-                border-top: 3px solid #1d367c;
-                border-left: 3px solid #1d367c;
-                border-right: 3px solid #1d367c;
-                box-shadow: 0px 0px 60px 0px rgba(30, 61, 146, 0.644);
-                border-radius: 10px 10px 0px 0px;
-            }
+            height: 100%;
+            transition: 1s;
         }
-        &__desc {
+
+        &__bio {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            margin-top: 1%;
+            height: 100%;
+
+            & p {
+                color: #fff;
+                padding: 1%;
+                background-color: #172A5F;
+                border-radius: 10px;
+                margin: 5px;
+                font-size: 14px;
+                margin-left: 2%;
+                margin-right: 2%;
+            }
+
+            & h1 {
+                font-style: italic;
+                margin-left: 2%;
+                margin-bottom: 1%;
+                text-transform: uppercase;
+                width: fit-content;
+            }
+        }
+
+        &__skins {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+            & h1 {
+                text-transform: uppercase;
+                font-style: italic;
+                margin-left: 2%;
+            }
+        }
+    }
+}
+
+.powers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    width: 33%;
+
+    &__gif {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        & img {
+            object-fit: cover;
             width: 90%;
-            border-bottom: 3px solid #1d367c;
+            border-top: 3px solid #1d367c;
             border-left: 3px solid #1d367c;
             border-right: 3px solid #1d367c;
             box-shadow: 0px 0px 60px 0px rgba(30, 61, 146, 0.644);
-            height: 200px;
-            background-color: #172A5F;
-            border-radius: 0px 0px 10px 10px;
-            &__img {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                margin-top: -30px;
-                &__bg {
-                    width: 65px;
-                    z-index: 1;
-                }
-                &__top {
-                    width: 40px;
-                    margin-top: -50px;
-                    z-index: 2;
-                }
-            }
-            &__content {
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                margin-top: 15px;
-                margin: 2%;
-                & h1 {
-                    color: #f5f5f5;
-                    letter-spacing: 1px;
-                }
-                & p {
-                    font-weight: 600;
-                    color: #f5f5f5;
-                    font-size: 14px;
-                }
-            }
-            &__stats {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #fff;
-            }
+            border-radius: 10px 10px 0px 0px;
         }
     }
-    .skins {
+
+    &__desc {
         display: flex;
         flex-direction: column;
-        padding-top: 2%;
+        justify-content: space-around;
+        width: 90%;
+        border-bottom: 3px solid #1d367c;
+        border-left: 3px solid #1d367c;
+        border-right: 3px solid #1d367c;
+        box-shadow: 0px 0px 60px 0px rgba(30, 61, 146, 0.644);
+        height: 200px;
+        background-color: #172A5F;
+        border-radius: 0px 0px 10px 10px;
+
         &__img {
             display: flex;
-            column-gap: 10px;
-            & img {
-                border-top: 3px solid #1d367c;
-                border-left: 3px solid #1d367c;
-                border-right: 3px solid #1d367c;
-                border-radius: 10px 10px 0px 0px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: -30px;
+
+            &__bg {
+                width: 65px;
+                z-index: 1;
+            }
+
+            &__top {
+                width: 40px;
+                margin-top: -50px;
+                z-index: 2;
             }
         }
-        &__name {
+
+        &__content {
             display: flex;
-            column-gap: 10px;
-            & span {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 15px;
+            margin: 2%;
+
+            & h1 {
                 color: #f5f5f5;
-                width: 256px;
-                height: 50px;
-                background-color: #172A5F;
-                border-bottom: 3px solid #1d367c;
-                border-left: 3px solid #1d367c;
-                border-right: 3px solid #1d367c;
-                border-radius: 0px 0px 10px 10px;
+                letter-spacing: 1px;
             }
+
+            & p {
+                font-weight: 600;
+                color: #f5f5f5;
+                font-size: 14px;
+            }
+        }
+
+        &__stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
         }
     }
+}
+
+.skins {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    width: 100%;
+    &__img {
+        display: flex;
+        column-gap: 10px;
+        width: 100%;
+        margin-left: 2%;
+        & img {
+            border-top: 3px solid #1d367c;
+            border-left: 3px solid #1d367c;
+            border-right: 3px solid #1d367c;
+            border-radius: 10px 10px 0px 0px;
+        }
+    }
+
+    &__name {
+        display: flex;
+        column-gap: 10px;
+        margin-left: 2%;
+        margin-bottom: 10%;
+        & span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f5f5f5;
+            width: 256px;
+            height: 50px;
+            background-color: #172A5F;
+            border-bottom: 3px solid #1d367c;
+            border-left: 3px solid #1d367c;
+            border-right: 3px solid #1d367c;
+            border-radius: 0px 0px 10px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    #striker__left {
+        width: 35%;
+    }
+    #striker__left__img img {
+        width: 100%;
+    }
+    #striker__left__content__title h1 {
+        font-size: 25px;
+    }
+    #striker__left__content__title p {
+        text-align: center;
+    }
+    #striker__right {
+        justify-content: flex-start;
+        padding-top: 2%;
+        width: 65%;
+    }
+    #striker__right h1 {
+        font-size: 28px;
+    }
+    #striker__right__powers {
+        flex-direction: column;
+        height: max-content;
+        row-gap: 2%;
+        padding-top: 0%;
+        margin-bottom: 5%;
+    }
+    #striker__right__bio {
+        margin: 3%;
+    }
+    #striker__right__bio p {
+        padding: 2%;
+        font-size: 18px;
+    }
+    .powers {
+        width: 100%;
+    }
+    .powers__desc {
+        height: 230px;
+    }
+    .powers__desc__img {
+        margin-top: -50px;
+    }
+    .powers__desc__img__bg {
+        width: 90px;
+    }
+    .powers__desc__img__top {
+        width: 60px;
+        margin-top: -75px;
+    }
+    .powers__desc__content p {
+        font-size: 18px;
+    }
+    #striker__right__skins {
+        margin-top: 10%;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+    #striker__right__skins h1 {
+        margin-left: 5%;
+    }
+    .skins {
+        flex-direction: row;
+        overflow-x: scroll; 
+        justify-content: center;
+    }
+    .skins__img {
+        flex-direction: column;
+        row-gap: 10px;
+        width: 25%;
+        align-items: flex-end;
+    }
+    .skins__name {
+        flex-direction: column;
+        margin-left: 0%;
+        row-gap: 10px;
+    }
+    .skins__name span {
+        height: 200px;
+        width: 170px;
+        border-top: 3px solid #1d367c;
+        border-right: 3px solid #1d367c;
+        border-left: 0px solid;
+        border-bottom: 3px solid #1d367c;
+        border-radius: 0px 10px 10px 0px;
+    }
+    .skins__img img {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px 0px 0px 10px;
+        border-top: 3px solid #1d367c;
+        border-left: 3px solid #1d367c;
+        border-right: 0px solid;
+        border-bottom: 3px solid #1d367c;
+    }
+}
 </style>
     
 <script>
-    import axios from 'axios';
-    
-    export default {
-        data() {
-            return {
-                strikerAPI : []
-            }
-        },
-        // language api calls
-        created() {
-            let url = window.location.pathname
-            let getStriker = url.substring(url.lastIndexOf("/") + 1)
-            this.nameOfStriker = getStriker;
-    
-            const i18nlang = this.$i18n.locale
-            let lang;
-            languagesClient()
-            function languagesClient() {
-            if(
-            (i18nlang === 'fr')
-            || (i18nlang === 'en') 
-            || (i18nlang === 'es')
-    
+import axios from 'axios';
+
+export default {
+    data() {
+        return {
+            strikerAPI: []
+        }
+    },
+    // language api calls
+    created() {
+        let url = window.location.pathname
+        let getStriker = url.substring(url.lastIndexOf("/") + 1)
+        this.nameOfStriker = getStriker;
+
+        const i18nlang = this.$i18n.locale
+        let lang;
+        languagesClient()
+        function languagesClient() {
+            if (
+                (i18nlang === 'fr')
+                || (i18nlang === 'en')
+                || (i18nlang === 'es')
+
             ) {
                 lang = i18nlang
             } else {
                 lang = 'en'
             }
             return lang;
-            }
-            console.log(lang)
-            // Fetching strikers-all
-            axios.get(`https://strapi-omega.onrender.com/api/strikers?locale=` + lang)
-            .then(response => { this.strikerAPI = response.data.data})
         }
+        console.log(lang)
+        // Fetching strikers-all
+        axios.get(`https://strapi-omega.onrender.com/api/strikers?locale=` + lang)
+            .then(response => { this.strikerAPI = response.data.data })
     }
-    </script>
+}
+</script>

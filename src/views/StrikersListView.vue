@@ -70,4 +70,9 @@ export default {
     }
   }
 }
+@media screen and (max-width: 1080px) {
+  .strikersList__item {
+    flex: 1 0 30%;
+  }
+}
 </style>

@@ -85,7 +85,7 @@ body {
 #layout {
   display: flex;
   width: 100%;
-  height: 97%;
+  height: 97vh;
   & main {
     display: flex;
     justify-content: center;
@@ -101,6 +101,15 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3%;
+  height: 3vh;
+}
+
+@media screen and (max-width: 1080px) {
+  aside {
+    display: none;
+  }
+  #layout main {
+    width: 95%;
+  }
 }
 </style>

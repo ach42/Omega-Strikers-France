@@ -180,7 +180,8 @@ export default {
             margin-top: 10px;
         }
         &__block {
-            width: 85%;
+            width: 90%;
+            margin-right: 5%;
             height: 100%;
             display: flex;
             flex-direction: column;

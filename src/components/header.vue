@@ -43,7 +43,7 @@
                             <localized-link to="/strikers/kai">Kai</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/strikers/Dubu">Dubu</localized-link>
+                            <localized-link to="/strikers/dubu">Dubu</localized-link>
                         </li>
                         <li>
                             <localized-link to="/strikers/estelle">Estelle</localized-link>
@@ -194,6 +194,11 @@ $text: getColor($main);
 
 %sidebar-hover {
     @include alpha-attribute('background-color', rgba($main, 0.6), white);
+}
+
+header {
+    display: flex;
+    height: 100vh;
 }
 
 .primnav {
@@ -433,7 +438,7 @@ label.hamburger {
     display: flex;
     justify-content: space-around;
     width: 90%;
-    margin-left: 10px;
+    margin-left: 8px;
     column-gap: 10px;
     height: 10%;
     &__img {
