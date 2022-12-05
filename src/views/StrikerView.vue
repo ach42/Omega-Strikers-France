@@ -78,6 +78,17 @@
                         <p>{{striker.attributes['bio3']}}</p>
                         <p>{{striker.attributes['bio4']}}</p>
                     </div>
+                    <div id="striker__right__skins">
+                        <h1>{{$t('Strikers.skins')}}</h1>
+                        <div class="skins"> 
+                            <div class="skins__img">
+                                <img v-for="skinsurl of striker.attributes['skins_url']" v-bind:src="skinsurl">
+                            </div>
+                            <div class="skins__name">
+                                <span v-for="skinname of striker.attributes['skins_name']">{{skinname}}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </section>
@@ -101,7 +112,8 @@
                 width: 100%;
                 height: 50%;
                 & img {
-                    width: 100%;
+                    width: 80%;
+                    margin: auto;
                     height: 100%;
                     object-fit: cover;
                 }
@@ -143,18 +155,22 @@
         }
         &__right {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-around;
             align-items: center;
             flex-direction: column;
+            row-gap: 5%;
             overflow-y: scroll;
             width: 75%;
+            height: 100%;
+            padding-top: 5%;
             background-color: #101d42;
             &__powers {
                 display: flex;
                 justify-content: space-between;
-                align-items: flex-start;
+                align-items: center;
                 width: 100%;
-                height: 70%;
+                height: 100%;
+                padding-top: 10%;
                 transition: 1s;
             }
             &__content {
@@ -162,14 +178,15 @@
                 flex-direction: column;
                 width: 100%;
                 background-color: #101d42;
-                height: 30%;
+                height: 100%;
                 transition: 1s;
+                margin-bottom: 5%;
             }
             &__bio {
                 display: flex;
                 flex-direction: column;
                 margin-top: 1%;
-                height: 50%;
+                height: 100%;
                 & p {
                     color: #fff;
                     padding: 1%;
@@ -186,6 +203,15 @@
                     margin-bottom: 1%;
                     text-transform: uppercase;
                     width: fit-content;
+                }
+            }
+            &__skins {
+                display: flex;
+                flex-direction: column;
+                margin: 2%;
+                & h1 {
+                    text-transform: uppercase;
+                    font-style: italic;
                 }
             }
         }
@@ -261,6 +287,38 @@
                 align-items: center;
                 justify-content: center;
                 color: #fff;
+            }
+        }
+    }
+    .skins {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2%;
+        &__img {
+            display: flex;
+            column-gap: 10px;
+            & img {
+                border-top: 3px solid #1d367c;
+                border-left: 3px solid #1d367c;
+                border-right: 3px solid #1d367c;
+                border-radius: 10px 10px 0px 0px;
+            }
+        }
+        &__name {
+            display: flex;
+            column-gap: 10px;
+            & span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #f5f5f5;
+                width: 256px;
+                height: 50px;
+                background-color: #172A5F;
+                border-bottom: 3px solid #1d367c;
+                border-left: 3px solid #1d367c;
+                border-right: 3px solid #1d367c;
+                border-radius: 0px 0px 10px 10px;
             }
         }
     }

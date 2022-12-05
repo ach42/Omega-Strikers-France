@@ -25,6 +25,12 @@
                     </localized-link>
                 </li>
                 <li>
+                    <a id="subtitle" href="#">
+                        <span class="emoji">{{ $t('App.Flag') }}</span>
+                        <p>{{ $t('App.Subtitle') }}</p>
+                    </a>
+                </li>
+                <li>
                     <localized-link id="strikers-menu" to="/strikers">
                         <img class="icon" src="../assets/striker_icon.png">
                         Strikers
@@ -75,7 +81,10 @@
                     </localized-link>
                     <ul class="secnav">
                         <li>
-                            <localized-link to="/wiki/rank-system">Rank System</localized-link>
+                            <localized-link to="/wiki/systeme-de-rang">Rank System</localized-link>
+                        </li>
+                        <li>
+                            <localized-link to="/wiki/toutes-les-maps">Toutes les maps</localized-link>
                         </li>
                     </ul>
                 </li>
@@ -308,7 +317,7 @@ input.hamburger {
             height: 100%;
 
             @include media-sm {
-                width: 230px;
+                width: 250px;
             }
 
             .secnav>li {
@@ -323,7 +332,7 @@ input.hamburger {
             >i {
                 background-color: transparent;
                 transform: rotate(90deg);
-                margin-left: 170px;
+                margin-left: 190px;
                 &:before {
                     transform: translate(-50%, -50%) rotate(45deg);
                 }
@@ -423,17 +432,18 @@ label.hamburger {
 #logo {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 90%;
+    margin-left: 10px;
     column-gap: 10px;
     height: 10%;
     &__img {
         display: flex;
         justify-content: center;
+        text-align: center;
         align-items: center;
         & img {
             width: 50px;
             height: 45px;
-            padding-left: 10px;
             border-radius: 10px;
         }
     }
@@ -474,6 +484,21 @@ label.hamburger {
     & .secnav {
         margin-left: 0px;
         border: none;
+    }
+}
+
+#subtitle {
+    display: flex;
+    justify-content: space-between;
+    background-color: #172A5F;
+    width: 100%;
+    & span {
+        display: flex;
+        padding: 12px;
+    }
+    & p {
+        display: flex;
+        width: 80%;
     }
 }
 
