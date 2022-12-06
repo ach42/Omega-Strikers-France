@@ -112,4 +112,13 @@ footer {
     width: 95%;
   }
 }
+@media screen and (max-width: 425px) {
+  #layout {
+    flex-direction: column;
+  }
+  #layout main {
+    width: 100%;
+  }
+} 
+
 </style>
