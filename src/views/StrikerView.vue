@@ -453,6 +453,7 @@
     #striker {
         flex-direction: column;
         overflow-y: scroll;
+        overflow-x: hidden;
     }
     #striker__right__powers {
         margin-bottom: 10%;

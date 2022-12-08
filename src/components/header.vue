@@ -152,7 +152,7 @@ export default {
 }
 
 @mixin media-sm {
-    @media (min-width: 650px) {
+    @media (min-width: 50px) {
         @content;
     }
 }
@@ -525,35 +525,5 @@ label.hamburger {
 .menu-title {
     font-weight: 600;
     font-style: italic;
-}
-@media screen and (max-width: 600px) {
-    label.hamburger {
-        top: 15px;
-        margin-left: 15px;
-    }
-    #logo {
-        width: 100%;
-        justify-content: flex-start;
-        height: 58px;
-        column-gap: 0px;
-        margin-left: 50px;
-    }
-    #logo__title {
-        flex-direction: row;
-        width: 70%;
-    }
-    #logo__title h1 {
-        width: 100%;
-        text-align: left;
-    }
-    input.hamburger:checked ~ label > i {
-        margin-left: 0px;
-    }
-    #subtitle {
-        justify-content: center;
-    }
-    #subtitle p {
-        width: 40%;
-    }
 }
 </style>
