@@ -2,7 +2,7 @@
 	"App": {
 		"Title": "Omega Strikers France",
 		"TitleStrikersList": "Tous les Strikers / Personnages",
-		"Subtitle": "1ère communauté française",
+		"Subtitle": "1 ère communauté française",
 		"Flag": "🇫🇷",
 		"Nav": {
 			"strikers": "Tous les Strikers",
@@ -30,6 +30,7 @@
 		},
 		"Footer": {
 			"odyssey": "Nous ne sommes pas affilié avec",
+			"mapMonde" : "🌍",
 			"croissant": "Sponsorisé par Pôle Emploi",
         	"42" : "Un problème ? Une suggestion ? Demande 42 sur Discord"
 		}

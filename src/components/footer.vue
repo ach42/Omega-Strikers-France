@@ -1,6 +1,7 @@
 <template>
     <footer>
         <language-switcher id="lang" v-slot="{ links }">
+            <p>{{ $t('App.Footer.mapMonde') }}</p>
 			<router-link :to="link.url" v-for="link in links" :key="link.langIndex">
 				<span>{{ link.langName }}</span>
 			</router-link>
@@ -35,9 +36,13 @@ footer {
     border-top: 0.3px solid rgba(0, 0, 0, 0.205);
     & #lang {
         display: flex;
+        align-items: center;
         column-gap: 3px;
         font-size: 9px;
         margin-left: 10px;
+        & p {
+            font-size: 14px;
+        }
         & a {
             color: #f5f5f5cc;
             &:hover {
@@ -74,6 +79,25 @@ footer {
                 text-decoration: underline;
             }
         }
+    }
+}
+@media screen and (max-width: 768px) {
+    footer #lang {
+        font-size: 8px;
+    }
+    footer #odyssey {
+        font-size: 8px;
+    }
+    footer #croissant {
+        font-size: 8px;
+    }
+}
+@media screen and (max-width: 425px) {
+    footer #croissant {
+        display: none;
+    }
+    footer #odyssey {
+        padding-right: 10px;
     }
 }
 </style>

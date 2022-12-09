@@ -3,7 +3,7 @@
       "Title": "Omega Strikers France - But, translated in english",
       "TitleStrikersList" : "List of all Strikers / characters",
       "Subtitle": "But, translated in english",
-      "Flag" : "🇬🇧",
+      "Flag" : "🇺🇸",
       "Nav" : {
         "strikers" : "All Strikers",
         "wiki" : "Wiki of the game",
@@ -27,6 +27,7 @@
       },
       "Footer" : {
         "odyssey" : "We are not affiliate with",
+        "mapMonde" : "🌎",
         "croissant": "🥐 Made with the power of croissant",
         "42" : "Any problem ? Suggest ? Ask 42 on Discord"
       }

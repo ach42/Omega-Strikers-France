@@ -263,6 +263,7 @@
         justify-content: space-around;
         width: 90%;
         row-gap: 20px;
+        padding-bottom: 20px;
         border-bottom: 3px solid #1d367c;
         border-left: 3px solid #1d367c;
         border-right: 3px solid #1d367c;
@@ -302,6 +303,7 @@
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 font-style: italic;
+                margin-bottom: 5px;
             }
 
             & p {

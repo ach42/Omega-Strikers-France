@@ -16,17 +16,18 @@
       "members_online": "En nuestra discordia",
       "join": "Únete a la discordia oficial",
       "link" : "https://discord.gg/omegastrikers",
-      "online": "conectado",
-      "dnd" : "no molestar",
-      "idle" : "inactivo"
+      "online": "Conectado",
+      "dnd" : "No molestar",
+      "idle" : "Inactivo"
     },
     "LinkToGame": {
       "title" : "Jugará Omega Strikers",
-      "steam": "descargar en Steam",
+      "steam": "Descargar en Steam",
       "soon" : "Disponible pronto"
     },
     "Footer" : {
       "odyssey" : "We are not affiliate with",
+      "mapMonde" : "🌍",
       "croissant": "🥐 Hecho con el poder del croissant",
       "42" : "Algún problema ? Sugerir ? Pregúntale a 42 en Discord"
     }
@@ -45,10 +46,10 @@
     "Luna": "The chaotic Rocketeer",
     "Aimi": "The girl who glitched",
     "Asher": "The unbreakable wall",
-    "lore" : "Lore",
+    "lore" : "Historia",
     "skins" : "Skins",
-    "difficulty" : "difficulty",
-    "powertime" : "reload time",
-    "secondes" : "seconds"
+    "difficulty" : "dificultad",
+    "powertime" : "tiempo de recarga",
+    "secondes" : "segundos"
   }
 }
