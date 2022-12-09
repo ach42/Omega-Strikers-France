@@ -31,6 +31,7 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
+    height: 3.5%;
     align-items: center;
     justify-content: space-between;
     z-index: 5;
@@ -95,11 +96,16 @@ footer {
     }
 }
 @media screen and (max-width: 425px) {
+    footer {
+        flex-direction: column;
+        height: 4.5%;
+        justify-content: center;
+    }
     footer #croissant {
         display: none;
     }
     footer #odyssey {
-        padding-right: 10px;
+        text-align: center;
     }
 }
 </style>

@@ -98,9 +98,6 @@ body {
     height: 100vh;
   }
 }
-footer {
-  height: 3.5%;
-}
 
 @media screen and (min-width: 1920px) {
   #layout main {
