@@ -85,7 +85,7 @@ body {
 #layout {
   display: flex;
   width: 100%;
-  height: 96.5vh;
+  height: 96.5%;
   & main {
     display: flex;
     justify-content: center;
@@ -99,7 +99,7 @@ body {
   }
 }
 footer {
-  height: 3.5vh;
+  height: 3.5%;
 }
 
 @media screen and (min-width: 1920px) {

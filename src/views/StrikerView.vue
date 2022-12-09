@@ -487,19 +487,22 @@
         overflow-x: hidden;
         width: 100%;
     }
+    #striker__right__bio p {
+        margin-bottom: 3%;
+        padding: 3%;
+    }
     #striker__right__powers {
         margin-bottom: 10%;
     }
     #striker__left {
-        flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 45%;
+        height: max-content;
     }
     #striker__left__img {
         height: 100%;
-        width: 50%;
+        width: 100%;
     }
     #striker__left__content {
         width: 50%;
@@ -525,10 +528,6 @@
     }
 }
 @media screen and (max-width: 375px) {
-    #striker__right__bio p {
-        margin-bottom: 3%;
-        padding: 5%;
-    }
     #striker__right__bio {
         margin-top: 20%;
     } 
