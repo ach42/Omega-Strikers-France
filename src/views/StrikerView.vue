@@ -262,6 +262,7 @@
         flex-direction: column;
         justify-content: space-around;
         width: 90%;
+        row-gap: 20px;
         border-bottom: 3px solid #1d367c;
         border-left: 3px solid #1d367c;
         border-right: 3px solid #1d367c;
@@ -565,7 +566,7 @@ export default {
         }
         console.log(lang)
         // Fetching strikers-all
-        axios.get(`https://strapi-omega.onrender.com/api/strikers?locale=` + lang)
+        axios.get(`https://database.omegastrikers-france.fr/api/strikers?locale=` + lang)
             .then(response => { this.strikerAPI = response.data.data })
     }
 }

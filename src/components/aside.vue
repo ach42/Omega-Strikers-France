@@ -10,11 +10,11 @@
             <p>{{$t('App.Discord.members_online')}}</p>
         </div>
         <div id="discord__cta">
-            <a v-bind:href="discordAPI.instant_invite"><img src="../assets/discord-mark-white.svg">Rejoindre le discord</a>
+            <a v-bind:href="$t('App.Discord.link')"><img src="../assets/discord-mark-white.svg">{{$t('App.Discord.join')}}</a>
         </div>
         <div id="discord__list">
             <div id="discord__list__block" v-for="members of discordAPI.members">
-                <div id="discord__list__block__online" v-if="members.status == CheckOnline">
+                <div id="discord__list__block__online" v-if="(members.status == CheckOnline && members.username != '[Adri] Chapeau' && members.username != 'DraftBot' && members.username != 'Discord.Me' && members.username != 'DISBOARD')">
                     <div id="discord__list__card">    
                         <a v-bind:href="discordAPI.instant_invite">
                         <img v-bind:src="members.avatar_url">
@@ -25,7 +25,7 @@
                         </a>
                     </div>
                 </div>
-                <div id="discord__list__block__dnd" v-if="members.status == CheckDnd">
+                <div id="discord__list__block__dnd" v-if="(members.status == CheckDnd  && members.username != '[Adri] Chapeau')">
                     <div id="discord__list__card">    
                         <a v-bind:href="discordAPI.instant_invite">
                         <img v-bind:src="members.avatar_url">
@@ -36,7 +36,7 @@
                         </a>
                     </div>
                 </div>
-                <div id="discord__list__block__idle" v-if="members.status == CheckIdle">
+                <div id="discord__list__block__idle" v-if="(members.status == CheckIdle  && members.username != '[Adri] Chapeau')">
                     <div id="discord__list__card">    
                         <a v-bind:href="discordAPI.instant_invite">
                         <img v-bind:src="members.avatar_url">

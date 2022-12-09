@@ -1,48 +1,52 @@
 {
-    "App": {
-      "Title": "Omega Strikers France",
-      "Subtitle": "Ah on est là hein",
-      "Flag" : "🇺🇸 🇬🇧",
-      "Nav" : {
-        "home" : "Acceuil",
-        "strikers" : "Tous les Strikers",
-        "wiki" : "Wiki du jeu",
-        "index": "Index communautaire"
-      },
-      "Discord": {
-        "steam_online": "Joueurs sur le jeu",
-        "members_online": "En ligne sur discord",
-        "online": "connecté",
-        "dnd" : "ne pas déranger",
-        "idle" : "inactif"
-      },
-      "LinkToGame": {
-        "title" : "Play Omega Strikers",
-        "steam": "Get on Steam",
-        "soon" : "Coming soon"
-      },
-      "Footer" : {
-        "odyssey" : "Nous ne sommes pas affilié avec"
-      }
+  "App": {
+    "Title": "Omega Strikers France - Pero, traducido al español",
+    "TitleStrikersList" : "Lista de Strikers / personajes",
+    "Subtitle": "Pero, traducido al español",
+    "Flag" : "🇪🇸",
+    "Nav" : {
+      "strikers" : "Todos los Strikers",
+      "wiki" : "Wiki del juego",
+      "rank": "sistema de Rank",
+      "maps": "Todas las Maps",
+      "index": "Índice de la comunidad"
     },
-    "Strikers": {
-      "Juliette" : "La recrue enthousiaste",
-      "Kai": "La superstar naturelle",
-      "Dubu": "Le défenseur attachant",
-      "Estelle": "Le sniper éblouissant",
-      "Atlas": "Le protecteur inébranlable",
-      "Juno": "L'éxplorateur curieux",
-      "Drekar": "L'envahisseur intimidant",
-      "Rune": "La force de l'ombre",
-      "X": "Le bagarreur excentrique",
-      "Era": "L'enchanteur qui confére du pouvoir",
-      "Aimi": "La fille qui a buggé",
-      "Asher": "Le mur inébranlable",
-      "lore" : "Histoire",
-      "skins" : "Skins",
-      "difficulty" : "difficulté",
-      "powertime" : "Temps de rechargement",
-      "secondes" : "secondes"
+    "Discord": {
+      "steam_online": "jugadores en juego",
+      "members_online": "En nuestra discordia",
+      "join": "Únete a la discordia oficial",
+      "link" : "https://discord.gg/omegastrikers",
+      "online": "conectado",
+      "dnd" : "no molestar",
+      "idle" : "inactivo"
+    },
+    "LinkToGame": {
+      "title" : "Jugará Omega Strikers",
+      "steam": "descargar en Steam",
+      "soon" : "Disponible pronto"
+    },
+    "Footer" : {
+      "odyssey" : "We are not affiliate with"
     }
+  },
+  "Strikers": {
+    "Juliette" : "The eadger rookie",
+    "Kai": "The natural superstar",
+    "Dubu": "The endearing defender",
+    "Estelle": "The stunning sniper",
+    "Atlas": "The steadfast protector",
+    "Juno": "The curious explorer",
+    "Drekar": "The intimidating invader",
+    "Rune": "The shadow's force",
+    "X": "The eccentric brawler",
+    "Era": "The empowering enchanter",
+    "Luna": "The chaotic Rocketeer",
+    "Aimi": "The girl who glitched",
+    "Asher": "The unbreakable wall",
+    "lore" : "Lore",
+    "skins" : "Skins",
+    "difficulty" : "difficulty",
+    "powertime" : "reload time",
+    "secondes" : "seconds"
   }
-  
+}

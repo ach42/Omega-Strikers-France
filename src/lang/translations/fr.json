@@ -1,48 +1,55 @@
 {
 	"App": {
-	  "Title": "Omega Strikers France",
-	  "Subtitle": "Ah on est là hein",
-	  "Flag" : "🇺🇸 🇬🇧",
-	  "Nav" : {
-		"home" : "Acceuil",
-		"strikers" : "Tous les Strikers",
-		"wiki" : "Wiki du jeu",
-		"index": "Index communautaire"
-	  },
-	  "Discord": {
-		"steam_online": "Joueurs sur le jeu",
-		"members_online": "En ligne sur discord",
-		"online": "connecté",
-		"dnd" : "ne pas déranger",
-		"idle" : "inactif"
-	  },
-	  "LinkToGame": {
-		"title" : "Play Omega Strikers",
-		"steam": "Get on Steam",
-		"soon" : "Coming soon"
-	  },
-	  "Footer" : {
-		"odyssey" : "Nous ne sommes pas affilié avec"
-	  }
+		"Title": "Omega Strikers France",
+		"TitleStrikersList": "Tous les Strikers / Personnages",
+		"Subtitle": "1ère communauté française",
+		"Flag": "🇫🇷",
+		"Nav": {
+			"strikers": "Tous les Strikers",
+			"wiki": "Wiki du jeu",
+			"rank": "Système de rang",
+			"maps": "Toutes les maps",
+			"index": "Index communautaire",
+			"creator": "Créateur vidéos",
+			"discordServer" : "Serveurs Discord",
+			"tools" : "Outils"
+		},
+		"Discord": {
+			"steam_online": "Joueurs sur le jeu",
+			"members_online": "En ligne sur discord",
+			"join": "Rejoindre le Discord",
+			"link": "https://discord.gg/XJArAHeER8",
+			"online": "connecté",
+			"dnd": "ne pas déranger",
+			"idle": "inactif"
+		},
+		"LinkToGame": {
+			"title": "Play Omega Strikers",
+			"steam": "Télècharger via Steam",
+			"soon": "Pas encore disponible"
+		},
+		"Footer": {
+			"odyssey": "Nous ne sommes pas affilié avec"
+		}
 	},
 	"Strikers": {
-	  "Juliette" : "La recrue enthousiaste",
-	  "Kai": "La superstar naturelle",
-	  "Dubu": "Le défenseur attachant",
-	  "Estelle": "Le sniper éblouissant",
-	  "Atlas": "Le protecteur inébranlable",
-	  "Juno": "L'éxplorateur curieux",
-	  "Drekar": "L'envahisseur intimidant",
-	  "Rune": "La force de l'ombre",
-	  "X": "Le bagarreur excentrique",
-	  "Era": "L'enchanteur qui confére du pouvoir",
-	  "Aimi": "La fille qui a buggé",
-	  "Asher": "Le mur inébranlable",
-	  "lore" : "Histoire",
-	  "skins" : "Skins",
-	  "difficulty" : "difficulté",
-	  "powertime" : "Temps de rechargement",
-	  "secondes" : "secondes"
+		"Juliette": "La recrue enthousiaste",
+		"Kai": "La superstar naturelle",
+		"Dubu": "Le défenseur attachant",
+		"Estelle": "Le sniper éblouissant",
+		"Atlas": "Le protecteur inébranlable",
+		"Juno": "L'éxplorateur curieux",
+		"Drekar": "L'envahisseur intimidant",
+		"Rune": "La force de l'ombre",
+		"X": "Le bagarreur excentrique",
+		"Era": "L'enchanteur qui confére du pouvoir",
+		"Luna": "",
+		"Aimi": "La fille qui a buggé",
+		"Asher": "Le mur inébranlable",
+		"lore": "Histoire",
+		"skins": "Skins",
+		"difficulty": "difficulté",
+		"powertime": "Temps de rechargement",
+		"secondes": "secondes"
 	}
-  }
-  
+}

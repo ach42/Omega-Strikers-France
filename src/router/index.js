@@ -97,6 +97,13 @@ const routes = [
     }
   },
   {
+    path: '/strikers/Luna',
+    name: 'StrikerLuna',
+    component: function () {
+    return import(/* webpackChunkName: "strikerLuna" */ '../views/StrikerView.vue')
+    }
+  },
+  {
     path: '/strikers/Ai.mi',
     name: 'StrikerAimi',
     component: function () {

@@ -37,40 +37,43 @@
                     </localized-link>
                     <ul class="secnav">
                         <li>
-                            <localized-link to="/strikers/juliette">Juliette</localized-link>
+                            <localized-link to="/strikers/Juliette">Juliette</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/strikers/kai">Kai</localized-link>
+                            <localized-link to="/strikers/Kai">Kai</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/strikers/dubu">Dubu</localized-link>
+                            <localized-link to="/strikers/Dubu">Dubu</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/strikers/estelle">Estelle</localized-link>
+                            <localized-link to="/strikers/Estelle">Estelle</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/strikers/atlas">Atlas</localized-link>
+                            <localized-link to="/strikers/Atlas">Atlas</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/strikers/juno">Juno</localized-link>
+                            <localized-link to="/strikers/Juno">Juno</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/strikers/drekar">Drek'ar</localized-link>
+                            <localized-link to="/strikers/Drek'ar">Drek'ar</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/strikers/rune">Rune</localized-link>
+                            <localized-link to="/strikers/Rune">Rune</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/strikers/x">X</localized-link>
+                            <localized-link to="/strikers/X">X</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/strikers/era">Era</localized-link>
+                            <localized-link to="/strikers/Era">Era</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/strikers/aimi">Ai.Mi</localized-link>
+                            <localized-link to="/strikers/Luna">Luna</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/strikers/asher">Asher</localized-link>
+                            <localized-link to="/strikers/Ai.mi">Ai.Mi</localized-link>
+                        </li>
+                        <li>
+                            <localized-link to="/strikers/Asher">Asher</localized-link>
                         </li>
                     </ul>
                 </li>
@@ -81,27 +84,27 @@
                     </localized-link>
                     <ul class="secnav">
                         <li>
-                            <localized-link to="/wiki/systeme-de-rang">Rank System</localized-link>
+                            <localized-link to="/wiki/systeme-de-rang">{{ $t('App.Nav.rank') }}</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/wiki/toutes-les-maps">Toutes les maps</localized-link>
+                            <localized-link to="/wiki/toutes-les-maps">{{ $t('App.Nav.maps') }}</localized-link>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <localized-link class="menu-title" to="/index-communautaire">
                         <img class="icon" src="../assets/connexions.png">
-                        index communautaire
+                        {{ $t('App.Nav.index') }}
                     </localized-link>
                     <ul class="secnav">
                         <li>
-                            <localized-link to="/index-communautaire/createurs">Créateurs</localized-link>
+                            <localized-link to="/index-communautaire/createurs">{{ $t('App.Nav.creator') }}</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/index-communautaire/discord">Serveurs Discord</localized-link>
+                            <localized-link to="/index-communautaire/discord">{{ $t('App.Nav.discordServer') }}</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/index-communautaire/outlis">Outils</localized-link>
+                            <localized-link to="/index-communautaire/outlis">{{ $t('App.Nav.tools') }}</localized-link>
                         </li>
                     </ul>
                 </li>
@@ -200,7 +203,9 @@ header {
     display: flex;
     height: 100vh;
 }
-
+#linkToGame {
+    margin-bottom: 50px;
+}
 .primnav {
     height: 58px;
     width: 100vw;
@@ -501,11 +506,12 @@ label.hamburger {
     width: 100%;
     & span {
         display: flex;
-        padding: 12px;
+        padding: 12px 22px 12px 22px;
     }
     & p {
         display: flex;
         width: 80%;
+        font-size: 12px;
     }
 }
 
