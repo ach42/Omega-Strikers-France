@@ -91,6 +91,7 @@ body {
     justify-content: center;
     width: 85%;
     height: 100%;
+    padding-left: 3%;
   }
   & aside {
     width: 12%;
@@ -104,14 +105,43 @@ footer {
   height: 3vh;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (min-width: 1920px) {
+  #layout main {
+    width: 95%;
+    padding-left: 2%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
   aside {
     display: none;
   }
   #layout main {
     width: 95%;
+    padding-left: 5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #layout main {
+    width: 95%;
+    padding-left: 7%;
   }
 }
 
+@media screen and (max-width: 425px) {
+  #layout main {
+    padding-left: 13%;
+  }
+}
+@media screen and (max-width: 375px) {
+  #layout main {
+    padding-left: 15%;
+  }
+}
+@media screen and (max-width: 320px) {
+  #layout main {
+    padding-left: 18%;
+  }
+}
 
 </style>

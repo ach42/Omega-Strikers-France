@@ -55,7 +55,7 @@ const routes = [
     }
   },
   {
-    path: '/strikers/atlas',
+    path: '/strikers/Atlas',
     name: 'StrikerAtlas',
     component: function () {
     return import(/* webpackChunkName: "strikerAtlas" */ '../views/StrikerView.vue')

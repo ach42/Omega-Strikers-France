@@ -204,10 +204,12 @@ header {
 .primnav {
     height: 58px;
     width: 100vw;
+    position: absolute;
     font-size: .8em;
     backdrop-filter: blur(5px);
     text-transform: uppercase;
     background-color: #101d42;
+    box-shadow: inset -5px 0px 30px 0px rgba(0,0,0,0.25);
     display: flex;
     flex-direction: column;
     transition: height 246ms .5s ease;

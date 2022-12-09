@@ -20,7 +20,7 @@ export default {
         {name: 'Kai', router: '/strikers/kai', subtitle: this.$i18n.t('Strikers.Kai'), imgurl:'https://strapi-omega.onrender.com/uploads/thumbnail_Kai_cropped_be10542f50.webp?width=796&height=800'},
         {name: 'Dubu', router: '/strikers/dubu', subtitle: this.$i18n.t('Strikers.Dubu'), imgurl:'https://strapi-omega.onrender.com/uploads/thumbnail_Dubu_cropped_047d36b2f0.webp?width=798&height=800'},
         {name: 'Estelle', router: '/strikers/estelle', subtitle: this.$i18n.t('Strikers.Estelle'), imgurl:'https://strapi-omega.onrender.com/uploads/thumbnail_Estelle_cropped_dfa4956f74.webp?width=800&height=760'},
-        {name: 'Atlas', router: '/strikers/atlas', subtitle: this.$i18n.t('Strikers.Atlas'), imgurl:'https://strapi-omega.onrender.com/uploads/thumbnail_Atlas_cropped_1350286f79.webp?width=790&height=800'},
+        {name: 'Atlas', router: '/strikers/Atlas', subtitle: this.$i18n.t('Strikers.Atlas'), imgurl:'https://strapi-omega.onrender.com/uploads/thumbnail_Atlas_cropped_1350286f79.webp?width=790&height=800'},
         {name: 'Juno', router: '/strikers/juno', subtitle: this.$i18n.t('Strikers.Juno'), imgurl:'https://strapi-omega.onrender.com/uploads/thumbnail_Juno_cropped_d96c197a3c.webp?width=800&height=759'},
         {name: 'Drek\'ar', router: '/strikers/drekar', subtitle: this.$i18n.t('Strikers.Drekar'), imgurl:'https://strapi-omega.onrender.com/uploads/thumbnail_Drek_ar_cropped_858f1a2cdf.webp?width=800&height=800'},
         {name: 'Rune', router: '/strikers/rune', subtitle: this.$i18n.t('Strikers.Rune'), imgurl:'https://strapi-omega.onrender.com/uploads/thumbnail_Rune_cropped_f064bb2b2a.webp?width=791&height=800'},
