@@ -7,7 +7,7 @@
                 </div>
                 <div id="striker__left__content">
                     <div id="striker__left__content__title">
-                        <h1>{{ striker.attributes['displayname'] }}</h1>
+                        <h1>{{ striker.attributes['name'] }}</h1>
                         <p>{{ striker.attributes['subtitle'] }}</p>
                         <span>{{ $t('Strikers.difficulty') }}: {{ striker.attributes['difficulty'] }}</span>
                     </div>

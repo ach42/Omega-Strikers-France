@@ -41,14 +41,14 @@ const routes = [
     }
   },
   {
-    path: '/strikers/dubu',
+    path: '/strikers/Dubu',
     name: 'StrikerDubu',
     component: function () {
     return import(/* webpackChunkName: "strikerDubu" */ '../views/StrikerView.vue')
     }
   },
   {
-    path: '/strikers/estelle',
+    path: '/strikers/Estelle',
     name: 'StrikerEstelle',
     component: function () {
     return import(/* webpackChunkName: "strikerEstelle" */ '../views/StrikerView.vue')
@@ -62,49 +62,49 @@ const routes = [
     }
   },
   {
-    path: '/strikers/juno',
+    path: '/strikers/Juno',
     name: 'StrikerJuno',
     component: function () {
     return import(/* webpackChunkName: "strikerJuno" */ '../views/StrikerView.vue')
     }
   },
   {
-    path: '/strikers/drekar',
+    path: '/strikers/Drek\'ar',
     name: 'StrikerDrekar',
     component: function () {
     return import(/* webpackChunkName: "strikerDrekar" */ '../views/StrikerView.vue')
     }
   },
   {
-    path: '/strikers/rune',
+    path: '/strikers/Rune',
     name: 'StrikerRune',
     component: function () {
     return import(/* webpackChunkName: "strikerRune" */ '../views/StrikerView.vue')
     }
   },
   {
-    path: '/strikers/x',
+    path: '/strikers/X',
     name: 'StrikerX',
     component: function () {
     return import(/* webpackChunkName: "strikerX" */ '../views/StrikerView.vue')
     }
   },
   {
-    path: '/strikers/era',
+    path: '/strikers/Era',
     name: 'StrikerEra',
     component: function () {
     return import(/* webpackChunkName: "strikerEra" */ '../views/StrikerView.vue')
     }
   },
   {
-    path: '/strikers/aimi',
+    path: '/strikers/Ai.mi',
     name: 'StrikerAimi',
     component: function () {
     return import(/* webpackChunkName: "strikerAimi" */ '../views/StrikerView.vue')
     }
   },
   {
-    path: '/strikers/asher',
+    path: '/strikers/Asher',
     name: 'StrikerAsher',
     component: function () {
     return import(/* webpackChunkName: "strikerAsher" */ '../views/StrikerView.vue')
