@@ -29,6 +29,8 @@ export default {
 footer {
     display: flex;
     width: 100%;
+    position: fixed;
+    bottom: 0;
     align-items: center;
     justify-content: space-between;
     z-index: 5;
