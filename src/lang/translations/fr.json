@@ -29,7 +29,9 @@
 			"soon": "Pas encore disponible"
 		},
 		"Footer": {
-			"odyssey": "Nous ne sommes pas affilié avec"
+			"odyssey": "Nous ne sommes pas affilié avec",
+			"croissant": "Sponsorisé par Pôle Emploi",
+        	"42" : "Un problème ? Une suggestion ? Demande 42 sur Discord"
 		}
 	},
 	"Strikers": {

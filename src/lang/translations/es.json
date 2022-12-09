@@ -26,7 +26,9 @@
       "soon" : "Disponible pronto"
     },
     "Footer" : {
-      "odyssey" : "We are not affiliate with"
+      "odyssey" : "We are not affiliate with",
+      "croissant": "🥐 Hecho con el poder del croissant",
+      "42" : "Algún problema ? Sugerir ? Pregúntale a 42 en Discord"
     }
   },
   "Strikers": {
