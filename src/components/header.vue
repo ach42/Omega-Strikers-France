@@ -201,7 +201,7 @@ $text: getColor($main);
 
 header {
     display: flex;
-    height: 100vh;
+    height: 100%;
 }
 #linkToGame {
     margin-bottom: 50px;
