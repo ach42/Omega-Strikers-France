@@ -9,7 +9,10 @@
         "wiki" : "Wiki of the game",
         "rank": "Ranking system",
 			  "maps": "All maps",
-        "index": "Community Index"
+        "index": "Community Index",
+        "creator": "Creator",
+			  "discordServer" : "Discord Server",
+			  "tools" : "Tools"
       },
       "Discord": {
         "steam_online": "Players in game",

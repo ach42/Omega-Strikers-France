@@ -499,7 +499,11 @@
     }
     #striker__left__img {
         height: 100%;
+        width: 50%;
     }
+    #striker__left__content {
+        width: 50%;
+    } 
     #striker__left img {
         height: 100%;
         width: 75%;

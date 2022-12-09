@@ -9,7 +9,10 @@
       "wiki" : "Wiki del juego",
       "rank": "sistema de Rank",
       "maps": "Todas las Maps",
-      "index": "Índice de la comunidad"
+      "index": "Índice de la comunidad",
+      "creator": "Creadores",
+			"discordServer" : "Servidor Discord",
+			"tools" : "Instrumentos"
     },
     "Discord": {
       "steam_online": "jugadores en juego",
