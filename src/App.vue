@@ -99,6 +99,9 @@ body {
   }
 }
 
+.ad-container {
+  width: 500px;
+}
 @media screen and (min-width: 1920px) {
   #layout main {
     width: 95%;

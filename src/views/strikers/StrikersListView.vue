@@ -6,7 +6,7 @@
         data-ad-client="ca-pub-2232424283250969"
         data-ad-slot="9506335294"
         data-ad-format="auto"
-        :data-full-width-responsive="true"
+        data-full-width-responsive="true"
       >
       </Adsense>
     </div>
@@ -26,7 +26,7 @@
         data-ad-client="ca-pub-2232424283250969"
         data-ad-slot="9506335294"
         data-ad-format="auto"
-        :data-full-width-responsive="true"
+        data-full-width-responsive="true"
       >
       </Adsense>
     </div>
