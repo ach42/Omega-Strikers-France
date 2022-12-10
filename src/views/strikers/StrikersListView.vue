@@ -1,13 +1,6 @@
 <template>
   <section id="StrikersListView">
-
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2232424283250969"
-     data-ad-slot="9506335294"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-
+    <Ads />
     <div class="strikersList">
       <localized-link class="strikersList__item" v-for="item in routes" :to="{path:item.router}" >
           <img v-bind:src="item.imgurl">
@@ -17,18 +10,16 @@
           </div>
       </localized-link>
     </div>
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2232424283250969"
-     data-ad-slot="9506335294"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+    <Ads />
   </section>
 </template>
 
 <script>
-
+import Ads from '@/components/ads.vue'
 export default {
+  components: {
+    Ads
+  },
   data() {
   return {
     routes: [
@@ -65,9 +56,9 @@ export default {
   width: 100%;
   margin-top: 0.5%;
   margin-bottom: 0.5%;
-  &__pub {
-    width: 40%;
-    height: 7%;
+  & ins {
+    width: 100%;
+    height: 8%;
   }
 }
 
