@@ -98,14 +98,14 @@ body {
     height: 100vh;
   }
 }
-
-.ad-container {
-  width: 500px;
-}
 .adswrapper {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 150px;
+  & ins {
+    width: 100%;
+    height: 100%;
+  }
 }
 @media screen and (min-width: 1920px) {
   #layout main {

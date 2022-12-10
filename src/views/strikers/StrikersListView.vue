@@ -1,7 +1,10 @@
 <template>
   <section id="StrikersListView">
 
-<AdSense slotter="9506335294" />
+    <Adsense
+      data-ad-client="ca-pub-2232424283250969"
+      data-ad-slot="9506335294">
+    </Adsense>
 
     <div class="strikersList">
       <localized-link class="strikersList__item" v-for="item in routes" :to="{path:item.router}" >
@@ -13,16 +16,16 @@
       </localized-link>
     </div>
 
+    <Adsense
+      data-ad-client="ca-pub-2232424283250969"
+      data-ad-slot="9506335294">
+    </Adsense>
+    
   </section>
 </template>
 
 <script>
-import AdSense from '@/components/adsense.vue'
-
 export default {
-  components: {
-    AdSense
-  },
   data() {
   return {
     routes: [
