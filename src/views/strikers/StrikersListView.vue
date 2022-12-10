@@ -23,6 +23,9 @@
 <script>
 
 export default {
+  mounted () {
+    this.adsenseContent = document.getElementById('divadsensedisplaynone').innerHTML
+  },
   data() {
   return {
     adsenseContent: '',
@@ -45,7 +48,6 @@ export default {
   },
   created () {
     document.title = this.$t('App.TitleStrikersList') + " - " + this.$i18n.t('App.Title');
-    this.adsenseContent = document.getElementById('divadsensedisplaynone').innerHTML
   }
   
 }
