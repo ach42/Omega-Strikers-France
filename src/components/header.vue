@@ -80,9 +80,12 @@
                 <li>
                     <localized-link class="menu-title" to="/wiki">
                         <img class="icon" src="../assets/dossier.png">
-                        Wiki
+                        {{ $t('App.Nav.wiki') }}
                     </localized-link>
                     <ul class="secnav">
+                        <li>
+                            <localized-link to="/wiki/patch-notes">{{ $t('App.Nav.patch') }}</localized-link>
+                        </li>
                         <li>
                             <localized-link to="/wiki/systeme-de-rang">{{ $t('App.Nav.rank') }}</localized-link>
                         </li>
@@ -111,7 +114,7 @@
                 <li id="linkToGame">
                     <a href="#" class="menu-title">
                         <img class="icon" src="../assets/video-game.png">
-                        Play Omega Strikers
+                        {{ $t('App.LinkToGame.title') }}
                     </a>
                     <ul class="secnav">
                         <li>

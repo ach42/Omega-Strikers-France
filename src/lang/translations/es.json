@@ -1,14 +1,15 @@
 {
   "App": {
     "Title": "Omega Strikers France - Pero, traducido al español",
-    "TitleStrikersList" : "Lista de Strikers / personajes",
+    "TitleStrikersList" : "Lista de Strikers / Personajes",
     "Subtitle": "Pero, traducido al español",
     "Flag" : "🇪🇸",
     "Nav" : {
       "strikers" : "Todos los Strikers",
       "wiki" : "Wiki del juego",
-      "rank": "sistema de Rank",
-      "maps": "Todas las Maps",
+      "patch" : "Notas del parche",
+      "rank": "Sistema de Rank",
+      "maps": "Todas las maps",
       "index": "Índice de la comunidad",
       "creator": "Creadores",
 			"discordServer" : "Servidor Discord",
@@ -29,7 +30,7 @@
       "soon" : "Disponible pronto"
     },
     "Footer" : {
-      "odyssey" : "We are not affiliate with",
+      "odyssey" : "No estamos afiliados a",
       "mapMonde" : "🌍",
       "croissant": "🥐 Hecho con el poder del croissant",
       "42" : "Algún problema ? Sugerir ? Pregúntale a 42 en Discord"

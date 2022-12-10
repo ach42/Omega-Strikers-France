@@ -110,7 +110,7 @@
         &__img {
             display: flex;
             width: 100%;
-            height: 50%;
+            height: 70%;
 
             & img {
                 width: 80%;

@@ -47,26 +47,32 @@ export default {
   align-content: center;
   flex-wrap: wrap;
   width: 90%;
-  height: 100%;
+  height: 80%;
   column-gap: 5%;
   row-gap: 5%;
   &__item {
     display: flex;
-    height: 100px;
+    height: 110px;
     transform: skew(-5deg);
     background-color: #101D42;
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.55);
-    flex: 1 0 25%;
+    width: 420px;
     & img {
-      width: 110px;
-      object-fit: contain;
+      width: 115px;
+      object-fit: cover;
       transform: skew(5deg);
       height: 100%;
     }
     &__desc {
+      display: flex;
+      flex-direction: column;
       width: 100%;
       & h1 {
         background-color: #172A5F;
+        padding-left: 10px;
+      }
+      & p {
+        padding-left: 10px;
       }
     }
   }

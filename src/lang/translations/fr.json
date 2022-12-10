@@ -7,6 +7,7 @@
 		"Nav": {
 			"strikers": "Tous les Strikers",
 			"wiki": "Wiki du jeu",
+			"patch": "Notes de mise à jour",
 			"rank": "Système de rang",
 			"maps": "Toutes les maps",
 			"index": "Index communautaire",
@@ -24,7 +25,7 @@
 			"idle": "inactif"
 		},
 		"LinkToGame": {
-			"title": "Play Omega Strikers",
+			"title": "Jouer à Omega Strikers",
 			"steam": "Télècharger via Steam",
 			"soon": "Pas encore disponible"
 		},
