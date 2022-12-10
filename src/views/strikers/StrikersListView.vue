@@ -1,6 +1,16 @@
 <template>
   <section id="StrikersListView">
-    <Ads />
+
+    <div class="ad-container">
+      <Adsense
+        data-ad-client="ca-pub-2232424283250969"
+        data-ad-slot="9506335294"
+        data-ad-format="auto"
+        :data-full-width-responsive="true"
+      >
+      </Adsense>
+    </div>
+
     <div class="strikersList">
       <localized-link class="strikersList__item" v-for="item in routes" :to="{path:item.router}" >
           <img v-bind:src="item.imgurl">
@@ -10,16 +20,23 @@
           </div>
       </localized-link>
     </div>
-    <Ads />
+
+    <div class="ad-container">
+      <Adsense
+        data-ad-client="ca-pub-2232424283250969"
+        data-ad-slot="9506335294"
+        data-ad-format="auto"
+        :data-full-width-responsive="true"
+      >
+      </Adsense>
+    </div>
+
   </section>
 </template>
 
 <script>
-import Ads from '@/components/ads.vue'
+
 export default {
-  components: {
-    Ads
-  },
   data() {
   return {
     routes: [
