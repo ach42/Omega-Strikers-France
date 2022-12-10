@@ -1,8 +1,12 @@
 <template>
   <section id="StrikersListView">
 
-    <div id="StrikersListView__pub" style="background: #1d1f29; padding-top:60px; text-align: center;" v-html="adsenseContent">
-    </div>
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2232424283250969"
+     data-ad-slot="9506335294"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
 
     <div class="strikersList">
       <localized-link class="strikersList__item" v-for="item in routes" :to="{path:item.router}" >
@@ -13,22 +17,20 @@
           </div>
       </localized-link>
     </div>
-
-    <div id="StrikersListView__pub" style="background: #1d1f29; padding-top:60px; text-align: center;" v-html="adsenseContent">
-    </div>
-
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2232424283250969"
+     data-ad-slot="9506335294"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
   </section>
 </template>
 
 <script>
 
 export default {
-  mounted () {
-    this.adsenseContent = document.getElementById('divadsensedisplaynone').innerHTML
-  },
   data() {
   return {
-    adsenseContent: '',
     routes: [
         {name: 'Juliette', router: '/strikers/Juliette', subtitle: this.$i18n.t('Strikers.Juliette'), imgurl:'https://database.omegastrikers-france.fr/uploads/thumbnail_Juliette_cropped_58621ec985.webp?width=736&height=800'},
         {name: 'Kai', router: '/strikers/Kai', subtitle: this.$i18n.t('Strikers.Kai'), imgurl:'https://database.omegastrikers-france.fr/uploads/thumbnail_Kai_cropped_be10542f50.webp?width=796&height=800'},
