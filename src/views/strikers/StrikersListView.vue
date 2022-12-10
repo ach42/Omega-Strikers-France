@@ -1,5 +1,10 @@
 <template>
-  <section class="strikersList" >
+  <section id="StrikersListView">
+
+    <div id="StrikersListView__pub" style="background: #1d1f29; padding-top:60px; text-align: center;" v-html="adsenseContent">
+    </div>
+
+    <div class="strikersList">
       <localized-link class="strikersList__item" v-for="item in routes" :to="{path:item.router}" >
           <img v-bind:src="item.imgurl">
           <div class="strikersList__item__desc">
@@ -7,6 +12,11 @@
             <p>{{item.subtitle}}</p>
           </div>
       </localized-link>
+    </div>
+
+    <div id="StrikersListView__pub" style="background: #1d1f29; padding-top:60px; text-align: center;" v-html="adsenseContent">
+    </div>
+
   </section>
 </template>
 
@@ -15,6 +25,7 @@
 export default {
   data() {
   return {
+    adsenseContent: '',
     routes: [
         {name: 'Juliette', router: '/strikers/Juliette', subtitle: this.$i18n.t('Strikers.Juliette'), imgurl:'https://database.omegastrikers-france.fr/uploads/thumbnail_Juliette_cropped_58621ec985.webp?width=736&height=800'},
         {name: 'Kai', router: '/strikers/Kai', subtitle: this.$i18n.t('Strikers.Kai'), imgurl:'https://database.omegastrikers-france.fr/uploads/thumbnail_Kai_cropped_be10542f50.webp?width=796&height=800'},
@@ -34,25 +45,41 @@ export default {
   },
   created () {
     document.title = this.$t('App.TitleStrikersList') + " - " + this.$i18n.t('App.Title');
+    this.adsenseContent = document.getElementById('divadsensedisplaynone').innerHTML
   }
-
+  
 }
 </script>
 
 <style lang="scss">
+
+#StrikersListView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  &__pub {
+    width: 40%;
+    height: 7%;
+  }
+}
+
 .strikersList {
   display: flex;
   justify-content: space-around;
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-  width: 90%;
-  height: 80%;
+  width: 100%;
+  height: 50%;
   column-gap: 5%;
   row-gap: 5%;
   &__item {
     display: flex;
-    height: 110px;
+    height: 100px;
     transform: skew(-5deg);
     background-color: #101D42;
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.55);
