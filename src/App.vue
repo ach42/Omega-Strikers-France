@@ -73,12 +73,12 @@ body {
   }
   & h1 { 
     font-family: 'made_outer';
-    color: #fff;
+    color: #f5f5f5;
     letter-spacing: 3px;
   }
   & a {
     text-decoration: none;
-    color: #fff;
+    color: #f5f5f5;
   }
 }
 
@@ -105,6 +105,24 @@ body {
   & ins {
     width: 100%;
     height: 100%;
+  }
+}
+.credit {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  font-style: italic;
+  font-weight: 400;
+  justify-content: flex-end;
+  & span {
+    font-size: 10px;
+    color: #ffffff91;
+  }
+  &__link {
+    color: #ffffff91!important;
+    &:hover {
+      color: #f5f5f5 !important;
+    }
   }
 }
 @media screen and (min-width: 1920px) {

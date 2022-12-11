@@ -55,5 +55,9 @@
 		"difficulty": "difficulté",
 		"powertime": "Temps de rechargement",
 		"secondes": "secondes"
+	},
+	"Credit" : {
+		"thanks" : "Merci à",
+		"coreassist" : "pour l'enregistrement des gifs"
 	}
 }

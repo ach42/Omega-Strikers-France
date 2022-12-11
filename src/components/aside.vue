@@ -201,6 +201,9 @@ export default {
                 width: 100%;
                 height: 100%;
                 border-radius: 5px;
+                &:hover {
+                    background-color: #1d367c;
+                }
             }
             &__online {
                 display: flex;

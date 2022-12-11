@@ -55,6 +55,10 @@
       "difficulty" : "difficulty",
       "powertime" : "reload time",
       "secondes" : "seconds"
+    },
+    "Credit" : {
+      "thanks" : "Thanks to",
+      "coreassist" : "for gif recording"
     }
   }
   

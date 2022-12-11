@@ -70,6 +70,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="credit">
+                    <span>
+                        {{$t('Credit.thanks')}}
+                        <a class="credit__link" href="https://www.youtube.com/@coreAssist">@coreAssist</a>
+                        {{$t('Credit.coreassist')}}
+                    </span>
+                </div>
                 <div id="striker__right__bio">
                     <h1>{{ $t('Strikers.lore') }}</h1>
                     <p>{{ striker.attributes['bio1'] }}</p>
@@ -94,6 +101,7 @@
 </template>
     
 <style lang="scss">
+
 #striker {
     display: flex;
     width: 100%;
@@ -168,7 +176,6 @@
         align-items: center;
         flex-direction: column;
         overflow-y: scroll;
-        row-gap: 5%;
         width: 75%;
         height: 100vh;
         padding-left: 1.5%;
@@ -492,7 +499,7 @@
         padding: 3%;
     }
     #striker__right__powers {
-        margin-bottom: 10%;
+        margin-bottom: 20%;
     }
     #striker__left {
         justify-content: center;
@@ -518,6 +525,12 @@
     }
     #striker__right__skins {
         margin-top: 5%;
+    }
+    .powers__desc {
+        width: 96%;
+    }
+    .powers__gif {
+        width: 96%;
     }
     .skins__img img {
         width: 160px;

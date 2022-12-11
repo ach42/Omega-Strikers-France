@@ -101,9 +101,25 @@ export default {
     }
   }
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 768px) {
+  .adswrapper {
+    display: none;
+  }
+  #StrikersListView {
+    background-color: #101D42;
+    margin-top: 0px;
+    overflow-y: scroll;
+    margin-bottom: 0px;
+  }
+  .strikersList {
+    row-gap: 0%;
+    justify-content: flex-start;
+    align-content: flex-start;
+    height: 100%;
+  }
   .strikersList__item {
-    flex: 1 0 30%;
+    transform: none;
+    width: 100%;
   }
 }
 </style>
