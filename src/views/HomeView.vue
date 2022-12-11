@@ -37,6 +37,14 @@
     </section>
 </template>
 
+<script>
+export default {
+    created () {
+        document.title = this.$t('App.Title');
+    }
+}
+</script>
+
 <style lang="scss">
 
 #home {
