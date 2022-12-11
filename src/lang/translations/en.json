@@ -1,7 +1,7 @@
 {
     "App": {
       "Title": "Omega Strikers France - But, translated in english",
-      "TitleStrikersList" : "List of all Strikers / characters",
+      "TitleStrikersList" : "List of all Strikers / Characters",
       "Subtitle": "But, translated in english",
       "Flag" : "🇺🇸",
       "Nav" : {
@@ -26,15 +26,20 @@
       },
       "LinkToGame": {
         "title" : "Play Omega Strikers",
-        "steam": "Get on Steam",
+        "steam": "Download via Steam",
         "soon" : "Coming soon"
       },
       "Footer" : {
-        "odyssey" : "We are not affiliate with",
+        "odyssey" : "🚧 This site is still under development 🚧 | We are not affiliate with",
         "mapMonde" : "🌎",
         "croissant": "🥐 Made with the power of croissant",
         "42" : "Any problem ? Suggest ? Ask 42 on Discord"
       }
+    },
+    "Home" : {
+      "construction" : "🚧 This website is under construction 🚧",
+      "constructionParagraph" : "You will find a lot of bugs, errors in the translations and surely in my understanding of the game. Please do not take any info at this time. Feedback and helping hands will be appreciated (especially if you have skills with Vuejs)",
+      "modulesAvailable" : "Module available : "
     },
     "Strikers": {
       "Juliette" : "The eadger rookie",

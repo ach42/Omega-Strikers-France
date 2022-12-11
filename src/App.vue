@@ -17,6 +17,7 @@ import Headervue from '@/components/header.vue'
 import Asidevue from '@/components/aside.vue'
 import Footervue from '@/components/footer.vue'
 
+
 export default {
   name: 'App',
   components: {
@@ -25,8 +26,6 @@ export default {
     Footervue
   }
 }
-
-
 
 </script>
 
@@ -86,6 +85,9 @@ body {
   display: flex;
   width: 100%;
   height: 96.5%;
+  & header {
+    z-index: 2;
+  }
   & main {
     display: flex;
     justify-content: center;
@@ -96,17 +98,10 @@ body {
   & aside {
     width: 12%;
     height: 100vh;
+    z-index: 2;
   }
 }
-.adswrapper {
-  display: flex;
-  width: 500px;
-  height: 150px;
-  & ins {
-    width: 100%;
-    height: 100%;
-  }
-}
+
 .credit {
   display: flex;
   width: 100%;

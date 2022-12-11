@@ -30,11 +30,16 @@
 			"soon": "Pas encore disponible"
 		},
 		"Footer": {
-			"odyssey": "Nous ne sommes pas affilié avec",
+			"odyssey": "🚧 Ce site est encore en développement 🚧 | Nous ne sommes pas affilié avec",
 			"mapMonde" : "🌍",
 			"croissant": "Sponsorisé par Pôle Emploi",
         	"42" : "Un problème ? Une suggestion ? Demande 42 sur Discord"
 		}
+	},
+	"Home" : {
+		"construction" : "🚧 Ce site est en construction 🚧",
+		"constructionParagraph" : "Vous trouverez un tas de bugs, des erreurs dans les traductions et sûrement dans ma compréhension du jeu. Merci de ne prendre, pour l'instant, aucunes infos à la lettre. Les retours et coups de mains seront appréciés ( surtout si vous avez des skills avec Vuejs )",
+		"modulesAvailable" : "Module disponible : "
 	},
 	"Strikers": {
 		"Juliette": "La recrue enthousiaste",
@@ -47,7 +52,7 @@
 		"Rune": "La force de l'ombre",
 		"X": "Le bagarreur excentrique",
 		"Era": "L'enchanteur qui confére du pouvoir",
-		"Luna": "",
+		"Luna": "La fusée chaotique",
 		"Aimi": "La fille qui a buggé",
 		"Asher": "Le mur inébranlable",
 		"lore": "Histoire",

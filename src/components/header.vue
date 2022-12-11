@@ -77,6 +77,7 @@
                         </li>
                     </ul>
                 </li>
+                <!--
                 <li>
                     <localized-link class="menu-title" to="/wiki">
                         <img class="icon" src="../assets/dossier.png">
@@ -111,6 +112,7 @@
                         </li>
                     </ul>
                 </li>
+                -->
                 <li id="linkToGame">
                     <a href="#" class="menu-title">
                         <img class="icon" src="../assets/video-game.png">
@@ -532,6 +534,11 @@ label.hamburger {
     font-family: 'made_outer';
     font-size: 13px;
     font-style: italic;
+    transition: 0.3s;
+    &:hover {
+        transition: 0.3s;
+        background-color: #E92F40;
+    }
 }
 .menu-title {
     font-weight: 600;

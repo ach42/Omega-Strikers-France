@@ -1,6 +1,7 @@
 <template>
     <div id="StrikerView">
         <section id="striker" v-for="striker of strikerAPI" v-if="striker.attributes['name'] == nameOfStriker">
+            <div id="preloader"></div>
             <section id="striker__left">
                 <div id="striker__left__img">
                     <img v-bind:src="striker.attributes['img_url']">
@@ -17,7 +18,7 @@
                 <div id="striker__right__powers">
                     <div id="striker__right__powers__primary" class="powers">
                         <div class="powers__gif">
-                            <img v-bind:src="striker.attributes['primary_gif']">
+                            <img rel="preload" v-bind:src="striker.attributes['primary_gif']">
                         </div>
                         <div class="powers__desc">
                             <div class="powers__desc__img">
@@ -35,7 +36,7 @@
                     </div>
                     <div id="striker__right__powers__secondary" class="powers">
                         <div class="powers__gif">
-                            <img v-bind:src="striker.attributes['secondary_gif']">
+                            <img rel="preload" v-bind:src="striker.attributes['secondary_gif']">
                         </div>
                         <div class="powers__desc">
                             <div class="powers__desc__img">
@@ -53,7 +54,7 @@
                     </div>
                     <div id="striker__right__powers__special" class="powers">
                         <div class="powers__gif">
-                            <img v-bind:src="striker.attributes['special_gif']">
+                            <img rel="preload" v-bind:src="striker.attributes['special_gif']">
                         </div>
                         <div class="powers__desc">
                             <div class="powers__desc__img">
@@ -585,7 +586,7 @@ export default {
         console.log(lang)
         // Fetching strikers-all
         axios.get(`https://database.omegastrikers-france.fr/api/strikers?locale=` + lang)
-            .then(response => { this.strikerAPI = response.data.data })
+        .then(response => { this.strikerAPI = response.data.data })
     }
 }
 </script>

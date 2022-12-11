@@ -1,11 +1,5 @@
 <template>
   <section id="StrikersListView">
-
-    <Adsense
-      data-ad-client="ca-pub-2232424283250969"
-      data-ad-slot="9506335294">
-    </Adsense>
-
     <div class="strikersList">
       <localized-link class="strikersList__item" v-for="item in routes" :to="{path:item.router}" >
           <img v-bind:src="item.imgurl">
@@ -15,12 +9,6 @@
           </div>
       </localized-link>
     </div>
-
-    <Adsense
-      data-ad-client="ca-pub-2232424283250969"
-      data-ad-slot="9506335294">
-    </Adsense>
-    
   </section>
 </template>
 
@@ -58,7 +46,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   margin-top: 0.5%;
   margin-bottom: 0.5%;
@@ -71,7 +59,7 @@ export default {
   align-content: center;
   flex-wrap: wrap;
   width: 100%;
-  height: 50%;
+  height: 90%;
   column-gap: 5%;
   row-gap: 5%;
   &__item {
@@ -120,6 +108,21 @@ export default {
   .strikersList__item {
     transform: none;
     width: 100%;
+    height: 125px;
+    flex-direction: row-reverse;
+  }
+  .strikersList__item img {
+    transform: none;
+    width: 190px;
+  }
+  .strikersList__item__desc {
+    text-align: right;
+  }
+  .strikersList__item__desc h1 {
+    padding-right: 10px;
+  }
+  .strikersList__item__desc p {
+    padding-right: 10px;
   }
 }
 </style>
