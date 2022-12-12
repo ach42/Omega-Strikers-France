@@ -184,4 +184,39 @@ export default {
         }
     }
 }
+@media screen and (max-width: 1024px) {
+    #home__bottom__links a {
+        width: 45%;
+    }
+}
+@media screen and (max-width: 970px) {
+    #home {
+        overflow-y: scroll;
+    }
+    #home__top {
+        height: max-content;
+        padding-bottom: 15px;
+    }
+    #home__bottom {
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+    }
+    #home__bottom__links {
+        row-gap: 10px;
+    }
+    #home__bottom__links h1 {
+        font-size: 15px;
+    }
+    #home__bottom__links a {
+        width: 60%;
+    }
+    #home__bottom div {
+        width: 100%;
+        height: 50vh;
+    }
+    #home__bottom__trailer iframe {
+        position: relative;
+    }
+}
 </style>

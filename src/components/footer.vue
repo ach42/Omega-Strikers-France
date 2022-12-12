@@ -84,7 +84,7 @@ footer {
         }
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
     footer #lang {
         font-size: 8px;
     }
