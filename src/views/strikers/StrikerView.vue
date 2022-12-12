@@ -555,6 +555,11 @@
 import axios from 'axios';
 
 export default {
+    metaInfo: {
+        meta: [
+        { name: 'description', content: 'An example Vue application with vue-meta.' }
+        ]   
+    },
     data() {
         return {
             strikerAPI: []
@@ -564,7 +569,6 @@ export default {
     created() {
         let url = window.location.pathname
         let getStriker = url.substring(url.lastIndexOf("/") + 1)
-        document.title = getStriker + " - " + this.$i18n.t('App.Nav.strikers') + " - " + this.$i18n.t('App.Title');
         this.nameOfStriker = getStriker;
 
         const i18nlang = this.$i18n.locale
@@ -587,6 +591,14 @@ export default {
         // Fetching strikers-all
         axios.get(`https://database.omegastrikers-france.fr/api/strikers?locale=` + lang)
         .then(response => { this.strikerAPI = response.data.data })
+    },
+    metaInfo () {
+      return {
+        title: this.nameOfStriker + " - " + this.$i18n.t('App.Nav.strikers') + " - " + this.$i18n.t('App.Title'),
+        meta: [
+          { vmid: 'description', name: 'description', content: this.$i18n.t('Strikers.meta') + this.nameOfStriker +  this.$i18n.t('Strikers.meta2') + this.$i18n.t('App.Title')}
+        ]
+      }
     }
 }
 </script>

@@ -33,10 +33,14 @@ export default {
         ]
     }
   },
-  created () {
-    document.title = this.$t('App.TitleStrikersList') + " - " + this.$i18n.t('App.Title');
-  }
-  
+  metaInfo () {
+      return {
+        title: this.$t('App.TitleStrikersList') + " - " + this.$i18n.t('App.Title'),
+        meta: [
+          { vmid: 'description', name: 'description', content: this.$t('App.MetaStrikersList') }
+        ]
+      }
+    }
 }
 </script>
 
@@ -89,7 +93,13 @@ export default {
     }
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1645px) {
+  .strikersList {
+    row-gap: 1%;
+  }
+
+}
+@media screen and (max-width: 930px) {
   .adswrapper {
     display: none;
   }

@@ -39,10 +39,15 @@
 
 <script>
 export default {
-    created () {
-        document.title = this.$t('App.Title');
+    metaInfo () {
+      return {
+        title: this.$t('App.Title'),
+        meta: [
+          { vmid: 'description', name: 'description', content: this.$t('App.Meta') }
+        ]
+      }
     }
-}
+  }
 </script>
 
 <style lang="scss">

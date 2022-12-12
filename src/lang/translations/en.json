@@ -1,7 +1,9 @@
 {
     "App": {
       "Title": "Omega Strikers France - But, translated in english",
+      "Meta" : "Everything you need to know about Omega Strikers, find Discord servers, learn more with the wiki and discover the creators of the game Omega Strikers available in free-to-play",
       "TitleStrikersList" : "List of all Strikers / Characters",
+      "MetaStrikersList" : "All the characters of the game Omega Strikers, find out with the wiki about the abilities and stories of each strikers.",
       "Subtitle": "But, translated in english",
       "Flag" : "🇺🇸",
       "Nav" : {
@@ -59,7 +61,9 @@
       "skins" : "Skins",
       "difficulty" : "difficulty",
       "powertime" : "reload time",
-      "secondes" : "seconds"
+      "secondes" : "seconds",
+      "meta" : "Discover the lore and powers of ",
+		  "meta2" : " from the Omega Strikers game. Learn about the abilities and stories of each striker at "
     },
     "Credit" : {
       "thanks" : "Thanks to",

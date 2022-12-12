@@ -1,7 +1,9 @@
 {
   "App": {
     "Title": "Omega Strikers France - Pero, traducido al español",
+    "Meta" : "Todo lo que necesitas saber sobre Omega Strikers, encuentra servidores de Discord, aprende más con la wiki y descubre a los creadores del juego Omega Strikers disponible en free-to-play",
     "TitleStrikersList" : "Lista de Strikers / Personajes",
+    "MetaStrikersList" : "Todos los personajes del juego Omega Strikers, entérate a la wiki de las habilidades e historias de cada uno de los strikers.",
     "Subtitle": "Pero, traducido al español",
     "Flag" : "🇪🇸",
     "Nav" : {
@@ -59,7 +61,9 @@
     "skins" : "Skins",
     "difficulty" : "dificultad",
     "powertime" : "tiempo de recarga",
-    "secondes" : "segundos"
+    "secondes" : "segundos",
+    "meta" : "Descubre la historia y los poderes de ",
+		"meta2" : " del juego Omega Strikers. Conoce las habilidades e historias de cada delantero en "
   },
   "Credit" : {
 		"thanks" : "Gracias a",

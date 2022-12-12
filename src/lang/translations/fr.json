@@ -1,7 +1,9 @@
 {
 	"App": {
 		"Title": "Omega Strikers France - 1ère communauté française",
+		"Meta" : "Le site internet de la commu française du jeu-vidéo Omega Strikers disponible en free-to-play, rejoignez nous sur discord ou renseignez vous sur les personnages du jeu grâce au wiki. Découvrez des créateurs et des outils pour devenir meilleur !",
 		"TitleStrikersList": "Tous les Strikers / Personnages",
+		"MetaStrikersList" : "Tous les personnages du jeu Omega Strikers, renseignez vous grâce au wiki sur les capacités et les histoires de chaque strikers.",
 		"Subtitle": "1 ère communauté française",
 		"Flag": "🇫🇷",
 		"Nav": {
@@ -59,7 +61,9 @@
 		"skins": "Skins",
 		"difficulty": "difficulté",
 		"powertime": "Temps de rechargement",
-		"secondes": "secondes"
+		"secondes": "secondes",
+		"meta" : "Découvrez l'histoire et les pouvoirs de ",
+		"meta2" : " du jeux Omega Strikers. Renseignez vous grâce au wiki sur les capacités et les histoires de chaque strikers sur "
 	},
 	"Credit" : {
 		"thanks" : "Merci à",
