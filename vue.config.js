@@ -1,7 +1,7 @@
 module.exports = {
     // options...
     devServer: {
-        proxy:  'https://api.steampowered.com/',
+        proxy:  'https://database.omegastrikers-france.fr/',
         changeOrigin: true
     }
 }
