@@ -1,8 +1,16 @@
 import Vue from 'vue'
 import LangRouter from 'vue-lang-router'
-import HomeView from '../views/HomeView.vue'
 import translations from '../lang/translations'
 import localizedURLs from '../lang/localized-urls'
+
+import HomeView from '../views/HomeView.vue'
+import WikiView from '../views/WikiView.vue'
+
+import Arenas from '../components/wiki/maps.vue'
+import Rank from '../components/wiki/rank.vue'
+import Patch from '../components/wiki/patch.vue'
+import Config from '../components/wiki/config.vue'
+import HowtoPlay from '../components/wiki/howtoplay.vue'
 
 Vue.use(LangRouter, {
 	defaultLanguage: 'fr',
@@ -123,9 +131,35 @@ const routes = [
   {
     path: '/wiki',
     name: 'Wiki',
-    component: function () {
-    return import(/* webpackChunkName: "Wiki" */ '../views/WikiView.vue')
-    }
+    component: WikiView,
+    redirect: '/wiki/system_de_ranking',
+    children : [
+      {
+        name : 'patch',
+        path : 'notes_de_mise_a_jour',
+        component : Patch
+      },
+      {
+        name : 'rank',
+        path : 'system_de_ranking',
+        component : Rank
+      },
+      {
+        name : 'arena',
+        path : 'arenes_maps',
+        component : Arenas
+      },
+      {
+        name : 'config',
+        path : 'configuration_necessaire',
+        component : Config
+      },
+      {
+        name : 'howtoplay',
+        path : 'comment_jouer',
+        component : HowtoPlay
+      },
+    ]
   },
 ]
 
