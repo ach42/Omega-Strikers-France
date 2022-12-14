@@ -1,7 +1,10 @@
 module.exports = {
-    // options...
     devServer: {
-        proxy:  'https://database.omegastrikers-france.fr/',
-        changeOrigin: true
-    }
-}
+      proxy: {
+        "/api": {
+          target: "http://localhost:3333",
+        },
+      },
+    },
+  };
+  
