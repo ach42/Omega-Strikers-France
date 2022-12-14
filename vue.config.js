@@ -1,6 +1,7 @@
 module.exports = {
     // options...
     devServer: {
-        proxy: 'https://api.steampowered.com/',
+        proxy:  'https://api.steampowered.com/',
+        changeOrigin: true
     }
 }
