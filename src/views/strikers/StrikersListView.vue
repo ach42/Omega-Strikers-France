@@ -93,11 +93,33 @@ export default {
     }
   }
 }
-@media screen and (max-width: 1645px) {
+@media screen and (min-width: 1650px) {
   .strikersList {
     row-gap: 1%;
   }
-
+}
+@media screen and (max-width: 1649px) {
+  .strikersList {
+    row-gap: 1%;
+  }
+  #StrikersListView {
+    margin: 2%;
+    align-items: center;
+  }
+  .strikersList__item {
+    width: 325px;
+  }
+  .strikersList__item p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1330px) {
+  .strikersList__item {
+    width: 30%;
+  }
+  #StrikersListView {
+    margin: 5%;
+  }
 }
 @media screen and (max-width: 930px) {
   .adswrapper {
@@ -105,9 +127,8 @@ export default {
   }
   #StrikersListView {
     background-color: #101D42;
-    margin-top: 0px;
+    margin: 0;
     overflow-y: scroll;
-    margin-bottom: 0px;
   }
   .strikersList {
     row-gap: 0%;
@@ -133,6 +154,7 @@ export default {
   }
   .strikersList__item__desc p {
     padding-right: 10px;
+    font-size: 15px;
   }
 }
 </style>

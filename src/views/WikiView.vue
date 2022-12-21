@@ -9,9 +9,9 @@
                 <div id="WikiLayout__content__header__tab">
                     <localized-link v-for="tab in tabs" :to="'/wiki/' + tab " :key="tab" :class="['tab-button', { active: currentTab === tab }]"
                     @click="currentTab = tab">
+                    <h2 v-if="tab == 'notes_de_mise_a_jour'">{{ $t('Wiki.patch') }}</h2>
                     <h2 v-if="tab == 'system_de_ranking'">{{ $t('Wiki.rank') }}</h2>
                     <h2 v-if="tab == 'arenes_maps'">{{ $t('Wiki.arenas') }}</h2>
-                    <h2 v-if="tab == 'notes_de_mise_a_jour'">{{ $t('Wiki.patch') }}</h2>
                     <h2 v-if="tab == 'configuration_necessaire'">{{ $t('Wiki.config') }}</h2>
                     <h2 v-if="tab == 'comment_jouer'">{{ $t('Wiki.howtoplay') }}</h2>
                     </localized-link>
@@ -27,7 +27,7 @@
 <script>
 import system_de_ranking from '../components/wiki/rank.vue'
 import arenes_maps from '../components/wiki/maps.vue'
-import notes_de_mise_a_jour from '../components/wiki/patch.vue'
+import notes_de_mise_a_jour from '../components/wiki/patchList.vue'
 import configuration_necessaire from '../components/wiki/config.vue'
 import comment_jouer from '../components/wiki/howtoplay.vue'
 
@@ -41,7 +41,7 @@ export default {
     },
     data() {
         return {
-            currentTab: 'system_de_ranking',
+            currentTab: 'notes_de_mise_a_jour',
             tabs: ['notes_de_mise_a_jour', 'system_de_ranking', 'arenes_maps', 'configuration_necessaire', 'comment_jouer']
         }
     }
@@ -79,20 +79,21 @@ export default {
             &__title {
                 display: flex;
                 align-items: center;
-                column-gap: 10px;
+                column-gap: 5px;
                 justify-content: center;
-                width: 40%;
+                width: 20%;
                 & img {
-                    width: 32px;
+                    width: 22px;
                 }
                 & h1 {
                     text-transform: uppercase;
                     font-style: italic;
+                    font-size: 12px;
                 }
             }
             &__tab {
                 display: flex;
-                width: 60%;
+                width: 80%;
                 align-items: center;
                 background-color: #101D42;
                 & .tab-button {
@@ -103,14 +104,17 @@ export default {
                     text-transform: uppercase;
                     background-color: #172a5f;
                     border: none;
-                    width: 33.3%;
+                    width: 100%;
                     height: 100%;
                     & h2 {
-                        font-size: 15px;
+                        font-size: 13px;
+                        background-color: #1d367c;
+                        padding: 5%;
+                        border-radius: 10px;
                     }
                     &.router-link-active {
                         border-bottom: none !important;
-                        background-color: #101D42
+                        background-color: #101D42;
                     }
                 }
             }

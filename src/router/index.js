@@ -8,7 +8,7 @@ import WikiView from '../views/WikiView.vue'
 
 import Arenas from '../components/wiki/maps.vue'
 import Rank from '../components/wiki/rank.vue'
-import Patch from '../components/wiki/patch.vue'
+import Patch from '../components/wiki/patchList.vue'
 import Config from '../components/wiki/config.vue'
 import HowtoPlay from '../components/wiki/howtoplay.vue'
 
@@ -132,7 +132,7 @@ const routes = [
     path: '/wiki',
     name: 'Wiki',
     component: WikiView,
-    redirect: '/wiki/system_de_ranking',
+    redirect: '/wiki/notes_de_mise_a_jour',
     children : [
       {
         name : 'patch',

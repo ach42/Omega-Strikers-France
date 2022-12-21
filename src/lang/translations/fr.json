@@ -74,6 +74,11 @@
 		"howtoplay" : "Comment jouer ?",
 		"ranktitle" : "Comment fonctionne le système de rang d'Omega Strikers ?"
 	},
+	"Patchs" : {
+		"1" : "Patch du 19 Septembre 2022",
+		"2" : "A.i.M.i Patch ( 6 octobre 2022 )",
+		"3" : "Rune Patch ( 20 octobre 2022 )"
+	},
 	"Credit" : {
 		"thanks" : "Merci à",
 		"coreassist" : "pour l'enregistrement des gifs"

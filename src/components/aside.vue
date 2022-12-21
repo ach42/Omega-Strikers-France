@@ -232,10 +232,27 @@ export default {
         }
     }
 }
-
-@media screen and (max-width: 1025px)  {
-    #discord__cta {
-        visibility: hidden;
+@media screen and (max-width: 1600px) {
+    #discord__steam p {
+        font-size: 10px;
+    }
+    #striker__left__content__title {
+        text-align: center;
+    }
+    #striker__left__content__title h1 {
+        font-size: 25px !important;
+    }
+    #discord__count p {
+        font-size: 10px;
+    }
+    #discord__cta a {
+        font-size: 10px;
+    }
+    #discord__list__block a {
+        margin-left: 1px;
+        width: 98%;
+        font-size: 10px;
     }
 }
+
 </style>

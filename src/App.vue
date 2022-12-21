@@ -93,7 +93,7 @@ body {
     justify-content: center;
     width: 85%;
     height: 100%;
-    padding-left: 3%;
+    padding-left: 58px;
   }
   & aside {
     width: 12%;
@@ -123,39 +123,22 @@ body {
 @media screen and (min-width: 1920px) {
   #layout main {
     width: 95%;
-    padding-left: 2%;
+    padding-left: 58px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1240px) {
   aside {
     display: none;
   }
   #layout main {
-    width: 95%;
-    padding-left: 5%;
+    width: 96%;
   }
 }
 @media screen and (max-width: 768px) {
   #layout main {
     width: 95%;
-    padding-left: 7%;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  #layout main {
-    padding-left: 13%;
-  }
-}
-@media screen and (max-width: 375px) {
-  #layout main {
-    padding-left: 15%;
-  }
-}
-@media screen and (max-width: 320px) {
-  #layout main {
-    padding-left: 18%;
+    padding-left: 58px;
   }
 }
 

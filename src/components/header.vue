@@ -112,7 +112,6 @@
                         </li>
                     </ul>
                 </li>
-                -->
                 <li id="linkToGame">
                     <a href="#" class="menu-title">
                         <img class="icon" src="../assets/video-game.png">
@@ -139,6 +138,7 @@
                         </li>
                     </ul>
                 </li>
+            -->
             </ul>
         </nav>
     </header>

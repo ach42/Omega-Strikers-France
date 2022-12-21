@@ -1,7 +1,6 @@
 <template>
     <div id="StrikerView">
         <section id="striker" v-for="striker of strikerAPI" v-if="striker.attributes['name'] == nameOfStriker">
-            <div id="preloader"></div>
             <section id="striker__left">
                 <div id="striker__left__img">
                     <img v-bind:src="striker.attributes['img_url']">
@@ -316,7 +315,7 @@
 
             & p {
                 color: #f5f5f5;
-                font-size: 14px;
+                font-size: 13px;
             }
         }
 
@@ -324,6 +323,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 12px;
             color: #fff;
         }
     }
@@ -366,9 +366,15 @@
         }
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1240px) {
+    .powers__desc__stats {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1024px) {
     #striker__left {
-        width: 30%;
+        width: 40%;
     }
     #striker__left__img img {
         width: 100%;
@@ -453,14 +459,13 @@
     }
     .skins {
         flex-direction: row;
-        overflow-x: scroll; 
         justify-content: flex-start;
-        width: 100%;
+        width: 97%;
     }
     .skins__img {
         flex-direction: column;
         row-gap: 10px;
-        width: 40%;
+        width: 50%;
         align-items: flex-start;
     }
     .skins__name {
@@ -488,7 +493,7 @@
         border-bottom: 2px solid #1d367c;
     }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 560px) {
     #striker {
         flex-direction: column;
         overflow-y: scroll;
@@ -528,20 +533,19 @@
         margin-top: 5%;
     }
     .powers__desc {
-        width: 96%;
+        width: 90%;
     }
     .powers__gif {
-        width: 96%;
-    }
-    .skins__img img {
-        width: 160px;
-        height: 160px;
-    }
-    .skins__name span {
-        height: 160px;
+        width: 90%;
     }
 }
 @media screen and (max-width: 375px) {
+    .powers__desc {
+        width: 95%;
+    }
+    .powers__gif {
+        width: 95%;
+    }
     #striker__right__bio {
         margin-top: 20%;
     } 
