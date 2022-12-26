@@ -18,6 +18,7 @@
                 </div>
             </div>
             <div id="WikiLayout__content__main">
+                <preloader />
                 <router-view class="tab"/>
             </div>
         </div>
@@ -25,6 +26,7 @@
 </template>
 
 <script>
+import preloader from '../components/preloader.vue'
 import system_de_ranking from '../components/wiki/rank.vue'
 import arenes_maps from '../components/wiki/maps.vue'
 import notes_de_mise_a_jour from '../components/wiki/patchList.vue'
@@ -33,6 +35,7 @@ import comment_jouer from '../components/wiki/howtoplay.vue'
 
 export default {
     components: {
+        preloader,
         system_de_ranking,
         arenes_maps,
         notes_de_mise_a_jour,
@@ -49,6 +52,12 @@ export default {
 </script>
 
 <style lang="scss">
+
+#WikiLayout__content__main .preloader {
+    width: 90%;
+    height: 81%;
+    border-radius: 0px 0px 10px 10px;
+}
 #WikiLayout {
     display: flex;
     align-items: center;
@@ -95,14 +104,14 @@ export default {
                 display: flex;
                 width: 80%;
                 align-items: center;
-                background-color: #101D42;
+                border-radius: 10px;
+                background-color: #172a5f;
                 & .tab-button {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     color: #f5f5f5;
                     text-transform: uppercase;
-                    background-color: #172a5f;
                     border: none;
                     width: 100%;
                     height: 100%;

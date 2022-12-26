@@ -1,31 +1,128 @@
 <template>
-    <section>
-        <div>
-            <div id="inRotation">
-                <img v-for="arenaRotationimg of arenasAPI.attributes['InRotationImg']" v-bind:src="arenaRotationimg">
-            </div>
-            <span v-for="InRotationName of arenasAPI.attributes['InRotationName']">{{ InRotationName}}</span>
+    <div id="arenas">
+        <h1 id="arenas__title">{{ $t('Wiki.inRotation') }}</h1>
+        <div id="arenas__InRotation" v-html="InRotation">
+
         </div>
-        <div>
-            <div>
-                <img v-for="arenas of arenasAPI.attributes['img']" v-bind:src="arenas">
-            </div>
-            <span v-for="name of arenasAPI.attributes['name']">{{ name }}</span>
+        <h1 id="arenas__title">{{ $t('Wiki.NotinRotation') }}</h1>
+        <div id="arenas__NotInRotation" v-html="NotInRotation">
+
         </div>
-    </section>
+    </div>
 </template>
 
 <style lang="scss">
 
+  @keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  } 
+
+#arenas {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 5%;
+    height: 100%;
+    padding: 1%;
+
+    &__title {
+        display: flex;
+        align-items: center;
+        animation: fadeInDown 0.5s;
+        width: fit-content;
+        height: 5%;
+        text-transform: uppercase;
+        border-bottom: 5px solid #1D367C;
+        margin-left: 10px;
+    }
+
+    &__InRotation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 30%;
+    }
+
+    &__NotInRotation {
+        display: flex;
+        width: 100%;
+        column-gap: 5%;
+    }
+}
+
+.arena {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    animation: fadeIn 1s;
+    animation-fill-mode: both;
+    align-items: center;
+    box-shadow: 0px 0px 40px 0px rgba(30, 61, 146, 0.432);
+    text-align: center;
+    width: 9vw;
+    height: 9vw;
+    padding: 30px;
+    background-color: #172A5F;
+    border: 5px solid #1D367C;
+    border-radius: 150px;
+
+    & h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
+    & img {
+        object-fit: contain;
+        width: 80%;
+    }
+
+    & p {
+        color: #E7137B;
+        font-family: 'made_outer';
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &__NotInRotation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        animation: fadeIn 1s;
+        animation-fill-mode: both;
+        align-items: center;
+        box-shadow: 0px 0px 40px 0px rgba(30, 61, 146, 0.432);
+        text-align: center;
+        padding: 30px;
+        background-color: #172A5F;
+        border: 5px solid #1D367C;
+        border-radius: 50px;
+
+        & h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+
+        & img {
+            object-fit: contain;
+            width: 80%;
+        }
+    }
+}
 </style>
 
 <script>
 import axios from 'axios';
+import marked from 'marked';
 
 export default {
     data() {
         return {
-            arenasAPI: []
+            InRotation: null,
+            NotInRotation: null
         }
     },
     created() {
@@ -45,10 +142,15 @@ export default {
             }
             return lang;
         }
-        console.log(lang)
-        // Fetching strikers-all
-        axios.get(`https://database.omegastrikers-france.fr/api/arena?locale=` + lang)
-        .then(response => { this.arenasAPI = response.data.data })
-    }
+        let ArenasResponse = axios.get(`https://database.omegastrikers-france.fr/api/arena`, {
+            params: {
+                locale: lang
+            }
+        }).then(res => {
+            let arenas = res.data.data;
+            this.InRotation = marked(arenas.attributes["InRotation"]);
+            this.NotInRotation = marked(arenas.attributes["NotInRotation"]);
+        })
+    },
 }
 </script>

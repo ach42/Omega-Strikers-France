@@ -28,10 +28,7 @@
                 </a>
             </div>
             <div id="home__bottom__trailer">
-                <iframe width="1080" height="720" src="https://www.youtube.com/embed/i1kEGXtaJsc?&autoplay=1"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                    allowfullscreen></iframe>
+                <video muted autoplay src="../assets/trailer.webm" type="video/webm"></video>
             </div>
         </div>
     </section>
@@ -170,16 +167,12 @@ export default {
         }
 
         &__trailer {
-            width: 50%;
-            overflow: hidden;
-            position: relative;
-
-            & iframe {
-                left: 0;
-                top: 0;
+            display: flex;
+            width: 51%;
+            height: 100%;
+            & video {
                 width: 100%;
                 height: 100%;
-                position: absolute;
             }
         }
     }

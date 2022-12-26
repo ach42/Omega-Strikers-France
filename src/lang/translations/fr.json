@@ -8,6 +8,8 @@
 		"Flag": "🇫🇷",
 		"Nav": {
 			"strikers": "Tous les Strikers",
+			"previousStriker" : "précedent",
+			"nextStriker" : "suivant",
 			"wiki": "Wiki du jeu",
 			"patch": "Notes de mise à jour",
 			"rank": "Système de rang",
@@ -72,7 +74,9 @@
 		"patch" : "Notes de mise à jours",
 		"config" : "Configuration nécessaire",
 		"howtoplay" : "Comment jouer ?",
-		"ranktitle" : "Comment fonctionne le système de rang d'Omega Strikers ?"
+		"ranktitle" : "Comment fonctionne le système de rang d'Omega Strikers ?",
+		"inRotation": "En rotation / jouables actuellement",
+		"NotinRotation": "Anciennes Arènes"
 	},
 	"Patchs" : {
 		"1" : "Patch du 19 Septembre 2022",

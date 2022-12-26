@@ -112,6 +112,7 @@
                         </li>
                     </ul>
                 </li>
+            -->
                 <li id="linkToGame">
                     <a href="#" class="menu-title">
                         <img class="icon" src="../assets/video-game.png">
@@ -138,7 +139,6 @@
                         </li>
                     </ul>
                 </li>
-            -->
             </ul>
         </nav>
     </header>
@@ -183,11 +183,7 @@ export default {
     }
 }
 
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+
 
 $red: random(256)-1;
 $green: random(256)-1;
@@ -207,6 +203,11 @@ $text: getColor($main);
 header {
     display: flex;
     height: 100%;
+    & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
 }
 #linkToGame {
     margin-bottom: 50px;
