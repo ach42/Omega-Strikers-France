@@ -8,6 +8,8 @@
       "Flag" : "🇺🇸",
       "Nav" : {
         "strikers" : "All Strikers",
+        "previousStriker" : "previous",
+			  "nextStriker" : "next",
         "wiki" : "Wiki of the game",
         "patch" : "Patch notes",
         "rank": "Ranking system",
