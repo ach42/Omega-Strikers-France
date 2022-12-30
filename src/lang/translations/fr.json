@@ -10,9 +10,9 @@
 			"strikers": "Tous les Strikers",
 			"previousStriker" : "précedent",
 			"nextStriker" : "suivant",
-			"wiki": "Wiki du jeu",
-			"patch": "Notes de mise à jour",
-			"rank": "Système de rang",
+			"wiki": "Wiki",
+			"patch": "Notes de patch",
+			"rank": "Système de Rank",
 			"maps": "Toutes les maps",
 			"index": "Index communautaire",
 			"creator": "Créateurs",
@@ -68,7 +68,7 @@
 		"meta2" : " du jeux Omega Strikers. Renseignez vous grâce au wiki sur les capacités et les histoires de chaque strikers sur "
 	},
 	"Wiki" : {
-		"title" : "Guides Omega Strikers",
+		"title" : "Wiki Omega Strikers",
 		"rank" : "Système de ranking",
 		"arenas" : "Arènes / maps",
 		"patch" : "Notes de mise à jours",
@@ -80,8 +80,10 @@
 	},
 	"Patchs" : {
 		"1" : "Patch du 19 Septembre 2022",
-		"2" : "A.i.M.i Patch ( 6 octobre 2022 )",
-		"3" : "Rune Patch ( 20 octobre 2022 )"
+		"2" : "A.i.M.i Patch ( 6 Octobre 2022 )",
+		"3" : "Rune Patch ( 20 Octobre 2022 )",
+		"4" : "Patch du 17 Novembre 2022",
+		"5" : "Patch du 8 Décembre 2022"
 	},
 	"Credit" : {
 		"thanks" : "Merci à",

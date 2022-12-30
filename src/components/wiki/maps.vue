@@ -21,6 +21,7 @@
 #arenas {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     row-gap: 5%;
     height: 100%;
@@ -40,6 +41,7 @@
     &__InRotation {
         display: flex;
         align-items: center;
+        animation: fadeIn 1s;
         justify-content: space-between;
         width: 100%;
         height: 30%;
@@ -47,8 +49,9 @@
 
     &__NotInRotation {
         display: flex;
+        justify-content: center;
         width: 100%;
-        column-gap: 5%;
+        column-gap: 3%;
     }
 }
 
@@ -56,7 +59,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    animation: fadeIn 1s;
     animation-fill-mode: both;
     align-items: center;
     box-shadow: 0px 0px 40px 0px rgba(30, 61, 146, 0.432);
@@ -66,7 +68,7 @@
     padding: 30px;
     background-color: #172A5F;
     border: 5px solid #1D367C;
-    border-radius: 150px;
+    border-radius: 50px;
 
     & h1 {
         text-align: center;

@@ -8,9 +8,8 @@ import WikiView from '../views/WikiView.vue'
 
 import Arenas from '../components/wiki/maps.vue'
 import Rank from '../components/wiki/rank.vue'
-import Patch from '../components/wiki/patchList.vue'
-import Config from '../components/wiki/config.vue'
-import HowtoPlay from '../components/wiki/howtoplay.vue'
+import PatchList from '../components/wiki/patchList.vue'
+import Patch from '../components/wiki/patch.vue'
 
 Vue.use(LangRouter, {
 	defaultLanguage: 'fr',
@@ -132,32 +131,50 @@ const routes = [
     path: '/wiki',
     name: 'Wiki',
     component: WikiView,
-    redirect: '/wiki/notes_de_mise_a_jour',
+    redirect: '/wiki/patch',
     children : [
       {
-        name : 'patch',
-        path : 'notes_de_mise_a_jour',
-        component : Patch
-      },
-      {
         name : 'rank',
-        path : 'system_de_ranking',
+        path : 'rank',
         component : Rank
       },
       {
         name : 'arena',
-        path : 'arenes_maps',
+        path : 'maps',
         component : Arenas
       },
       {
-        name : 'config',
-        path : 'configuration_necessaire',
-        component : Config
-      },
-      {
-        name : 'howtoplay',
-        path : 'comment_jouer',
-        component : HowtoPlay
+        name : 'patch',
+        path : 'patch',
+        component : PatchList,
+        redirect: '/wiki/patch/3/patch-du-20-octobre-2022',
+        children : [
+          {
+            name : 'Patch19082022' ,
+            path : '1/patch-du-19-septembre-2022',
+            component : Patch
+          },
+          {
+            name : 'Patch06092022' ,
+            path : '2/patch-du-6-octobre-2022',
+            component : Patch
+          },
+          {
+            name : 'Patch20092022' ,
+            path : '3/patch-du-20-octobre-2022',
+            component : Patch
+          },
+          {
+            name : 'Patch17112022' ,
+            path : '4/patch-du-17-novembre-2022',
+            component : Patch
+          },
+          {
+            name : 'Patch08122022' ,
+            path : '5/patch-du-8-decembre-2022',
+            component : Patch
+          },
+        ],
       },
     ]
   },

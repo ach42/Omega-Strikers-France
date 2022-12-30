@@ -106,7 +106,7 @@ export default {
             font-size: 13px;
             color: #fff;
             width: 70%;
-            border-bottom: 0.1px rgba(255, 255, 255, 0.212) solid;
+            border-bottom: 0.05px rgba(255, 255, 255, 0.212) solid;
         }
     }
     &__count {
@@ -132,6 +132,7 @@ export default {
             width: 70%;
             align-items: center;
             color: #fff;
+            border-top: 0.05px rgba(255, 255, 255, 0.212) solid;
         }
     }
     &__cta {

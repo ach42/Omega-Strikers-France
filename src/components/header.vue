@@ -77,24 +77,24 @@
                         </li>
                     </ul>
                 </li>
-                <!--
                 <li>
-                    <localized-link class="menu-title" to="/wiki">
+                    <localized-link id="wiki-menu" class="menu-title" to="/wiki">
                         <img class="icon" src="../assets/dossier.png">
                         {{ $t('App.Nav.wiki') }}
                     </localized-link>
                     <ul class="secnav">
                         <li>
-                            <localized-link to="/wiki/patch-notes">{{ $t('App.Nav.patch') }}</localized-link>
+                            <localized-link to="/wiki/patch">{{ $t('App.Nav.patch') }}</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/wiki/systeme-de-rang">{{ $t('App.Nav.rank') }}</localized-link>
+                            <localized-link to="/wiki/rank">{{ $t('App.Nav.rank') }}</localized-link>
                         </li>
                         <li>
-                            <localized-link to="/wiki/toutes-les-maps">{{ $t('App.Nav.maps') }}</localized-link>
+                            <localized-link to="/wiki/maps">{{ $t('App.Nav.maps') }}</localized-link>
                         </li>
                     </ul>
                 </li>
+                <!--                
                 <li>
                     <localized-link class="menu-title" to="/index-communautaire">
                         <img class="icon" src="../assets/connexions.png">
@@ -539,6 +539,16 @@ label.hamburger {
     &:hover {
         transition: 0.3s;
         background-color: #E92F40;
+    }
+}
+#wiki-menu {
+    font-family: 'made_outer';
+    font-size: 13px;
+    font-style: italic;
+    transition: 0.3s;
+    &:hover {
+        transition: 0.3s;
+        background-color: #3BA55C;
     }
 }
 .menu-title {

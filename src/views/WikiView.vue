@@ -9,11 +9,9 @@
                 <div id="WikiLayout__content__header__tab">
                     <localized-link v-for="tab in tabs" :to="'/wiki/' + tab " :key="tab" :class="['tab-button', { active: currentTab === tab }]"
                     @click="currentTab = tab">
-                    <h2 v-if="tab == 'notes_de_mise_a_jour'">{{ $t('Wiki.patch') }}</h2>
-                    <h2 v-if="tab == 'system_de_ranking'">{{ $t('Wiki.rank') }}</h2>
-                    <h2 v-if="tab == 'arenes_maps'">{{ $t('Wiki.arenas') }}</h2>
-                    <h2 v-if="tab == 'configuration_necessaire'">{{ $t('Wiki.config') }}</h2>
-                    <h2 v-if="tab == 'comment_jouer'">{{ $t('Wiki.howtoplay') }}</h2>
+                    <h2 v-if="tab == 'patch'">{{ $t('Wiki.patch') }}</h2>
+                    <h2 v-if="tab == 'rank'">{{ $t('Wiki.rank') }}</h2>
+                    <h2 v-if="tab == 'maps'">{{ $t('Wiki.arenas') }}</h2>
                     </localized-link>
                 </div>
             </div>
@@ -27,25 +25,21 @@
 
 <script>
 import preloader from '../components/preloader.vue'
-import system_de_ranking from '../components/wiki/rank.vue'
-import arenes_maps from '../components/wiki/maps.vue'
-import notes_de_mise_a_jour from '../components/wiki/patchList.vue'
-import configuration_necessaire from '../components/wiki/config.vue'
-import comment_jouer from '../components/wiki/howtoplay.vue'
+import rank from '../components/wiki/rank.vue'
+import maps from '../components/wiki/maps.vue'
+import patch from '../components/wiki/patchList.vue'
 
 export default {
     components: {
         preloader,
-        system_de_ranking,
-        arenes_maps,
-        notes_de_mise_a_jour,
-        configuration_necessaire,
-        comment_jouer 
+        rank,
+        maps,
+        patch,
     },
     data() {
         return {
-            currentTab: 'notes_de_mise_a_jour',
-            tabs: ['notes_de_mise_a_jour', 'system_de_ranking', 'arenes_maps', 'configuration_necessaire', 'comment_jouer']
+            currentTab: 'patch',
+            tabs: ['patch', 'rank', 'maps']
         }
     }
 }
@@ -54,8 +48,8 @@ export default {
 <style lang="scss">
 
 #WikiLayout__content__main .preloader {
-    width: 90%;
-    height: 81%;
+    width: 100%;
+    height: 95%;
     border-radius: 0px 0px 10px 10px;
 }
 #WikiLayout {
@@ -71,19 +65,12 @@ export default {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: #101D42;
         box-shadow: 0px 0px 60px 0px rgba(30, 61, 146, 0.644);
-        width: 90%;
-        border-radius: 10px;
-        height: 90%;
+        width: 100%;
+        height: 100%;
         &__header {
             display: flex;
-            background-color: #172a5f;
-            height: 10%;
-            border-top: 3px solid #1d367c;
-            border-left: 3px solid #1d367c;
-            border-right: 3px solid #1d367c;
-            border-radius: 10px 10px 0px 0px;
+            height: 7%;
             width: 100%;
             &__title {
                 display: flex;
@@ -92,12 +79,17 @@ export default {
                 justify-content: center;
                 width: 20%;
                 & img {
-                    width: 22px;
+                    width: 35px;
+                    padding-left: 10%;
                 }
                 & h1 {
+                    display: flex;
+                    flex-wrap: wrap;
+                    text-align: center;
+                    width: 60%;
                     text-transform: uppercase;
                     font-style: italic;
-                    font-size: 12px;
+                    font-size: 18px;
                 }
             }
             &__tab {
@@ -105,7 +97,6 @@ export default {
                 width: 80%;
                 align-items: center;
                 border-radius: 10px;
-                background-color: #172a5f;
                 & .tab-button {
                     display: flex;
                     justify-content: center;
@@ -118,7 +109,7 @@ export default {
                     & h2 {
                         font-size: 13px;
                         background-color: #1d367c;
-                        padding: 5%;
+                        padding: 3%;
                         border-radius: 10px;
                     }
                     &.router-link-active {
@@ -130,11 +121,8 @@ export default {
         }
         &__main {
             display: flex;
-            border-bottom: 3px solid #1d367c;
-            border-left: 3px solid #1d367c;
-            border-right: 3px solid #1d367c;
-            border-radius: 0px 0px 10px 10px;
-            height: 90%;
+            background-color: #101D42;
+            height: 93%;
             width: 100%;
         }
     }

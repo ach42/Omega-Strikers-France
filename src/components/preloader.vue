@@ -19,7 +19,7 @@
             displayContent() {
                 setTimeout(() => {
                     this.display = false
-                }, 100)
+                }, 1000)
             }
         }
     }
