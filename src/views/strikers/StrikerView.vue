@@ -455,6 +455,11 @@
 }
 
 @media screen and (max-width: 1024px) {
+    #strikerView .preloader {
+    height: 100%;
+    width: 63%;
+    right: 0;
+    }
     #striker__left {
         width: 40%;
     }
@@ -608,6 +613,9 @@
 }
 
 @media screen and (max-width: 750px) {
+    #strikerView .preloader {
+    width: 100%;
+    }
     #striker {
         flex-direction: column;
         overflow-y: scroll;
@@ -621,7 +629,8 @@
     }
 
     #striker__right__powers {
-        margin-bottom: 20%;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
 
     #striker__left {
@@ -641,6 +650,7 @@
 
     #striker__left__content {
         width: 50%;
+        padding: 0%;
     }
 
     #striker__left__nav__strikers {
@@ -657,7 +667,9 @@
     #striker__right__skins {
         margin-top: 5%;
     }
-
+    .powers {
+        width: 95%;
+    }
 }
 
 @media screen and (max-width: 460px) {
@@ -669,7 +681,7 @@
         margin-bottom: 5%;
     }
     #striker__left__nav__strikers  {
-        width: 55%;
+        width: 80%;
     }
     #striker__left__img img {
         width: 70%;
@@ -691,7 +703,6 @@ export default {
             color : ''
         }
     },
-    // language api calls
     created() {
         let url = window.location.pathname
         let getStriker = url.substring(url.lastIndexOf("/") + 1)
@@ -713,8 +724,6 @@ export default {
             }
             return lang;
         }
-        console.log(lang)
-        // Fetching strikers-all
         let StrikerResponse = axios.get(`https://database.omegastrikers-france.fr/api/strikers?filters[name][$eq]=${getStriker}`, {
             params: {
                 locale: lang,

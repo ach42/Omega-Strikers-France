@@ -1,5 +1,6 @@
 <template>
   <section id="StrikersListView">
+    <preloader />
     <div id="big">
       <h1 id="placeholder">{{ $t('Strikers.List') }}</h1>
       <div id="big__strikers"></div>
@@ -17,6 +18,8 @@
 </template>
 
 <script>
+import preloader from '@/components/preloader.vue';
+
 export default {
   data() {
     return {
@@ -36,6 +39,9 @@ export default {
         { name: 'Asher', router: '/strikers/Asher', subtitle: this.$i18n.t('Strikers.Asher'), color: '#D95628', imgurl: 'https://database.omegastrikers-france.fr/uploads/Asher_cropped_c3c7a25042_58d4e876c3.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/asher_6bfadd11e4.png' }
       ]
     }
+  },
+  components : {
+    preloader
   },
   metaInfo() {
     return {
@@ -61,6 +67,11 @@ export default {
 </script>
 
 <style lang="scss">
+#StrikersListView .preloader {
+    height: 100%;
+    width: 100%;
+}
+
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -167,6 +178,10 @@ export default {
   }
 }
 @media screen and (max-width: 1240px) {
+  #StrikersListView .preloader {
+    width: 100%;
+    height: 100%;
+  }
   #StrikersListView {
     flex-direction: column;
   }
@@ -201,7 +216,7 @@ export default {
     flex: 0 0 14%;
   }
 }
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 800px) {
   #big {
     height: 20%;
   }
@@ -223,7 +238,7 @@ export default {
     flex: 0 0 50%;
   }
   .strikersList {
-    height: 90%;
+    height: 100%;
     overflow-y: scroll;
   }
   #placeholder {
