@@ -135,10 +135,13 @@ body {
     width: 96%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
+  #layout {
+    height: 100%;
+  }
   #layout main {
-    width: 95%;
-    padding-left: 58px;
+    width: 100%;
+    padding-left: 0px;
   }
 }
 

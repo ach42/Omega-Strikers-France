@@ -1,19 +1,17 @@
 <template>
   <section id="StrikersListView">
     <div id="big">
-      <Adsense data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890">
-      </Adsense>
+      <h1 id="placeholder">{{ $t('Strikers.List') }}</h1>
+      <div id="big__strikers"></div>
     </div>
     <div class="strikersList">
-      <localized-link class="strikersList__item" v-for="item in routes" :to="{ path: item.router }">
-        <div @mouseenter="MouseEvent(item)" class="strikersList__item__mouseEvent">
-          <img v-bind:src="item.imgurl">
-          <div class="strikersList__item__desc">
-            <h1>{{ item.name }}</h1>
-            <p>{{ item.subtitle }}</p>
+      <div class="strikersList__block">
+        <localized-link class="strikersList__item" v-for="item in routes" :to="{ path: item.router }">
+          <div @mouseenter="MouseEvent(item)" class="strikersList__item__mouseEvent">
+            <img v-bind:style="'box-shadow: 0px 0px 0px 2px' + item.color" v-bind:src="item.imgurl">
           </div>
-        </div>
-      </localized-link>
+        </localized-link>
+      </div>
     </div>
   </section>
 </template>
@@ -23,19 +21,19 @@ export default {
   data() {
     return {
       routes: [
-        { name: 'Juliette', router: '/strikers/Juliette', subtitle: this.$i18n.t('Strikers.Juliette'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_Juliette_cropped_58621ec985.webp?width=736&height=800', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/juliette_38c21b8e1d.webp' },
-        { name: 'Kai', router: '/strikers/Kai', subtitle: this.$i18n.t('Strikers.Kai'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_Kai_cropped_be10542f50.webp?width=796&height=800', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/kai_2131d6d7ad.webp' },
-        { name: 'Dubu', router: '/strikers/Dubu', subtitle: this.$i18n.t('Strikers.Dubu'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_Dubu_cropped_047d36b2f0.webp?width=798&height=800', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/dubu_1609dcb15c.webp' },
-        { name: 'Estelle', router: '/strikers/Estelle', subtitle: this.$i18n.t('Strikers.Estelle'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_Estelle_cropped_dfa4956f74.webp?width=800&height=760', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/estelle_99721409df.webp' },
-        { name: 'Atlas', router: '/strikers/Atlas', subtitle: this.$i18n.t('Strikers.Atlas'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_Atlas_cropped_1350286f79.webp?width=790&height=800', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/atlas_e87f04a6fe.webp' },
-        { name: 'Juno', router: '/strikers/Juno', subtitle: this.$i18n.t('Strikers.Juno'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_Juno_cropped_d96c197a3c.webp?width=800&height=759', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/juno_dbb3ad7b62.webp' },
-        { name: 'Drek\'ar', router: '/strikers/Drek\'ar', subtitle: this.$i18n.t('Strikers.Drekar'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_Drek_ar_cropped_858f1a2cdf.webp?width=800&height=800', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/drekar_9582715278.webp' },
-        { name: 'Rune', router: '/strikers/Rune', subtitle: this.$i18n.t('Strikers.Rune'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_Rune_cropped_f064bb2b2a.webp?width=791&height=800', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/rune_15339ea04f.webp' },
-        { name: 'X', router: '/strikers/X', subtitle: this.$i18n.t('Strikers.X'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_X_cropped_82c3c9b255.webp?width=800&height=759', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/x_3e02b6da8f.webp' },
-        { name: 'Era', router: '/strikers/Era', subtitle: this.$i18n.t('Strikers.Era'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_Era_cropped_2f1326f072.webp?width=800&height=717', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/era_c3c9abb9ff.webp' },
-        { name: 'Luna', router: '/strikers/Luna', subtitle: this.$i18n.t('Strikers.Luna'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_Luna_cropped_ec3128d36c.webp?width=711&height=800', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/luna_479fd68ee3.webp' },
-        { name: 'Ai.mi', router: '/strikers/Ai.mi', subtitle: this.$i18n.t('Strikers.Aimi'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_Ai_Mi_cropped_381aad389e.webp?width=790&height=800', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/ai_mi_85ae1e6bc2.webp' },
-        { name: 'Asher', router: '/strikers/Asher', subtitle: this.$i18n.t('Strikers.Asher'), imgurl: 'https://database.omegastrikers-france.fr/uploads/thumbnail_Asher_cropped_df0100d569.webp?width=800&height=800', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/asher_2e2384a48e.webp' }
+        { name: 'Juliette', router: '/strikers/Juliette', subtitle: this.$i18n.t('Strikers.Juliette'), color: '#E82335',imgurl: 'https://database.omegastrikers-france.fr/uploads/Juliette_cropped_70ddd5e28b_3076c2ca0d.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/juliette_4be98e436c.png' },
+        { name: 'Kai', router: '/strikers/Kai', subtitle: this.$i18n.t('Strikers.Kai'), color: '#E21985', imgurl: 'https://database.omegastrikers-france.fr/uploads/Kai_cropped_caa7f623b2_caa8cc2da2.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/kai_d1982bf154.png' },
+        { name: 'Dubu', router: '/strikers/Dubu', subtitle: this.$i18n.t('Strikers.Dubu'), color: '#E7963B', imgurl: 'https://database.omegastrikers-france.fr/uploads/Dubu_cropped_0a79c299dc_d5724f30c7.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/dubu_09b691455e.png' },
+        { name: 'Estelle', router: '/strikers/Estelle', subtitle: this.$i18n.t('Strikers.Estelle'), color: '#3485EE', imgurl: 'https://database.omegastrikers-france.fr/uploads/Estelle_cropped_556b426598_59192b22fd.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/estelle_2c959fa3b3.png' },
+        { name: 'Atlas', router: '/strikers/Atlas', subtitle: this.$i18n.t('Strikers.Atlas'), color: '#B08E4D', imgurl: 'https://database.omegastrikers-france.fr/uploads/Atlas_cropped_3a4f6326bc_d7f741d085.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/atlas_a22f433dfc.png' },
+        { name: 'Juno', router: '/strikers/Juno', subtitle: this.$i18n.t('Strikers.Juno'), color: '#4DCEB2', imgurl: 'https://database.omegastrikers-france.fr/uploads/Juno_cropped_5209edda17_084c91c706.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/juno_69981665f7.png' },
+        { name: 'Drek\'ar', router: '/strikers/Drek\'ar', subtitle: this.$i18n.t('Strikers.Drekar'), color: '#5E86BA', imgurl: 'https://database.omegastrikers-france.fr/uploads/Drek_ar_cropped_b9262e4270_ba33b48980.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/drekar_f2103f9195.png' },
+        { name: 'Rune', router: '/strikers/Rune', subtitle: this.$i18n.t('Strikers.Rune'), color: '#7451B7', imgurl: 'https://database.omegastrikers-france.fr/uploads/Rune_cropped_050eab6a6f_1a2c1be983.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/rune_978c7759c7.png' },
+        { name: 'X', router: '/strikers/X', subtitle: this.$i18n.t('Strikers.X'), color: '#dd0e64', imgurl: 'https://database.omegastrikers-france.fr/uploads/X_cropped_c47af244d5_73f97ca002.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/x_c3894875e3.png' },
+        { name: 'Era', router: '/strikers/Era', subtitle: this.$i18n.t('Strikers.Era'), color: '#E21985', imgurl: 'https://database.omegastrikers-france.fr/uploads/Era_cropped_f5df9bd080_b11705dcdb.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/era_df1a0bba01.png' },
+        { name: 'Luna', router: '/strikers/Luna', subtitle: this.$i18n.t('Strikers.Luna'), color: '#87BB21', imgurl: 'https://database.omegastrikers-france.fr/uploads/Luna_cropped_5bf0f79c05_f9f5b38000.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/luna_1784dfe5a6.png' },
+        { name: 'Ai.mi', router: '/strikers/Ai.mi', subtitle: this.$i18n.t('Strikers.Aimi'), color: '#F45A8C', imgurl: 'https://database.omegastrikers-france.fr/uploads/Ai_Mi_cropped_920f784f07_5ec25db572.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/ai_mi_b9c57e9dd2.png' },
+        { name: 'Asher', router: '/strikers/Asher', subtitle: this.$i18n.t('Strikers.Asher'), color: '#D95628', imgurl: 'https://database.omegastrikers-france.fr/uploads/Asher_cropped_c3c7a25042_58d4e876c3.png', imgBigUrl: 'https://database.omegastrikers-france.fr/uploads/asher_6bfadd11e4.png' }
       ]
     }
   },
@@ -49,18 +47,38 @@ export default {
   },
   methods: {
     MouseEvent(item) {
-      // Mettre à jour l'image dans la div "principal" en utilisant l'URL de l'image de l'élément sélectionné
-      document.getElementById('big').innerHTML = `<img src="${item.imgBigUrl}">`;
+      document.getElementById('placeholder').style.display = "none";
+      document.getElementById('big__strikers').innerHTML = `
+      <img src="${item.imgBigUrl}">
+      <div style="background: ${item.color};" id="big__item">
+            <h1>${item.name}</h1>
+            <p>${item.subtitle}</p>
+          </div>
+      `;
     }
   }
 }
 </script>
 
 <style lang="scss">
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
 #StrikersListView {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  background-color: rgba(16, 29, 66, 0.7960784314);
   justify-content: space-between;
   width: 100%;
   height: 100%;
@@ -69,57 +87,147 @@ export default {
 #big {
   display: flex;
   justify-content: center;
-  width: 100%;
-  background-color: rgba(16, 29, 66, 0.7960784314);
-  height: 50%;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
 
-  & img {
-    object-fit: cover;
-    width: 15%;
+  &__item {
+    position: absolute;
+    animation: fadeInLeft 0.5s;
+    bottom: 30%;
+    left: 20%;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    padding: 10px;
+    border-radius: 10px;
+    & h1 {
+      text-transform: uppercase;
+      font-style: italic;
+    }
+    & p {
+      color: #f5f5f5;
+    }
   }
+  & img {
+    animation: fadeInLeft 0.5s;
+    object-fit: cover;
+    width: 95%;
+  }
+}
+
+#placeholder {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2vw;
+  font-style: italic;
 }
 
 .strikersList {
   display: flex;
+  width: 50%;
+  height: fit-content;
+  justify-content: center;
   align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 50%;
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 100%;
+  }
 
   &__item {
     display: flex;
-    height: 100px;
-    flex: 1 0 33%;
-    background-color: #101D42;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 25%;
 
     &__mouseEvent {
       display: flex;
-      width: 100%;
-      height: 100%;
+      justify-content: center;
+      width: 90%;
+      height: 90%;
     }
 
     & img {
-      width: 115px;
-      object-fit: cover;
+      width: 95%;
+      background-color: #101D42;
+      border-radius: 10px;
       height: 100%;
-    }
-
-    &__desc {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-
-      & h1 {
-        background-color: #172A5F;
-        padding-left: 10px;
-      }
-
-      & p {
-        padding-left: 10px;
+      object-fit: cover;
+      &:hover {
+        background-color: #16285c;
       }
     }
+  }
+}
+@media screen and (max-width: 1240px) {
+  #StrikersListView {
+    flex-direction: column;
+  }
+  #big {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    align-items: center;
+  }
+  #big__strikers {
+    display: flex;
+    justify-content: center;
+  }
+  #big__strikers img {
+    width: 45%;
+    padding-top: 30px;
+  }
+  #big__item {
+    bottom: 55%;
+    left: 50%;
+    padding: 5px;
+  }
+  #placeholder {
+    display: flex;
+    font-size: 4vw;
+  }
+  .strikersList {
+    width: 100%;
+    height: 50%;
+  }
+  .strikersList__item {
+    flex: 0 0 14%;
+  }
+}
+@media screen and (max-width: 1240px) {
+  #big {
+    height: 20%;
+  }
+  #big__strikers {
+    display: none;
+  }
+  .strikersList {
+    height: 80%;
+  }
+  .strikersList__item {
+    flex: 0 0 25%;
+  }
+}
+@media screen and (max-width: 400px) {
+  #big {
+    height: 10%;
+  }
+  .strikersList__item {
+    flex: 0 0 50%;
+  }
+  .strikersList {
+    height: 90%;
+    overflow-y: scroll;
+  }
+  #placeholder {
+    font-size: 6vw;
   }
 }
 </style>

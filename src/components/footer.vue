@@ -84,28 +84,23 @@ footer {
         }
     }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 1240px) {
     footer #lang {
-        font-size: 8px;
+        font-size: 10px;
     }
     footer #odyssey {
-        font-size: 8px;
+        font-size: 10px;
     }
     footer #croissant {
-        font-size: 8px;
+        font-size: 10px;
     }
-}
-@media screen and (max-width: 425px) {
-    footer {
-        flex-direction: column;
-        height: 4.5%;
-        justify-content: center;
-    }
-    footer #croissant {
+    footer #lang {
         display: none;
     }
-    footer #odyssey {
-        text-align: center;
+}
+@media screen and (max-width: 800px) {
+    footer {
+        display: none;
     }
 }
 </style>

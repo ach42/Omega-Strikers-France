@@ -121,20 +121,17 @@
     display: flex;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(5px);
     box-shadow: inset 0px 0px 270px 0px rgba(16, 29, 66, 0.5);
-
+    backdrop-filter: blur(5px);
     &__left {
         display: flex;
         flex-direction: column;
         width: 25%;
-        padding-top: 10px;
+        padding-top: 15px;
         background-color: #101d42cb;
 
         &__nav {
             display: flex;
-            width: 100%;
-            height: 20%;
             align-items: center;
             row-gap: 20px;
             flex-direction: column;
@@ -160,7 +157,7 @@
             }
             &__strikers {
                 background-color: #E82335;
-                width: 40%;
+                width: fit-content;
                 justify-content: space-around;
             }
             &__previous {
@@ -187,7 +184,7 @@
             height: 70%;
 
             & img {
-                width: 80%;
+                width: 100%;
                 margin: auto;
                 height: 100%;
                 object-fit: cover;
@@ -244,7 +241,7 @@
         overflow-y: scroll;
         width: 75%;
         height: 100vh;
-        padding-top: 13px;
+        padding-top: 15px;
         padding-left: 1.5%;
         padding-right: 1.5%;
         background-color: #101d42;
@@ -462,7 +459,10 @@
         width: 40%;
     }
     #striker__left__nav__strikers {
-        width: 60%;
+        width: 55%;
+    }
+    #striker__left__nav a {
+        font-size: 15px;
     }
     #striker__left__img img {
         width: 100%;
@@ -519,7 +519,7 @@
     }
 
     .powers {
-        width: 100%;
+        width: 85%;
     }
 
     .powers__gif {
@@ -554,7 +554,7 @@
     }
 
     #striker__right__bio {
-        margin-top: 15%;
+        margin-top: 5%;
     }
 
     #striker__right__skins {
@@ -601,9 +601,13 @@
         border-right: 0px solid;
         border-bottom: 2px solid #1d367c;
     }
+    .credit {
+        margin-top: 60px;
+        margin-right: 65px;
+    }
 }
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 750px) {
     #striker {
         flex-direction: column;
         overflow-y: scroll;
@@ -631,6 +635,9 @@
         height: 100%;
         width: 100%;
     }
+    #striker__left__img img {
+        width: 55%;
+    }
 
     #striker__left__content {
         width: 50%;
@@ -638,7 +645,7 @@
 
     #striker__left__nav__strikers {
         height: 100%;
-        width: 35%;
+        width: 65%;
     }
 
     #striker__right {
@@ -653,13 +660,19 @@
 
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 460px) {
     #striker__right__bio {
         margin-top: 20%;
     }
 
     #striker__right__bio h1 {
         margin-bottom: 5%;
+    }
+    #striker__left__nav__strikers  {
+        width: 55%;
+    }
+    #striker__left__img img {
+        width: 70%;
     }
 }
 </style>

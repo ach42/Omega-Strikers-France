@@ -555,4 +555,16 @@ label.hamburger {
     font-weight: 600;
     font-style: italic;
 }
+
+@media screen and (max-width: 800px) {
+    .primnav {
+        width: 0px;
+    }
+    label.hamburger {
+        margin-left: 30px;
+    }
+    input.hamburger:checked ~ label > i {
+        margin-left: 230px;
+    }
+}
 </style>
