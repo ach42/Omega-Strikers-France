@@ -231,6 +231,9 @@ export default {
   }
 }
 @media screen and (max-width: 400px) {
+  #StrikersListView {
+    overflow-y: scroll;
+  }
   #big {
     height: 10%;
   }
@@ -239,7 +242,6 @@ export default {
   }
   .strikersList {
     height: 100%;
-    overflow-y: scroll;
   }
   #placeholder {
     font-size: 6vw;
