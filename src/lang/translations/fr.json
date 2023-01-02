@@ -1,6 +1,6 @@
 {
 	"App": {
-		"Title": "Omega Strikers France - 1ère communauté française",
+		"Title": "Omega Strikers France - première communauté française",
 		"Meta" : "Le site internet de la commu française du jeu-vidéo Omega Strikers disponible en free-to-play, rejoignez nous sur discord ou renseignez vous sur les personnages du jeu grâce au wiki. Découvrez des créateurs et des outils pour devenir meilleur !",
 		"TitleStrikersList": "Tous les Strikers / Personnages",
 		"MetaStrikersList" : "Tous les personnages du jeu Omega Strikers, renseignez vous grâce au wiki sur les capacités et les histoires de chaque strikers.",
@@ -46,7 +46,7 @@
 		"modulesAvailable" : "Module disponible : "
 	},
 	"Strikers": {
-		"List" : "Choissisez un striker",
+		"List" : "Choissisez un Striker",
 		"Juliette": "La recrue enthousiaste",
 		"Kai": "La superstar naturelle",
 		"Dubu": "Le défenseur attachant",
@@ -73,11 +73,9 @@
 		"rank" : "Système de ranking",
 		"arenas" : "Arènes / maps",
 		"patch" : "Notes de mise à jours",
-		"config" : "Configuration nécessaire",
-		"howtoplay" : "Comment jouer ?",
 		"ranktitle" : "Comment fonctionne le système de rang d'Omega Strikers ?",
 		"inRotation": "En rotation / jouables actuellement",
-		"NotinRotation": "Anciennes Arènes"
+		"NotinRotation": "Absent de la rotation"
 	},
 	"Patchs" : {
 		"1" : "Patch du 19 Septembre 2022",

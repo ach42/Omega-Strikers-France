@@ -11,7 +11,7 @@
       "previousStriker" : "anterior",
 			"nextStriker" : "Próximo",
       "wiki" : "Wiki del juego",
-      "patch" : "Notas del parche",
+      "patch" : "Notas del patchs",
       "rank": "Sistema de Rank",
       "maps": "Todas las maps",
       "index": "Índice de la comunidad",
@@ -46,6 +46,7 @@
     "modulesAvailable" : "Módulo disponible : "
   },
   "Strikers": {
+    "List": "Elige un Striker",
     "Juliette" : "El nova entusiasta",
     "Kai": "La superestrella nata",
     "Dubu": "El Defensor entrañable",
@@ -67,6 +68,22 @@
     "meta" : "Descubre la historia y los poderes de ",
 		"meta2" : " del juego Omega Strikers. Conoce las habilidades e historias de cada delantero en "
   },
+  "Wiki" : {
+		"title" : "Wiki Omega Strikers",
+		"rank" : "Sistema de Rank",
+		"arenas" : "Todas las maps / arenas",
+		"patch" : "Notas del patch",
+		"ranktitle" : "¿Cómo funciona el sistema de clasificación de Omega Strikers?",
+		"inRotation": "En rotación / actualmente jugable",
+		"NotinRotation": "Ausente de la rotación"
+	},
+  "Patchs" : {
+		"1" : "Patch del 19 de Septiembre 2022",
+		"2" : "A.i.M.i Patch ( 6 de octubre de 2022 )",
+		"3" : "Rune Patch ( 20 de octubre de 2022)",
+		"4" : "Patch del 17 de noviembre de 2022",
+		"5" : "Patch del 8 de diciembre de 2022"
+	},
   "Credit" : {
 		"thanks" : "Gracias a",
 		"coreassist" : "para la grabación de gifs"
