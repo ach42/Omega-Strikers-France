@@ -184,7 +184,7 @@
             height: 70%;
 
             & img {
-                width: 100%;
+                width: 85%;
                 margin: auto;
                 height: 100%;
                 object-fit: cover;
