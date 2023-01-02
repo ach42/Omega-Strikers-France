@@ -9,7 +9,7 @@
       <div class="strikersList__block">
         <localized-link class="strikersList__item" v-for="item in routes" :to="{ path: item.router }">
           <div @mouseenter="MouseEvent(item)" class="strikersList__item__mouseEvent">
-            <img v-bind:style="'box-shadow: 0px 0px 0px 2px' + item.color" v-bind:src="item.imgurl">
+            <img v-bind:alt="item.name + ' Omega Strikers'" v-bind:style="'box-shadow: 0px 0px 0px 2px' + item.color" v-bind:src="item.imgurl">
           </div>
         </localized-link>
       </div>

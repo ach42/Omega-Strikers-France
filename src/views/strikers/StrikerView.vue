@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div id="striker__left__img">
-                    <img v-bind:src="striker.attributes['img_url']">
+                    <img v-bind:alt="striker.attributes['name'] + ' Omega Strikers'" v-bind:src="striker.attributes['img_url']">
                 </div>
                 <div id="striker__left__content">
                     <div id="striker__left__content__title">
@@ -25,7 +25,7 @@
                 <div id="striker__right__powers">
                     <div id="striker__right__powers__primary" v-bind:style="'border: 5px solid ' + color " class="powers">
                         <div class="powers__gif">
-                            <img rel="preload" v-bind:src="striker.attributes['primary_gif']">
+                            <img v-bind:alt="striker.attributes['name'] + ' Primary Omega Strikers'" rel="preload" v-bind:src="striker.attributes['primary_gif']">
                         </div>
                         <div class="powers__desc">
                             <div class="powers__desc__img">
@@ -44,7 +44,7 @@
                     </div>
                     <div id="striker__right__powers__secondary" v-bind:style="'border: 5px solid ' + color " class="powers">
                         <div class="powers__gif">
-                            <img rel="preload" v-bind:src="striker.attributes['secondary_gif']">
+                            <img v-bind:alt="striker.attributes['name'] + ' Secondary Omega Strikers'" rel="preload" v-bind:src="striker.attributes['secondary_gif']">
                         </div>
                         <div class="powers__desc">
                             <div class="powers__desc__img">
@@ -63,7 +63,7 @@
                     </div>
                     <div id="striker__right__powers__special" v-bind:style="'border: 5px solid ' + color " class="powers">
                         <div class="powers__gif">
-                            <img rel="preload" id="striker__right__powers__primary" v-bind:src="striker.attributes['special_gif']">
+                            <img v-bind:alt="striker.attributes['name'] + ' Special Omega Strikers'" rel="preload" id="striker__right__powers__primary" v-bind:src="striker.attributes['special_gif']">
                         </div>
                         <div class="powers__desc">
                             <div class="powers__desc__img">
