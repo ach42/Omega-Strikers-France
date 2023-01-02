@@ -2,7 +2,7 @@
     <aside>
     <section id="discord" v-if="discordAPI">
         <div id="discord__steam">
-            <span>{{NmbOfPlayers.player_count}}</span>
+            <span v-for="players of NmbOfPlayers">{{players.count}}</span>
             <p>{{$t('App.Discord.steam_online')}}</p>
         </div>
         <div id="discord__count">
@@ -70,8 +70,8 @@ export default {
     axios.get("https://discordapp.com/api/guilds/1026604059580448875/widget.json")
     .then(resp =>{this.discordAPI = resp.data})
     
-    axios.get("https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?key=52E6009875FC31C619516A1ED1C9FE04&appid=1869590")
-    .then(response =>{this.NmbOfPlayers = response.data.response})
+    axios.get("https://count.omegastrikers-france.fr/players")
+    .then(response =>{this.NmbOfPlayers = response.data})
     }
 }
 </script>
