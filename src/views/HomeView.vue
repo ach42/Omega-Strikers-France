@@ -46,26 +46,6 @@ export default {
         ]
       }
     },
-    methods: {
-    async indexNow() {
-      try {
-        const data = {
-          host: 'www.omegastrikers-france.fr',
-          key: 'cd1476815b1944d6b3b4c63646bae1cb',
-          keyLocation: 'https://www.omegastrikers-france.fr/cd1476815b1944d6b3b4c63646bae1cb.txt',
-          urlList: [
-            'https://www.omegastrikers-france.fr/strikers',
-            'https://www.omegastrikers-france.fr/wiki'
-          ]
-        }
-
-        const response = await axios.post('/IndexNow', data)
-        console.log(response.data)
-      } catch (error) {
-        console.error(error)
-      }
-    }
-  }
   }
 </script>
 
