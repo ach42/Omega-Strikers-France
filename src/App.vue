@@ -61,10 +61,11 @@ body {
   background-repeat: no-repeat;
   & ::-webkit-scrollbar {
     width: 0px;
+    height: 3px;
   }
 
   & ::-webkit-scrollbar-track {
-    background-color: #101d4200;
+    background-color: #101D42;
   }
 
   & ::-webkit-scrollbar-thumb {

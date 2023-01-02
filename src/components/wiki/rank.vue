@@ -190,5 +190,13 @@ export default {
             this.ranksAPI = marked(ranks.attributes["ranks"]);
         })
     },
+    metaInfo() {
+        return {
+            title: this.$i18n.t('Wiki.rank') + " - " + this.$i18n.t('App.Title'),
+            meta: [
+                { vmid: 'description', name: 'description', content: this.$i18n.t('Wiki.ranktitle') + this.$i18n.t('Wiki.RankMeta') + this.$i18n.t('App.Title') }
+            ]
+        }
+    }
 }
 </script>

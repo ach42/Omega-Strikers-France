@@ -154,5 +154,13 @@ export default {
             this.NotInRotation = marked(arenas.attributes["NotInRotation"]);
         })
     },
+    metaInfo() {
+        return {
+            title: this.$i18n.t('Wiki.arenas') + " - " + this.$i18n.t('App.Title'),
+            meta: [
+                { vmid: 'description', name: 'description', content: this.$i18n.t('Wiki.ArenasMeta') + this.$i18n.t('App.Title') }
+            ]
+        }
+    }
 }
 </script>

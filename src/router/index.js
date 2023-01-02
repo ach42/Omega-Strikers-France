@@ -147,31 +147,31 @@ const routes = [
         name : 'patch',
         path : 'patch',
         component : PatchList,
-        redirect: '/wiki/patch/3/patch-du-20-octobre-2022',
+        redirect: '/wiki/patch/3/Patch-du-20-octobre-2022',
         children : [
           {
             name : 'Patch19082022' ,
-            path : '1/patch-du-19-septembre-2022',
+            path : '1/Patch-du-19-septembre-2022',
             component : Patch
           },
           {
             name : 'Patch06092022' ,
-            path : '2/patch-du-6-octobre-2022',
+            path : '2/Patch-du-6-octobre-2022',
             component : Patch
           },
           {
             name : 'Patch20092022' ,
-            path : '3/patch-du-20-octobre-2022',
+            path : '3/Patch-du-20-octobre-2022',
             component : Patch
           },
           {
             name : 'Patch17112022' ,
-            path : '4/patch-du-17-novembre-2022',
+            path : '4/Patch-du-17-novembre-2022',
             component : Patch
           },
           {
             name : 'Patch08122022' ,
-            path : '5/patch-du-8-decembre-2022',
+            path : '5/Patch-du-8-decembre-2022',
             component : Patch
           },
         ],

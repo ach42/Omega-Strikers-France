@@ -87,13 +87,13 @@ export default {
         display: flex;
         backdrop-filter: blur(5px);
         width: 100%;
-        height: 5%;
+        height: 3.25%;
         & span {
             display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
-            font-size: 14px;
+            font-size: 17px;
             background-color: #E82335;
             width: 30%;
             font-family: 'made_outer';
@@ -102,16 +102,16 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: #101D42;
             font-weight: 400;
             font-size: 13px;
             color: #fff;
             width: 70%;
-            border-bottom: 0.05px rgba(255, 255, 255, 0.212) solid;
         }
     }
     &__count {
         display: flex;
-        height: 5%;
+        height: 3.25%;
         width: 100%;
         backdrop-filter: blur(5px);
         & span {
@@ -120,7 +120,7 @@ export default {
             justify-content: center;
             font-family: 'made_outer';
             background-color: #3BA55C;
-            font-size: 14px;
+            font-size: 17px;
             color: #fff;
             width: 30%;
         }
@@ -129,10 +129,10 @@ export default {
             justify-content: center;
             font-size: 13px;
             font-weight: 400;
+            background-color: #172A5F;
             width: 70%;
             align-items: center;
             color: #fff;
-            border-top: 0.05px rgba(255, 255, 255, 0.212) solid;
         }
     }
     &__cta {

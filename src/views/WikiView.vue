@@ -3,7 +3,6 @@
         <div id="WikiLayout__content">
             <div id="WikiLayout__content__header">
                 <div id="WikiLayout__content__header__title">
-                    <img src="../assets/dossier.png">
                     <h1>{{ $t('Wiki.title') }}</h1>
                 </div>
                 <div id="WikiLayout__content__header__tab">
@@ -41,6 +40,14 @@ export default {
             currentTab: 'patch',
             tabs: ['patch', 'rank', 'maps']
         }
+    },
+    metaInfo() {
+        return {
+            title: this.$i18n.t('Wiki.title') + " - " + this.$i18n.t('App.Title'),
+            meta: [
+                { vmid: 'description', name: 'description', content: this.$i18n.t('Wiki.meta') + this.$i18n.t('App.Title') }
+            ]
+        }
     }
 }
 </script>
@@ -74,6 +81,7 @@ export default {
             width: 100%;
             &__title {
                 display: flex;
+                background-color: #101D42;
                 align-items: center;
                 column-gap: 5px;
                 justify-content: center;
@@ -96,24 +104,27 @@ export default {
                 display: flex;
                 width: 80%;
                 align-items: center;
-                border-radius: 10px;
                 & .tab-button {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     color: #f5f5f5;
+                    background-color: #1D367C;
                     text-transform: uppercase;
                     border: none;
                     width: 100%;
                     height: 100%;
                     & h2 {
                         font-size: 13px;
-                        background-color: #1d367c;
                         padding: 3%;
                         border-radius: 10px;
+                        &:hover {
+                        transition: 0.3s ease-in;
+                        background-color: #101D42;
+                    }
                     }
                     &.router-link-active {
-                        border-bottom: none !important;
+                        box-shadow: none;
                         background-color: #101D42;
                     }
                 }
@@ -126,5 +137,26 @@ export default {
             width: 100%;
         }
     }
+}
+
+@media screen and (max-width: 1620px) {
+    #WikiLayout__content__header__title h1 {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 1420px) {
+    #WikiLayout__content__header__title h1 {
+        font-size: 13px;
+    }
+    #WikiLayout__content__header__title {
+        width: 30%;
+    }
+}
+@media screen and (max-width: 1030px) {
+    #WikiLayout__content__header__title {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 840px) {
 }
 </style>
