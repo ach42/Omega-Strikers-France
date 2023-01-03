@@ -143,6 +143,7 @@ document.addEventListener('DOMNodeInserted', addAnchorEventListeners);
             & h1 {
                 width: 100%;
                 padding: 2%;
+                text-transform: uppercase;
                 text-align: center;
                 transform: skew(-5deg);
                 background-color: #172A5F;
