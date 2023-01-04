@@ -139,6 +139,11 @@ document.addEventListener('DOMNodeInserted', addAnchorEventListeners);
             width: 90%;
             height: fit-content;
 
+            & img {
+                border-radius: 10px;
+                margin-left: 3%;
+            }
+
 
             & h1 {
                 width: 100%;

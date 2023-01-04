@@ -86,7 +86,13 @@
 		"2" : "A.i.M.i Patch | 6 Octobre 2022",
 		"3" : "Rune Patch | 20 Octobre 2022",
 		"4" : "Patch du 17 Novembre 2022",
-		"5" : "Patch du 8 Décembre 2022"
+		"5" : "Patch du 8 Décembre 2022",
+		"6" : "Le retour d'Omega Strikers",
+		"comeback": "Omega Strikers revient dans :",
+		"day": "jours",
+		"hours": "heures",
+		"minutes": "minutes",
+		"seconds": "secondes"
 	},
 	"Credit" : {
 		"thanks" : "Merci à",

@@ -120,6 +120,7 @@ export default {
     data() {
         return {
             patchs: [
+                { title: this.$i18n.t('Patchs.6'), to: '/wiki/Patch/6/Quand-omega-strikers-reviendra', color : '#E82335', icon : '01/04/2023'},
                 { title: this.$i18n.t('Patchs.5'), to: '/wiki/Patch/5/Patch-du-8-decembre-2022', color : '#D95628', icon : '08/12/2022'},
                 { title: this.$i18n.t('Patchs.4'), to: '/wiki/Patch/4/Patch-du-17-novembre-2022', color : '#E21985', icon : '17/11/2022'},
                 { title: this.$i18n.t('Patchs.3'), to: '/wiki/Patch/3/Patch-du-20-octobre-2022', color : '#7451B7', icon : '20/10/2022' },

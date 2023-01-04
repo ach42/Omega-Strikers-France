@@ -10,6 +10,7 @@ import Arenas from '../components/wiki/maps.vue'
 import Rank from '../components/wiki/rank.vue'
 import PatchList from '../components/wiki/patchList.vue'
 import Patch from '../components/wiki/patch.vue'
+import Count from '../components/wiki/count.vue'
 
 Vue.use(LangRouter, {
 	defaultLanguage: 'fr',
@@ -173,6 +174,11 @@ const routes = [
             name : 'Patch08122022' ,
             path : '5/Patch-du-8-decembre-2022',
             component : Patch
+          },
+          {
+            name : 'Patch01012023' ,
+            path : '6/Quand-omega-strikers-reviendra',
+            component : Count
           },
         ],
       },

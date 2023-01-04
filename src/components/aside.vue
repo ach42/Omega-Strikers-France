@@ -3,7 +3,7 @@
     <section id="discord" v-if="discordAPI">
         <div id="discord__steam">
             <span v-for="players of NmbOfPlayers">{{players.count}}</span>
-            <p>{{$t('App.Discord.steam_online')}}</p>
+            <p>301</p>
         </div>
         <div id="discord__count">
             <span>{{discordAPI.presence_count}}</span>
