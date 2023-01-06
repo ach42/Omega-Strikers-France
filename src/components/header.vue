@@ -332,7 +332,7 @@ input.hamburger {
 
     &:checked {
         &~nav.primnav {
-            height: 100%;
+            height: 100vh;
 
             @include media-sm {
                 width: 250px;
@@ -481,8 +481,8 @@ label.hamburger {
             justify-content: center;
             width: 100%;
             & img {
-                width: 32px;
-                height: 32px;
+                width: 24px;
+                height: 24px;
             }
         }
 
@@ -491,7 +491,7 @@ label.hamburger {
             align-items: center;
             font-style: italic;
             justify-content: center;
-            font-size: 16px;
+            font-size: 13px;
             height: 100%;
             width: 20%;
         }

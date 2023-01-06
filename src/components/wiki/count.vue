@@ -66,7 +66,7 @@
         justify-content: space-around;
         backdrop-filter: blur(2px);
         align-items: center;
-        width: 50%;
+        width: 600px;
         height: 100%;
         padding: 5% 5% 5% 5%;
         border-radius: 20px;
@@ -161,7 +161,7 @@
         text-align: center;
         text-transform: uppercase;
         font-size: 25px;
-        width: fit-content;
+        width: 60%;
         border-radius: 15px;
         margin-left: auto;
         margin-right: auto;
@@ -185,6 +185,31 @@
         border-left: 3px solid #EB4F5D;
     }
 }
+@media screen and (max-width: 1470px) {
+    #needToKnow {
+        width: 90%;
+        column-gap: 50px;
+    }
+    #needToKnow h1 {
+        font-size: 25px;
+    }
+    #incoming__seven {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    #incoming__content h2 {
+        margin-left: 10px;
+    }
+    #incoming__seven p {
+        margin-left: 33.5px;
+    }
+    #incoming__seven iframe {
+        width: 700px;
+        margin-left: 33.5px;
+    }
+}
+
+
 </style>
 
 

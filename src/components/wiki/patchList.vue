@@ -49,7 +49,7 @@
             border-radius: 10px;
             align-items: center;
             & h3 {
-                font-size: 14px;
+                font-size: 11px;
             }
             & span {
                 display: flex;

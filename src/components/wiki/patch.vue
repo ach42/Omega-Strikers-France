@@ -79,6 +79,8 @@ document.addEventListener('DOMNodeInserted', addAnchorEventListeners);
 
 <style lang="scss">
 #patch {
+    display: flex;
+    height: 100vh;
     &__main {
         display: flex;
         flex-direction: column;
