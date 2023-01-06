@@ -179,9 +179,21 @@ document.addEventListener('DOMNodeInserted', addAnchorEventListeners);
                     border-radius: 0px 6px 6px 0px;
                 }
             }
+            & em {
+                display: flex;
+                margin-left: 3px;
+                font-weight: 400;
+                font-size: 12px;
+                color: #f5f5f5;
+            }
 
             & h3 {
                 color: #fff;
+                width: fit-content;
+                border-radius: 10px;
+                background-color: #172A5F;
+                padding: 10px;
+                margin-bottom: 10px;
             }
 
             & p {
@@ -191,6 +203,7 @@ document.addEventListener('DOMNodeInserted', addAnchorEventListeners);
 
             & li {
                 color: #f5f5f5;
+                font-size: 14px;
             }
 
             & ul li {
@@ -208,7 +221,7 @@ document.addEventListener('DOMNodeInserted', addAnchorEventListeners);
             & blockquote {
                 border-left: 1px solid #f5f5f5;
                 margin-bottom: 1%;
-                margin-left: 3%;
+                margin-left: 1%;
 
                 & li {
                     background-color: #172A5F;

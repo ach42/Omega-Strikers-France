@@ -10,6 +10,7 @@
                     <localized-link v-for="tab in tabs" :to="'/wiki/' + tab " :key="tab" :class="['tab-button', { active: currentTab === tab }]"
                     @click="currentTab = tab">
                     <h2 v-if="tab == 'patch'">{{ $t('Wiki.patch') }}</h2>
+                    <h2 v-if="tab == 'trainings'">{{ $t('Wiki.trainings') }}</h2>
                     <h2 v-if="tab == 'rank'">{{ $t('Wiki.rank') }}</h2>
                     <h2 v-if="tab == 'maps'">{{ $t('Wiki.arenas') }}</h2>
                     </localized-link>
@@ -28,10 +29,12 @@ import preloader from '../components/preloader.vue'
 import rank from '../components/wiki/rank.vue'
 import maps from '../components/wiki/maps.vue'
 import patch from '../components/wiki/patchList.vue'
+import trainings from '../components/wiki/trainings.vue'
 
 export default {
     components: {
         preloader,
+        trainings,
         rank,
         maps,
         patch,
@@ -39,7 +42,7 @@ export default {
     data() {
         return {
             currentTab: 'patch',
-            tabs: ['patch', 'rank', 'maps']
+            tabs: ['patch', 'trainings', 'rank', 'maps']
         }
     },
     metaInfo() {
@@ -106,7 +109,7 @@ export default {
                 align-items: center;
                 justify-content: center;
                 column-gap: 5px;
-                width: 55%;
+                width: 75%;
                 height: 100%;
                 background-color: #E82335;
                 &:hover {

@@ -65,6 +65,7 @@
     text-align: center;
     width: 9vw;
     height: 9vw;
+    row-gap: 5px;
     padding: 30px;
     background-color: #172A5F;
     border: 5px solid #1D367C;
@@ -73,7 +74,7 @@
     & h1 {
         text-align: center;
         text-transform: uppercase;
-        font-size: 18px;
+        font-size: 14px;
     }
 
     & img {

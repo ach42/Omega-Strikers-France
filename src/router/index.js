@@ -8,6 +8,7 @@ import WikiView from '../views/WikiView.vue'
 
 import Arenas from '../components/wiki/maps.vue'
 import Rank from '../components/wiki/rank.vue'
+import trainings from '../components/wiki/trainings.vue'
 import PatchList from '../components/wiki/patchList.vue'
 import Patch from '../components/wiki/patch.vue'
 import Count from '../components/wiki/count.vue'
@@ -143,6 +144,11 @@ const routes = [
         name : 'arena',
         path : 'maps',
         component : Arenas
+      },
+      {
+        name : 'trainings',
+        path : 'trainings',
+        component : trainings
       },
       {
         name : 'patch',

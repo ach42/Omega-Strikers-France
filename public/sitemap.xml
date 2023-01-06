@@ -8,6 +8,8 @@
 
 <url>
   <loc>https://omegastrikers-france.fr/</loc>
+  <xhtml:link rel="alternate" hreflang="es" href="https://omegastrikers-france.fr/es" />
+  <xhtml:link rel="alternate" hreflang="en" href="https://omegastrikers-france.fr/en" />
   <lastmod>2023-01-02T12:59:08+00:00</lastmod>
 </url>
 
