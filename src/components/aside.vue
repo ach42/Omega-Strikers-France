@@ -87,7 +87,7 @@ export default {
         display: flex;
         backdrop-filter: blur(5px);
         width: 100%;
-        height: 3.25%;
+        height: 3.35%;
         & span {
             display: flex;
             align-items: center;
@@ -111,7 +111,7 @@ export default {
     }
     &__count {
         display: flex;
-        height: 3.25%;
+        height: 3.35%;
         width: 100%;
         backdrop-filter: blur(5px);
         & span {

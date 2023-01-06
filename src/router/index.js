@@ -148,7 +148,7 @@ const routes = [
         name : 'patch',
         path : 'patch',
         component : PatchList,
-        redirect: '/wiki/patch/3/Patch-du-20-octobre-2022',
+        redirect: '/wiki/patch/6/Quand-omega-strikers-reviendra',
         children : [
           {
             name : 'Patch19082022' ,

@@ -6,6 +6,7 @@
                     <h1>{{ $t('Wiki.title') }}</h1>
                 </div>
                 <div id="WikiLayout__content__header__tab">
+                    <localized-link id="WikiLayout__content__header__strikers" to="/strikers"><img src="../assets/striker_icon.png"><h1>Strikers</h1></localized-link>
                     <localized-link v-for="tab in tabs" :to="'/wiki/' + tab " :key="tab" :class="['tab-button', { active: currentTab === tab }]"
                     @click="currentTab = tab">
                     <h2 v-if="tab == 'patch'">{{ $t('Wiki.patch') }}</h2>
@@ -97,7 +98,27 @@ export default {
                     width: 60%;
                     text-transform: uppercase;
                     font-style: italic;
-                    font-size: 18px;
+                    font-size: 15px;
+                }
+            }
+            &__strikers {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                column-gap: 5px;
+                width: 55%;
+                height: 100%;
+                background-color: #E82335;
+                &:hover {
+                    box-shadow: inset -10px 10px 92px 0px rgb(0 0 0 / 15%);
+                }
+                & h1 {
+                    text-transform: uppercase;
+                    font-size: 17px;
+                    font-style: italic;
+                }
+                & img {
+                    width: 30px;
                 }
             }
             &__tab {
@@ -109,7 +130,7 @@ export default {
                     justify-content: center;
                     align-items: center;
                     color: #f5f5f5;
-                    background-color: #1D367C;
+                    background-color: #172A5F;
                     text-transform: uppercase;
                     border: none;
                     width: 100%;

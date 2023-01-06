@@ -10,7 +10,7 @@
         </label>
         <nav class="primnav">
             <ul>
-                <li>
+                <li id="logo__block">
                     <localized-link id="logo" to="/">
                         <div id="logo__img">
                         <img src="../assets/logo.webp">
@@ -443,7 +443,7 @@ label.hamburger {
 
 label.hamburger {
     position: fixed;
-    top: 22px;
+    top: 16px;
     margin-left: 75px;
 }
 
@@ -453,7 +453,10 @@ label.hamburger {
     width: 90%;
     margin-left: 8px;
     column-gap: 10px;
-    height: 10%;
+    height: 100%;
+    &__block {
+        height: 6.8%;
+    }
     &__img {
         display: flex;
         justify-content: center;

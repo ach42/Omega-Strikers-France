@@ -122,7 +122,7 @@ export default {
   & img {
     animation: fadeInLeft 0.5s;
     object-fit: cover;
-    width: 95%;
+    width: 85%;
   }
 }
 

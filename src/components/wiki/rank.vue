@@ -143,13 +143,14 @@
     border-radius: 5px 5px 0px 0px;
     background-color: #1f4ac2;
     animation: height 0.5s ease-in-out;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
 }
 .lineVomega {
     width: 8px;
     background-color: #1f4ac2;
     animation: height 1s ease-in-out;
-    animation-delay: 0.3s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
 }
 </style>
