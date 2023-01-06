@@ -710,20 +710,16 @@ export default {
 
         const i18nlang = this.$i18n.locale
         let lang;
-        languagesClient()
-        function languagesClient() {
-            if (
-                (i18nlang === 'fr')
-                || (i18nlang === 'en')
-                || (i18nlang === 'es')
+        if (
+            (i18nlang === 'fr')
+            || (i18nlang === 'en')
+            || (i18nlang === 'es')
 
             ) {
                 lang = i18nlang
             } else {
                 lang = 'en'
             }
-            return lang;
-        }
         let StrikerResponse = axios.get(`https://database.omegastrikers-france.fr/api/strikers?filters[name][$eq]=${getStriker}`, {
             params: {
                 locale: lang,

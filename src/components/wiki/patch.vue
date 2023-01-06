@@ -80,7 +80,7 @@ document.addEventListener('DOMNodeInserted', addAnchorEventListeners);
 <style lang="scss">
 #patch {
     display: flex;
-    height: 100vh;
+    height: 100%;
     &__main {
         display: flex;
         flex-direction: column;

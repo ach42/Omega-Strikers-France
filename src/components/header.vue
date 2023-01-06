@@ -214,7 +214,7 @@ header {
 }
 .primnav {
     height: 58px;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     font-size: .8em;
     backdrop-filter: blur(5px);
@@ -230,7 +230,7 @@ header {
     z-index: 1;
 
     @include media-sm {
-        height: 100vh;
+        height: 100%;
         width: 58px;
         transition: width 246ms .5s ease;
     }
