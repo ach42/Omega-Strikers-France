@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div id="striker__left__img">
-                    <img v-bind:alt="striker.attributes['name'] + ' Omega Strikers'" v-bind:src="striker.attributes['img_url']">
+                    <img v-bind:alt="striker.attributes['name'] + ' Omega Strikers'" v-bind:src="$strapi + full">
                 </div>
                 <div id="striker__left__content">
                     <div id="striker__left__content__title">
@@ -23,59 +23,59 @@
             <preloader />
             <section id="striker__right">
                 <div id="striker__right__powers">
-                    <div id="striker__right__powers__primary" v-bind:style="'border: 5px solid ' + color " class="powers">
+                    <div v-for="Primary of primary" id="striker__right__powers__primary" v-bind:style="'border: 5px solid ' + color " class="powers">
                         <div class="powers__gif">
-                            <img v-bind:alt="striker.attributes['name'] + ' Primary Omega Strikers'" rel="preload" v-bind:src="striker.attributes['primary_gif']">
+                            <img v-bind:alt="striker.attributes['name'] + ' Primary Omega Strikers'" rel="preload" v-bind:src="$strapi + Primary.gif">
                         </div>
                         <div class="powers__desc">
                             <div class="powers__desc__img">
-                                <img class="powers__desc__img__bg" v-bind:src="striker.attributes['power_bg']">
-                                <img class="powers__desc__img__top" v-bind:src="striker.attributes['primary_img']">
+                                <img v-for="background of powerBG" class="powers__desc__img__bg" v-bind:src="$strapi + background.attributes.url">
+                                <img class="powers__desc__img__top" v-bind:src="$strapi + Primary.icon">
                             </div>
                             <div class="powers__desc__content">
-                                <h1>{{ striker.attributes['primary_name'] }}</h1>
-                                <p>{{ striker.attributes['primary_desc'] }}</p>
+                                <h1>{{ Primary.name }}</h1>
+                                <p>{{ Primary.description }}</p>
                             </div>
                             <div class="powers__desc__stats">
-                                <span>{{ $t('Strikers.powertime') }}: {{ striker.attributes['primary_time'] }}
+                                <span>{{ $t('Strikers.powertime') }}: {{ Primary.reload }}
                                     {{ $t('Strikers.secondes') }}</span>
                             </div>
                         </div>
                     </div>
-                    <div id="striker__right__powers__secondary" v-bind:style="'border: 5px solid ' + color " class="powers">
+                    <div v-for="Secondary of secondary" id="striker__right__powers__secondary" v-bind:style="'border: 5px solid ' + color " class="powers">
                         <div class="powers__gif">
-                            <img v-bind:alt="striker.attributes['name'] + ' Secondary Omega Strikers'" rel="preload" v-bind:src="striker.attributes['secondary_gif']">
+                            <img v-bind:alt="striker.attributes['name'] + ' Secondary Omega Strikers'" rel="preload" v-bind:src="$strapi + Secondary.gif">
                         </div>
                         <div class="powers__desc">
                             <div class="powers__desc__img">
-                                <img class="powers__desc__img__bg" v-bind:src="striker.attributes['power_bg']">
-                                <img class="powers__desc__img__top" v-bind:src="striker.attributes['secondary_img']">
+                                <img v-for="background of powerBG" class="powers__desc__img__bg" v-bind:src="$strapi + background.attributes.url">
+                                <img class="powers__desc__img__top" v-bind:src="$strapi + Secondary.icon">
                             </div>
                             <div class="powers__desc__content">
-                                <h1>{{ striker.attributes['secondary_name'] }}</h1>
-                                <p>{{ striker.attributes['secondary_desc'] }}</p>
+                                <h1>{{ Secondary.name }}</h1>
+                                <p>{{ Secondary.description }}</p>
                             </div>
                             <div class="powers__desc__stats">
-                                <span>{{ $t('Strikers.powertime') }}: {{ striker.attributes['secondary_time'] }}
+                                <span>{{ $t('Strikers.powertime') }}: {{ Secondary.reload }}
                                     {{ $t('Strikers.secondes') }}</span>
                             </div>
                         </div>
                     </div>
-                    <div id="striker__right__powers__special" v-bind:style="'border: 5px solid ' + color " class="powers">
+                    <div v-for="Special of special" id="striker__right__powers__special" v-bind:style="'border: 5px solid ' + color " class="powers">
                         <div class="powers__gif">
-                            <img v-bind:alt="striker.attributes['name'] + ' Special Omega Strikers'" rel="preload" id="striker__right__powers__primary" v-bind:src="striker.attributes['special_gif']">
+                            <img v-bind:alt="striker.attributes['name'] + ' Special Omega Strikers'" rel="preload" id="striker__right__powers__primary" v-bind:src="$strapi + Special.gif">
                         </div>
                         <div class="powers__desc">
                             <div class="powers__desc__img">
-                                <img class="powers__desc__img__bg" v-bind:src="striker.attributes['power_bg']">
-                                <img class="powers__desc__img__top" v-bind:src="striker.attributes['special_img']">
+                                <img v-for="background of powerBG" class="powers__desc__img__bg" v-bind:src="$strapi + background.attributes.url">
+                                <img class="powers__desc__img__top" v-bind:src="$strapi + Special.icon">
                             </div>
                             <div class="powers__desc__content">
-                                <h1>{{ striker.attributes['special_name'] }}</h1>
-                                <p>{{ striker.attributes['special_desc'] }}</p>
+                                <h1>{{ Special.name }}</h1>
+                                <p>{{ Special.description }}</p>
                             </div>
                             <div class="powers__desc__stats">
-                                <span>{{ $t('Strikers.powertime') }}: {{ striker.attributes['special_time'] }}
+                                <span>{{ $t('Strikers.powertime') }}: {{ Special.reload }}
                                     {{ $t('Strikers.secondes') }}</span>
                             </div>
                         </div>
@@ -700,14 +700,18 @@ export default {
     data() {
         return {
             strikerAPI: [],
-            color : ''
+            powerBG: '',
+            color : '',
+            full: '',
+            primary: [],
+            secondary: [],
+            special: []
         }
     },
     created() {
         let url = window.location.pathname
         let getStriker = url.substring(url.lastIndexOf("/") + 1)
         this.nameOfStriker = getStriker;
-
         const i18nlang = this.$i18n.locale
         let lang;
         if (
@@ -720,14 +724,37 @@ export default {
             } else {
                 lang = 'en'
             }
-        let StrikerResponse = axios.get(`https://database.omegastrikers-france.fr/api/strikers?filters[name][$eq]=${getStriker}`, {
+        let StrikerResponse = axios.get(`https://database.omegastrikers-france.fr/api/strikers?populate=deep&[filters][name][$eq]=${getStriker}`, {
             params: {
                 locale: lang,
             }
         }).then(res => {
             this.strikerAPI = res.data.data
-            for(let colorOfStriker of res.data.data) {
-                this.color = colorOfStriker.attributes['color']
+            for(let components of res.data.data) {
+                this.full = components.attributes.img.data.attributes.url;
+                this.color = components.attributes.color;
+                this.powerBG = components.attributes.power_bg.data;   
+                this.primary = [{
+                    "gif": components.attributes.Primary.gif.data.attributes.url,
+                    "icon": components.attributes.Primary.icon.data.attributes.url,
+                    "name": components.attributes.Primary.name,
+                    "description": components.attributes.Primary.description,
+                    "reload": components.attributes.Primary.reload
+                }]
+                this.secondary = [{
+                    "gif": components.attributes.Secondary.gif.data.attributes.url,
+                    "icon": components.attributes.Secondary.icon.data.attributes.url,
+                    "name": components.attributes.Secondary.name,
+                    "description": components.attributes.Secondary.description,
+                    "reload": components.attributes.Secondary.reload
+                }]
+                this.special = [{
+                    "gif": components.attributes.Special.gif.data.attributes.url,
+                    "icon": components.attributes.Special.icon.data.attributes.url,
+                    "name": components.attributes.Special.name,
+                    "description": components.attributes.Special.description,
+                    "reload": components.attributes.Special.reload
+                }]
             }
         })
     },

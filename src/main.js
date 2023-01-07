@@ -5,6 +5,10 @@ import { i18n } from 'vue-lang-router'
 import VueMeta from 'vue-meta'
 import Ads from 'vue-google-adsense'
 
+
+Vue.prototype.$strapi = 'https://database.omegastrikers-france.fr';
+
+
 Vue.use(require('vue-script2'))
 
 Vue.use(Ads.Adsense)
