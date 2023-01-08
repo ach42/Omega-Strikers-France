@@ -26,7 +26,7 @@ const routes = [
     component: HomeView
   },
 
-  // Strikers Menu
+  // Strikers
 
   {
     path: '/strikers',
