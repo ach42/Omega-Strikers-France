@@ -3,10 +3,14 @@
         <section id="striker" v-for="striker of strikerAPI" v-if="striker.attributes['name'] == nameOfStriker">
             <section id="striker__left">
                 <div id="striker__left__nav">
-                    <localized-link id="striker__left__nav__strikers" to="/strikers"><img src="@/assets/striker_icon.png">{{ $t('App.Nav.strikers') }}</localized-link>
+                    <localized-link id="striker__left__nav__strikers" to="/strikers"><img
+                            src="@/assets/striker_icon.png">{{ $t('App.Nav.strikers') }}</localized-link>
                     <div id="striker__left__nav__bn">
-                        <localized-link id="striker__left__nav__previous" v-bind:to="striker.attributes['previousStriker']">{{ $t('App.Nav.previousStriker') }}<img src="@/assets/previous.png"></localized-link>
-                        <localized-link id="striker__left__nav__next" v-bind:to="striker.attributes['nextStriker']"><img src="@/assets/next.png">{{ $t('App.Nav.nextStriker') }}</localized-link>
+                        <localized-link id="striker__left__nav__previous"
+                            v-bind:to="striker.attributes['previousStriker']">{{ $t('App.Nav.previousStriker') }}<img
+                                src="@/assets/previous.png"></localized-link>
+                        <localized-link id="striker__left__nav__next" v-bind:to="striker.attributes['nextStriker']"><img
+                                src="@/assets/next.png">{{ $t('App.Nav.nextStriker') }}</localized-link>
                     </div>
                 </div>
                 <div id="striker__left__img">
@@ -23,13 +27,15 @@
             <preloader />
             <section id="striker__right">
                 <div id="striker__right__powers">
-                    <div v-for="Primary of primary" id="striker__right__powers__primary" v-bind:style="'border: 5px solid ' + color " class="powers">
+                    <div v-for="Primary of primary" id="striker__right__powers__primary"
+                        v-bind:style="'border: 5px solid ' + color" class="powers">
                         <div class="powers__gif">
                             <img v-bind:alt="striker.attributes['name'] + ' Primary Omega Strikers'" rel="preload" v-bind:src="$strapi + Primary.gif">
                         </div>
                         <div class="powers__desc">
                             <div class="powers__desc__img">
-                                <img v-for="background of powerBG" class="powers__desc__img__bg" v-bind:src="$strapi + background.attributes.url">
+                                <img v-for="background of powerBG" class="powers__desc__img__bg"
+                                    v-bind:src="$strapi + background.attributes.url">
                                 <img class="powers__desc__img__top" v-bind:src="$strapi + Primary.icon">
                             </div>
                             <div class="powers__desc__content">
@@ -42,13 +48,16 @@
                             </div>
                         </div>
                     </div>
-                    <div v-for="Secondary of secondary" id="striker__right__powers__secondary" v-bind:style="'border: 5px solid ' + color " class="powers">
+                    <div v-for="Secondary of secondary" id="striker__right__powers__secondary"
+                        v-bind:style="'border: 5px solid ' + color" class="powers">
                         <div class="powers__gif">
-                            <img v-bind:alt="striker.attributes['name'] + ' Secondary Omega Strikers'" rel="preload" v-bind:src="$strapi + Secondary.gif">
+                            <img v-bind:alt="striker.attributes['name'] + ' Secondary Omega Strikers'" rel="preload"
+                                v-bind:src="$strapi + Secondary.gif">
                         </div>
                         <div class="powers__desc">
                             <div class="powers__desc__img">
-                                <img v-for="background of powerBG" class="powers__desc__img__bg" v-bind:src="$strapi + background.attributes.url">
+                                <img v-for="background of powerBG" class="powers__desc__img__bg"
+                                    v-bind:src="$strapi + background.attributes.url">
                                 <img class="powers__desc__img__top" v-bind:src="$strapi + Secondary.icon">
                             </div>
                             <div class="powers__desc__content">
@@ -61,13 +70,16 @@
                             </div>
                         </div>
                     </div>
-                    <div v-for="Special of special" id="striker__right__powers__special" v-bind:style="'border: 5px solid ' + color " class="powers">
+                    <div v-for="Special of special" id="striker__right__powers__special"
+                        v-bind:style="'border: 5px solid ' + color" class="powers">
                         <div class="powers__gif">
-                            <img v-bind:alt="striker.attributes['name'] + ' Special Omega Strikers'" rel="preload" id="striker__right__powers__primary" v-bind:src="$strapi + Special.gif">
+                            <img v-bind:alt="striker.attributes['name'] + ' Special Omega Strikers'" rel="preload"
+                                id="striker__right__powers__primary" v-bind:src="$strapi + Special.gif">
                         </div>
                         <div class="powers__desc">
                             <div class="powers__desc__img">
-                                <img v-for="background of powerBG" class="powers__desc__img__bg" v-bind:src="$strapi + background.attributes.url">
+                                <img v-for="background of powerBG" class="powers__desc__img__bg"
+                                    v-bind:src="$strapi + background.attributes.url">
                                 <img class="powers__desc__img__top" v-bind:src="$strapi + Special.icon">
                             </div>
                             <div class="powers__desc__content">
@@ -97,12 +109,10 @@
                 </div>
                 <div id="striker__right__skins">
                     <h1>{{ $t('Strikers.skins') }}</h1>
-                    <div class="skins">
-                        <div class="skins__img">
-                            <img v-for="skinsurl of striker.attributes['skins_url']" v-bind:src="skinsurl">
-                        </div>
-                        <div class="skins__name">
-                            <span v-for="skinname of striker.attributes['skins_name']">{{ skinname }}</span>
+                    <div id="striker__right__skins__block">
+                        <div v-bind:style="'border: 2px solid ' + color" class="skins" v-for="skin of skins">
+                            <img v-bind:alt="skin.name +' Omega Strikers'" rel="preload" v-bind:src="$strapi + skin.url">
+                            <p>{{ skin.name }}</p>
                         </div>
                     </div>
                 </div>
@@ -117,12 +127,14 @@
     width: 76%;
     right: 0;
 }
+
 #striker {
     display: flex;
     width: 100%;
     height: 100%;
     box-shadow: inset 0px 0px 270px 0px rgba(16, 29, 66, 0.5);
     backdrop-filter: blur(5px);
+
     &__left {
         display: flex;
         flex-direction: column;
@@ -136,30 +148,36 @@
             row-gap: 20px;
             flex-direction: column;
             justify-content: center;
+
             &__bn {
                 display: flex;
                 width: 100%;
                 justify-content: center;
                 column-gap: 5%;
             }
+
             & a {
                 display: flex;
                 align-items: center;
                 border-radius: 5px;
                 padding: 4px 6px 4px 6px;
+
                 &:hover {
                     transition: 0.3s;
                     box-shadow: inset -10px 10px 92px 0px rgba(0, 0, 0, 0.15);
                 }
             }
+
             & img {
-                    width: 30px;
+                width: 30px;
             }
+
             &__strikers {
                 background-color: #E82335;
                 width: fit-content;
                 justify-content: space-around;
             }
+
             &__previous {
                 background-color: #101E44;
                 width: fit-content;
@@ -168,6 +186,7 @@
                 column-gap: 10px;
                 justify-content: space-between;
             }
+
             &__next {
                 background-color: #101E44;
                 width: fit-content;
@@ -303,11 +322,20 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: max-content;
-
+            height: 100%;
+            margin-top: 2%;
+            margin-bottom: 5%;
+            &__block {
+                display: flex;
+                column-gap: 1%;
+                row-gap: 1%;
+                flex-wrap: wrap;
+                width: 100%;
+            }
             & h1 {
                 text-transform: uppercase;
                 font-style: italic;
+                margin-bottom: 1%;
             }
         }
     }
@@ -329,7 +357,6 @@
         & img {
             object-fit: cover;
             width: 100%;
-            
             box-shadow: 0px 0px 60px 0px rgba(30, 61, 146, 0.644);
             border-radius: 10px 10px 0px 0px;
         }
@@ -401,43 +428,28 @@
 }
 
 .skins {
-    display: flex;
     flex-direction: column;
-    padding-top: 2%;
-    width: 95%;
-
-    &__img {
-        display: flex;
-        column-gap: 10px;
+    align-items: center;
+    display: flex;
+    flex: 0 0 23%;
+    background-color: #172A5F;
+    border-radius: 10px;
+    & img {
+        object-fit: cover;
         width: 100%;
-
-        & img {
-            border-radius: 10px 10px 0px 0px;
-            width: 256px;
-            border-top: 3px solid #1d367c;
-            border-left: 3px solid #1d367c;
-            border-right: 3px solid #1d367c;
-        }
+        height: 100%;
+        box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.30);
     }
-
-    &__name {
+    & p {
         display: flex;
-        column-gap: 10px;
-        margin-bottom: 10%;
-
-        & span {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #f5f5f5;
-            width: 256px;
-            height: 50px;
-            background-color: #172A5F;
-            border-bottom: 3px solid #1d367c;
-            border-left: 3px solid #1d367c;
-            border-right: 3px solid #1d367c;
-            border-radius: 0px 0px 10px 10px;
-        }
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: #101D42;
+        color: #f5f5f5;
+        font-weight: 600;
+        border-radius: 0px 0px 10px 10px;
     }
 }
 
@@ -446,9 +458,11 @@
         font-size: 12px;
         text-align: center;
     }
+
     #striker__left__nav__previous {
         font-size: 12px;
     }
+
     #striker__left__nav__next {
         font-size: 12px;
     }
@@ -456,19 +470,23 @@
 
 @media screen and (max-width: 1024px) {
     #strikerView .preloader {
-    height: 100%;
-    width: 63%;
-    right: 0;
+        height: 100%;
+        width: 63%;
+        right: 0;
     }
+
     #striker__left {
         width: 40%;
     }
+
     #striker__left__nav__strikers {
         width: 55%;
     }
+
     #striker__left__nav a {
         font-size: 15px;
     }
+
     #striker__left__img img {
         width: 100%;
     }
@@ -514,6 +532,7 @@
     #striker__right__powers__special .powers__gif {
         justify-content: center;
     }
+
     #striker__right__bio {
         row-gap: 10px;
     }
@@ -566,45 +585,8 @@
         margin-top: 0%;
         margin-bottom: 5%;
     }
-
     .skins {
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 97%;
-    }
-
-    .skins__img {
-        flex-direction: column;
-        row-gap: 10px;
-        width: 50%;
-        align-items: flex-start;
-    }
-
-    .skins__name {
-        flex-direction: column;
-        margin-left: 0%;
-        width: 50%;
-        row-gap: 10px;
-    }
-
-    .skins__name span {
-        height: 180px;
-        width: 100%;
-        border-top: 2px solid #1d367c;
-        border-right: 2px solid #1d367c;
-        border-left: 0px solid;
-        border-bottom: 2px solid #1d367c;
-        border-radius: 0px 10px 10px 0px;
-    }
-
-    .skins__img img {
-        width: 100%;
-        height: 180px;
-        border-radius: 10px 0px 0px 10px;
-        border-top: 2px solid #1d367c;
-        border-left: 2px solid #1d367c;
-        border-right: 0px solid;
-        border-bottom: 2px solid #1d367c;
+        flex: 0 0 48%;
     }
     .credit {
         margin-top: 60px;
@@ -614,8 +596,9 @@
 
 @media screen and (max-width: 750px) {
     #strikerView .preloader {
-    width: 100%;
+        width: 100%;
     }
+
     #striker {
         flex-direction: column;
         overflow-y: scroll;
@@ -644,6 +627,7 @@
         height: 100%;
         width: 100%;
     }
+
     #striker__left__img img {
         width: 55%;
     }
@@ -670,19 +654,26 @@
     .powers {
         width: 95%;
     }
+    .skins {
+        flex: 0 0 48.5%;
+    }
 }
 
 @media screen and (max-width: 460px) {
     #striker__right__bio {
         margin-top: 20%;
     }
-
+    .skins {
+        flex: 0 0 47.5%;
+    }
     #striker__right__bio h1 {
         margin-bottom: 5%;
     }
-    #striker__left__nav__strikers  {
+
+    #striker__left__nav__strikers {
         width: 80%;
     }
+
     #striker__left__img img {
         width: 70%;
     }
@@ -694,18 +685,19 @@ import axios from 'axios';
 import preloader from '@/components/preloader.vue';
 
 export default {
-    components : {
+    components: {
         preloader
     },
     data() {
         return {
             strikerAPI: [],
             powerBG: '',
-            color : '',
+            color: '',
             full: '',
             primary: [],
             secondary: [],
-            special: []
+            special: [],
+            skins: []
         }
     },
     created() {
@@ -719,44 +711,53 @@ export default {
             || (i18nlang === 'en')
             || (i18nlang === 'es')
 
-            ) {
-                lang = i18nlang
-            } else {
-                lang = 'en'
-            }
-        let StrikerResponse = axios.get(`https://database.omegastrikers-france.fr/api/strikers?populate=deep&[filters][name][$eq]=${getStriker}`, {
-            params: {
-                locale: lang,
-            }
-        }).then(res => {
-            this.strikerAPI = res.data.data
-            for(let components of res.data.data) {
-                this.full = components.attributes.img.data.attributes.url;
-                this.color = components.attributes.color;
-                this.powerBG = components.attributes.power_bg.data;   
-                this.primary = [{
-                    "gif": components.attributes.Primary.gif.data.attributes.url,
-                    "icon": components.attributes.Primary.icon.data.attributes.url,
-                    "name": components.attributes.Primary.name,
-                    "description": components.attributes.Primary.description,
-                    "reload": components.attributes.Primary.reload
-                }]
-                this.secondary = [{
-                    "gif": components.attributes.Secondary.gif.data.attributes.url,
-                    "icon": components.attributes.Secondary.icon.data.attributes.url,
-                    "name": components.attributes.Secondary.name,
-                    "description": components.attributes.Secondary.description,
-                    "reload": components.attributes.Secondary.reload
-                }]
-                this.special = [{
-                    "gif": components.attributes.Special.gif.data.attributes.url,
-                    "icon": components.attributes.Special.icon.data.attributes.url,
-                    "name": components.attributes.Special.name,
-                    "description": components.attributes.Special.description,
-                    "reload": components.attributes.Special.reload
-                }]
-            }
-        })
+        ) {
+            lang = i18nlang
+        } else {
+            lang = 'en'
+        }
+        axios.get(`https://database.omegastrikers-france.fr/api/strikers?populate=deep&[filters][name][$eq]=${getStriker}&locale=${lang}`)
+            .then(res => {
+                this.strikerAPI = res.data.data
+                for (let components of res.data.data) {
+                    this.full = components.attributes.img.data.attributes.url;
+                    this.color = components.attributes.color;
+                    this.powerBG = components.attributes.power_bg.data;
+                    this.primary = [{
+                        "gif": components.attributes.primary_data.gif.data.attributes.url,
+                        "icon": components.attributes.primary_data.icon.data.attributes.url,
+                        "name": components.attributes.primary.name,
+                        "description": components.attributes.primary.description,
+                        "reload": components.attributes.primary_data.reload
+                    }]
+                    this.secondary = [{
+                        "gif": components.attributes.secondary_data.gif.data.attributes.url,
+                        "icon": components.attributes.secondary_data.icon.data.attributes.url,
+                        "name": components.attributes.secondary.name,
+                        "description": components.attributes.secondary.description,
+                        "reload": components.attributes.secondary_data.reload
+                    }]
+                    this.special = [{
+                        "gif": components.attributes.special_data.gif.data.attributes.url,
+                        "icon": components.attributes.special_data.icon.data.attributes.url,
+                        "name": components.attributes.special.name,
+                        "description": components.attributes.special.description,
+                        "reload": components.attributes.special_data.reload
+                    }]
+                    for (let skinsIMG of components.attributes.skins_img) {
+                        this.skins.url = skinsIMG.skins.data.attributes.url;
+                    }
+                    for (let skinsNAME of components.attributes.skins_name) {
+                        this.skins.name = skinsNAME.skins_name
+                    }
+                    this.skins = components.attributes.skins_img.map((skin, index) => {
+                        return {
+                            url: skin.skins.data.attributes.url,
+                            name: components.attributes.skins_name[index].skins_name
+                        }
+                    });
+                }
+            })
     },
     metaInfo() {
         return {
